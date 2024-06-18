@@ -1,16 +1,17 @@
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 use serde::Deserialize;
 
 fn ret_false() -> bool {
     false
 }
 
-pub(crate) type Test = HashMap<String, TestPart>;
+#[derive(Clone, Debug, Deserialize, Default)]
+pub(crate) struct Test(BTreeMap<String, TestPart>);
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct TestPart {
     introduction: String,
-    sections: HashMap<String, Section>,
+    sections: BTreeMap<String, Section>,
 }
 
 #[derive(Clone, Debug, Deserialize)]
@@ -21,6 +22,29 @@ pub(crate) struct Section {
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct Question {
+    id: String,
+    question: String,
+    choices: BTreeMap<char, AnswerChoice>,
+    canceled: bool,
+}
+
+#[derive(Clone, Debug, Deserialize, Default)]
+pub(crate) struct RawTest(BTreeMap<String, RawTestPart>);
+
+#[derive(Clone, Debug, Deserialize)]
+pub(crate) struct RawTestPart {
+    introduction: String,
+    sections: BTreeMap<String, RawSection>,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+pub(crate) struct RawSection {
+    introduction: String,
+    questions: Vec<RawQuestion>,
+}
+
+#[derive(Clone, Debug, Deserialize)]
+pub(crate) struct RawQuestion {
     question: String,
     choices: Vec<AnswerChoice>,
     #[serde(default = "ret_false")]
@@ -35,7 +59,63 @@ pub(crate) struct AnswerChoice {
 
 pub(crate) type TestPartsIterable = Vec<String>;
 
+impl Into<Test> for RawTest {
+    fn into(self) -> Test {
+        let new_test = self.0.iter()
+            .map(|part: (&String, &RawTestPart)| {
+                let part_id = part.0.clone();
+                let test_part = TestPart::from_raw(part.1, &part_id);
+                (part_id, test_part)
+            })
+            .collect();
+        Test(new_test)
+    }
+}
+
+impl TestPart {
+    fn from_raw(value: &RawTestPart, part_id: &str) -> Self {
+        let new_sections = value.sections.iter()
+            .map(|section: (&String, &RawSection)| {
+                let section_id = section.0.clone();
+                let new_section = Section::from_raw(section.1, part_id, &section_id);
+                (section_id, new_section)
+            })
+            .collect();
+        TestPart {
+            introduction: value.introduction.clone(),
+            sections: new_sections,
+        }
+    }
+}
+
+static QUESTION_IDS: [char; 8] = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+];
+
+impl Section {
+    fn from_raw(value: &RawSection, part_id: &str, section_id: &str) -> Self {
+        let new_questions = value.questions.iter()
+            .enumerate()
+            .map(|(i, question)| {
+                let question_id = format!("q{part_id}_{section_id}_{i}");
+                let new_choices = QUESTION_IDS.into_iter()
+                    .zip(question.choices.clone().into_iter())
+                    .collect();
+                Question {
+                    id: question_id,
+                    question: question.question.clone(),
+                    canceled: question.canceled,
+                    choices: new_choices,
+                }
+            })
+            .collect();
+        Section {
+            introduction: value.introduction.clone(),
+            questions: new_questions,
+        }
+    }
+}
 
 pub(crate) fn get_test_parts(test: &Test) -> TestPartsIterable {
-    test.keys().map(|s| s.to_owned()).collect()
+    test.0.keys().map(|s| s.to_owned()).collect()
 }

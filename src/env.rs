@@ -5,6 +5,7 @@ use std::time::Duration;
 
 use crate::routes::MetadataRoutes;
 use crate::models::Test;
+use crate::models::RawTest;
 
 pub struct Metadata<'a> {
     pub title: String,
@@ -101,10 +102,10 @@ pub fn http_timeout() -> Result<Duration, Error> {
 pub fn giga_test() -> &'static Test {
     static GIGA_TEST: OnceLock<Test> = OnceLock::new();
 
-    let result = GIGA_TEST.get_or_init(|| {
+    GIGA_TEST.get_or_init(|| {
         let giga_test_toml = include_str!("../resources/gigatest.toml");
-        toml::from_str::<Test>(giga_test_toml)
+        toml::from_str::<RawTest>(giga_test_toml)
             .unwrap_or_default()
-    });
-    result
+            .into()
+    })
 }
