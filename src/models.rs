@@ -56,6 +56,7 @@ pub(crate) struct Question {
     pub(crate) id: String,
     pub(crate) question: String,
     pub(crate) choices: BTreeMap<char, AnswerChoice>,
+    // FIXME: brak logiki tego pola
     canceled: bool,
 }
 
@@ -157,4 +158,33 @@ pub(crate) struct TestStateMainPageElem {
     pub(crate) total_q: usize,
     pub(crate) answered_good_q: usize,
     pub(crate) answered_bad_q: usize,
+}
+
+#[derive(Clone, Debug, Default, Deserialize)]
+pub(crate) struct TestStatePartPage {
+    pub(crate) introduction: String,
+    pub(crate) sections: Vec<TestStatePartPageSection>,
+}
+
+#[derive(Clone, Debug, Default, Deserialize)]
+pub(crate) struct TestStatePartPageSection {
+    pub(crate) introduction: String,
+    pub(crate) questions: Vec<TestStatePartPageQuestion>,
+}
+
+#[derive(Clone, Debug, Default, Deserialize)]
+pub(crate) struct TestStatePartPageQuestion {
+    pub(crate) id: String,
+    pub(crate) question: String,
+    pub(crate) choices: BTreeMap<char, TestStatePartPageAnswerChoice>,
+    pub(crate) user_answer: Option<char>,
+}
+
+#[derive(Clone, Debug, Default, Deserialize)]
+pub(crate) struct TestStatePartPageAnswerChoice {
+    pub(crate) answer: String,
+    pub(crate) correct: bool,
+    pub(crate) user_selected: bool,
+    pub(crate) choice_class: String,
+    pub(crate) id: String,
 }

@@ -1,5 +1,5 @@
 use crate::env;
-use crate::models::{Test, TestStateMainPageElem, TestPart};
+use crate::models::{Test, TestStateMainPageElem, TestStatePartPage};
 //use crate::routes::paste::{Format, QueryData};
 use askama::Template;
 use axum::http::StatusCode;
@@ -58,17 +58,21 @@ impl<'a> Index<'a> {
 pub struct Part<'a> {
     meta: &'a env::Metadata<'a>,
     base_path: &'static env::BasePath,
-    part_state: &'a TestPart,
+    part_state: &'a TestStatePartPage,
+    giga_test_finished: bool,
 }
 
 impl<'a> Part<'a> {
     /// Construct new paste view from cache `key` and paste `html`.
-    pub fn new(part_state: &'a TestPart) -> Self {
+    pub fn new(part_state: &'a TestStatePartPage, giga_test_finished: bool) -> Self {
 
         Self {
             meta: env::metadata(),
             base_path: env::base_path(),
             part_state,
+            giga_test_finished,
         }
     }
 }
+
+mod filters {}

@@ -1,7 +1,8 @@
 use crate::pages::{Index, Part};
 use crate::{AppState, Error};
 use crate::env;
-use crate::models::{TestStateMainPageElem, UserResponse, Test, Question, UserResponseData, QuestionsDB};
+use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
+    TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice};
 use std::collections::HashMap;
 use axum::routing::{get, Router};
 use axum::body::Body;
@@ -78,6 +79,58 @@ fn get_index_tests_state(
         .collect()
 }
 
+
+fn get_part_state(
+    test_part: &TestPart,
+    test_responses: &UserResponseData,
+) -> TestStatePartPage {
+    let new_sections = test_part.sections.values()
+        .map(|section| {
+            let new_questions = section.questions.iter()
+                .map(|question| {
+                    let user_answer = match test_responses.get(&question.id) {
+                        None => None,
+                        Some(r) => Some(r.user_answer),
+                    };
+                    let new_answers = question.choices.iter()
+                        .map(|answer| {
+                            let user_selected = match user_answer {
+                                None => false,
+                                Some(r) => &r == answer.0,
+                            };
+                            let choice_class = "".to_string();
+                            let id = format!("{}_{}", question.id, answer.0).to_string();
+                            let obj = TestStatePartPageAnswerChoice {
+                                answer: answer.1.answer.clone(),
+                                correct: answer.1.correct,
+                                user_selected,
+                                choice_class,
+                                id,
+                            };
+                            (answer.0.clone(), obj)
+                        })
+                        .collect();
+                    TestStatePartPageQuestion {
+                        id: question.id.clone(),
+                        question: question.question.clone(),
+                        choices: new_answers,
+                        user_answer,
+                    }
+                })
+                .collect();
+            TestStatePartPageSection {
+                introduction: section.introduction.clone(),
+                questions: new_questions,
+            }
+        })
+        .collect();
+
+    TestStatePartPage {
+        introduction: test_part.introduction.clone(),
+        sections: new_sections,
+    }
+}
+
 async fn get_index(
     session: Session,
     request: Request<Body>,
@@ -95,13 +148,12 @@ async fn get_part(
 ) -> Result<impl IntoResponse, Part<'static>> {
     let test_id = id.to_string();
     let test_part = env::giga_test().get(&test_id).unwrap(); // FIXME: poprawna strona błędu
-
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+    let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
 
-    // FIXME: trzeba stworzyć nową strukturę, w której przy każdym pytaniu będzie info jak
-    // odpowiedział user, i czy poprawnie
+    let part_state = get_part_state(test_part, &test_responses);
 
-    Ok(Part::new(&test_part))
+    Ok(Part::new(&part_state, test_finished).into_response())
 }
 
 async fn post_answers(
