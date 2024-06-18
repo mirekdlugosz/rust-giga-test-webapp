@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 
-{% block nav %}
-    <li><a href=""><button>delete</button></a></li>
-    <li><a href=""><button>download</button></a></li>
-    <li><a href=""><button>raw</button></a></li>
+{%- block content -%}
+<form action="/" method="POST">
+    <button>Submit!</button>
+<p>{{ part_state.introduction }}</p>
+
+{% for section in part_state.sections %}
+<p>{{ section.1.introduction }}</p>
+{% for question in section.1.questions %}
+<div id="{{ question.id }}">
+    <p>{{ question.question }}</p>
+    {% for choice in question.choices %}
+    <input type="radio" id="{{ question.id }}_{{ choice.0 }}" name="{{ question.id }}" value="{{ choice.0 }}" />
+    <label for="{{ question.id }}_{{ choice.0 }}">{{ choice.1.answer }}</label>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endfor %}
+</form>
 {% endblock %}

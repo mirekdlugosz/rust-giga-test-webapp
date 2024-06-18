@@ -1,5 +1,5 @@
 use crate::pages::{Index, Part};
-use crate::AppState;
+use crate::{AppState, Error};
 use crate::env;
 use crate::models::{TestStateMainPageElem, UserResponse, Test, Question, UserResponseData, QuestionsDB};
 use std::collections::HashMap;
@@ -67,7 +67,6 @@ fn get_index_tests_state(
                 }
             }
 
-            // match na test_finished i policzenie good/bad, albo zera
             TestStateMainPageElem {
                 test_id,
                 answered_q,
@@ -85,16 +84,70 @@ async fn get_index(
 ) -> Result<impl IntoResponse, Index<'static>> {
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-
     let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
+    Ok(Index::new(&index_tests_state, test_finished).into_response())
+}
 
+async fn get_part(
+    session: Session,
+    Path(id): Path<usize>,
+    request: Request<Body>,
+) -> Result<impl IntoResponse, Part<'static>> {
+    let test_id = id.to_string();
+    let test_part = env::giga_test().get(&test_id).unwrap(); // FIXME: poprawna strona błędu
+
+    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+
+    // FIXME: trzeba stworzyć nową strukturę, w której przy każdym pytaniu będzie info jak
+    // odpowiedział user, i czy poprawnie
+
+    Ok(Part::new(&test_part))
+}
+
+async fn post_answers(
+    session: Session,
+    form: Option<Form<HashMap<String, String>>>,
+) -> Result<impl IntoResponse, Index<'static>> {
+    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+
+    if let Some(form) = form {
+        let new_responses: UserResponseData = form.iter()
+            .map(|answer| {
+                let question_id = answer.0;
+                let user_answer = answer.1.chars().next().unwrap();
+
+                let correct_answer = env::giga_test_questions().get(question_id)
+                    .unwrap()
+                    .choices.iter()
+                    .find(|choice| choice.1.correct)
+                    .map(|choice| choice.0)
+                    .unwrap()
+                    .clone();
+
+                let ur = UserResponse {
+                    user_answer,
+                    correct_answer,
+                };
+                (question_id.clone(), ur)
+            })
+            .collect();
+        let all_responses: UserResponseData = test_responses.into_iter().chain(new_responses).collect();
+        session.insert(GT_RESP_KEY, all_responses).await.unwrap();
+    }
+
+    // FIXME: odczytuje choć przed chwilą zapisałem
+    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+
+    // FIXME: duplikat
+    let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
+    let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
     Ok(Index::new(&index_tests_state, test_finished).into_response())
 }
 
 pub fn routes() -> Router<AppState> {
     Router::new()
-        .route("/", get(get_index))//.post(paste::insert))
-        .route("/czesc-:id", get(|| async { Part::new() }))
+        .route("/", get(get_index).post(post_answers))
+        .route("/czesc-:id", get(get_part))
         //.merge(assets::routes())
 }
 

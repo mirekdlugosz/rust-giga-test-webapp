@@ -17,6 +17,10 @@ impl Test {
         self.0.iter()
     }
 
+    pub(crate) fn get(&self, key: &str) -> Option<&TestPart> {
+        self.0.get(key)
+    }
+
     pub(crate) fn get_questions(&self) -> HashMap<String, &Question> {
         self.0.values()
             .flat_map(|part| part.sections.values())
@@ -35,23 +39,23 @@ impl Test {
     }
 }
 
-#[derive(Clone, Debug, Deserialize)]
+#[derive(Clone, Debug, Default, Deserialize)]
 pub(crate) struct TestPart {
-    introduction: String,
-    sections: BTreeMap<String, Section>,
+    pub(crate) introduction: String,
+    pub(crate) sections: BTreeMap<String, Section>,
 }
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct Section {
-    introduction: String,
-    questions: Vec<Question>,
+    pub(crate) introduction: String,
+    pub(crate) questions: Vec<Question>,
 }
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct Question {
     pub(crate) id: String,
-    question: String,
-    choices: BTreeMap<char, AnswerChoice>,
+    pub(crate) question: String,
+    pub(crate) choices: BTreeMap<char, AnswerChoice>,
     canceled: bool,
 }
 
@@ -80,8 +84,8 @@ pub(crate) struct RawQuestion {
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct AnswerChoice {
-    answer: String,
-    correct: bool,
+    pub(crate) answer: String,
+    pub(crate) correct: bool,
 }
 
 impl Into<Test> for RawTest {
