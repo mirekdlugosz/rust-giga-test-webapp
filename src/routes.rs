@@ -4,7 +4,7 @@ use crate::env;
 use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
     TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice};
 use std::collections::HashMap;
-use axum::routing::{get, Router};
+use axum::routing::{get, post, Router};
 use axum::body::Body;
 use axum::extract::{Form, Json, Path, Query, State};
 use axum::http::header::{self, HeaderMap};
@@ -98,7 +98,12 @@ fn get_part_state(
                                 None => false,
                                 Some(r) => &r == answer.0,
                             };
-                            let choice_class = "".to_string();
+                            let choice_class = match (user_selected, answer.1.correct) {
+                                (true, true) => "poprawnie".to_string(),
+                                (true, false) => "niepoprawnie".to_string(),
+                                (false, true) => "poprawnie".to_string(),
+                                (false, false) => "".to_string(),
+                            };
                             let id = format!("{}_{}", question.id, answer.0).to_string();
                             let obj = TestStatePartPageAnswerChoice {
                                 answer: answer.1.answer.clone(),
@@ -196,10 +201,21 @@ async fn post_answers(
     Ok(Index::new(&index_tests_state, test_finished).into_response())
 }
 
+
+async fn submit_test(
+    session: Session,
+    form: Option<Form<HashMap<String, String>>>,
+) -> Redirect {
+    session.insert(GT_FINISHED_KEY, true).await.unwrap();
+    Redirect::to("/")
+}
+
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(get_index).post(post_answers))
         .route("/czesc-:id", get(get_part))
+        .route("/zakoncz", post(submit_test))
+        // FIXME: assety statyczne
         //.merge(assets::routes())
 }
 

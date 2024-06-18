@@ -19,7 +19,7 @@
         {% if giga_test_finished %}disabled{% endif %}
         {% if choice.1.user_selected %}checked{% endif %}
     />
-    <label class="{{ choice.1.choice_class }}" for="{{ choice.1.id }}">{{ choice.1.answer }}</label>
+    <label class="{% if giga_test_finished %}{{ choice.1.choice_class }}{% endif %}" for="{{ choice.1.id }}">{{ choice.1.answer }}</label>
     {% endfor %}
 </div>
 {% endfor %}

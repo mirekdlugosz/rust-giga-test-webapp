@@ -6,6 +6,10 @@
         <title>{{ meta.title }}</title>
         <link rel="stylesheet" href="{{ meta.routes.css }}">
         <link rel="icon" href="{{ meta.routes.favicon }}" type="image/png">
+        <style>
+        .niepoprawnie { color: red; }
+        .poprawnie { color: green; }
+        </style>
         {% block head %}{% endblock %}
     </head>
     <body>
