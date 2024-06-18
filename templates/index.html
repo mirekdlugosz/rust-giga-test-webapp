@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{%- block content -%}
+{% for czesc in giga_test_parts %}
+{{ czesc }}
+{% endfor %}
+
+<button {% if giga_test_finished %}disabled{% endif %}>Zamknij giga test</button>
+
+{%- endblock -%}

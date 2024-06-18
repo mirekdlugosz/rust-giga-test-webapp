@@ -1,0 +1,1127 @@
+[1]
+introduction = """
+Witamy w pierwszej z sześciu części Giga Testu, w którym główną nagrodą jest nic innego jak superkonsola PlayStation 2. Tak, tak, Drodzy Czytelnicy, jeden z Was wyjdzie stąd (wręczenie nagrody odbędzie się w Redakcji) z tą właśnie konsolą, ale zanim to nastąpi - będzie musiał wykazać się niebagatelnyą wiedzą w zakresie gier na PlayStation (i nie tylko), odpowiadając prawidłowo na największą liczę pytań spośród 350, jakie postawimy w 6 kolejnych wydaniach PE.
+"""
+
+[1.sections]
+
+[1.sections.1]
+introduction = """
+Cze! To ja, Alien. Przygotowałem dla Was na początek kilka pytań z różnych dziedzin. Mam nadzieję, że nie bardzo trudnych. [Mr.Ś]
+"""
+
+[[1.sections.1.questions]]
+question = "Ten power-up w BOMBERMANie służy do: [img]"
+
+[[1.sections.1.questions.choices]]
+answer = "rzucania ognistymi kulami"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "wywoływania ognistych duszków"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "zwiększenie siły rażenia bomb"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "zapalenia wszystkich przeciwników"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Kto jest wydawcą tej gry? [img]"
+
+[[1.sections.1.questions.choices]]
+answer = "SONY"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "THQ"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "NAMCO"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "TAITO"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Który oddział KONAMI jest producentem ISS PRO EVOLUTION na PSX"
+
+[[1.sections.1.questions.choices]]
+answer = "KCES"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "KCEO"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "KCET"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "KONAMI CENTRAL"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Z której gry pochodzi ta postać? [img]"
+
+[[1.sections.1.questions.choices]]
+answer = "ROAD RASH"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "ROAD RASH JAILBREAK"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "TWISTED METAL 2"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "ROGUE TRIP"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Jaką ocenę przyznaliśmy grze METAL GEAR SOLID na łamach PE?"
+
+[[1.sections.1.questions.choices]]
+answer = "10"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "9"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "8"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "7"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Który z wymienionych środków lokomocji nie jest dostępny w grze MICRO MANIACS?"
+
+[[1.sections.1.questions.choices]]
+answer = "deskorolka"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "pszczoła"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "mini-skuter"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "wanna"
+correct = true
+
+[[1.sections.1.questions]]
+question = "Jakie zadanie w TONY HAWK'S SKATEBOARDING masz do wykonania w tej planszy? [img]"
+
+[[1.sections.1.questions.choices]]
+answer = """zniszczyć znaki "Zakaz skejtowania""""
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "rozwalić wszystkie beczki"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "rozwalić telebimy"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "zdobyć medal"
+correct = false
+
+[[1.sections.1.questions]]
+question = "W grze LONE SOLDIER sterujesz"
+
+[[1.sections.1.questions.choices]]
+answer = "czołgiem"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "żołnierzem"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "mechem (robotem)"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "albo żołnierzem albo mechem (robotem) w zależności od werski gry"
+correct = true
+
+[[1.sections.1.questions]]
+question = "Samochody jakiej marki nie występują w GT2?"
+
+[[1.sections.1.questions.choices]]
+answer = "Lotus"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "Volvo"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "Audi"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "Alfa Romeo"
+correct = false
+
+[[1.sections.1.questions]]
+question = "W którym roku pojawiła się w sprzedaży konsola PlayStation (świat)?"
+
+[[1.sections.1.questions.choices]]
+answer = "1994"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "1995"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "1996"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "1997"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Tylko jedno z 4 zdjęć z gry RESIDENT EVIL nie zostało spreparowane. Zaznacz właściwe."
+
+[[1.sections.1.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "[img]"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Która z wymienionych gier nie jest bijatyką?"
+
+[[1.sections.1.questions.choices]]
+answer = "CRITICOM"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "BEATMANIA"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "ZERO DIVIDE"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "FIGHTERS IMPACT"
+correct = false
+
+[[1.sections.1.questions]]
+question = "Czy boss o ksywie MINION pochodzi z gry:"
+
+[[1.sections.1.questions.choices]]
+answer = "WARHAWK"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "TWISTED METAL"
+correct = true
+
+[[1.sections.1.questions.choices]]
+answer = "BLOODY ROAR 2"
+correct = false
+
+[[1.sections.1.questions.choices]]
+answer = "SPYRO 2"
+correct = false
+
+[1.sections.2]
+introduction = """
+Haha. Nadszedł czas na mnie:) - i już po Was! Jako że interesuję się wyścigami i strzelaninami, pytania są tylko z tych dwóch dziedzin. Spróbujcie szczęścia, bo są trudne. [Gamera]
+"""
+
+[[1.sections.2.questions]]
+question = "DUKE NUKEM: TIME TO KILL. W co zmienił się motor Duke'a, którym przyjechał do miasta?"
+
+[[1.sections.2.questions.choices]]
+answer = "w samochód"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "w pistolet"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "w rower"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "w sanki"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Jak ma zostać zgładzony Duke po schwytaniu i osadzeniu go w więzieniu przez prosiaki (DUKE NUKEM 3D)?"
+
+[[1.sections.2.questions.choices]]
+answer = "przez rozstrzelanie"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "na krześle elektrycznym"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "w komorze gazowej"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "na szubienlcy"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Co przedstawia filmik po ostatniej misji w grze MEDAL OF HONOR?"
+
+[[1.sections.2.questions.choices]]
+answer = "przemówienie Adolfa Hitlera do narodu"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "bombardowanie miasta"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "wybuch działa na pociągu"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "wybuch rakiety podczas startu"
+correct = true
+
+[[1.sections.2.questions]]
+question = "Ile ładunków wybuchowych masz do rozbrojenia na moście w jednej z misji w SYPHON FILTER 2?"
+
+[[1.sections.2.questions.choices]]
+answer = "3"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "4"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "5"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "6"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Ostatni z czterech ukrytych filmików w SYPHON FILTER 2, do odblokowania na poziomie Hard, przedstawia:"
+
+[[1.sections.2.questions.choices]]
+answer = "Logana i całą bandę z gry na lodowisku"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Logana i całą bandę z gry na dyskotece"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = """Logana i Teresę "w łóżku""""
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "zapowiedź kolejnej części gry"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Jak nazywa się boss z miotaczem ognia pierwszej części SYPHON FILTER, z którym musisz walczyć po misji w parku?"
+
+[[1.sections.2.questions.choices]]
+answer = "Anton Girdeux"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "Edward Benton"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Lian Xing"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Erich Rhoemer"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Jakiego nazwiska brakuje w F1 '97 (prawdopodobnie z powodu braku odpowiedniej licencji)?"
+
+[[1.sections.2.questions.choices]]
+answer = "M. Schumacher"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "M. Hakkinen"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "E. Irvine"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "J. Villeneuve"
+correct = true
+
+[[1.sections.2.questions]]
+question = "Który z wymienionych samochodów nie występuje w pierwszej części gry COLIN MCRAE RALLY?"
+
+[[1.sections.2.questions.choices]]
+answer = "Lancia Delta Integrale"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Audi Quattro"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Toyota Corolla WRC"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Seat Cordoba"
+correct = true
+
+[[1.sections.2.questions]]
+question = "Którego państwa zabrakło w COLIN MCRAE RALLY 2?"
+
+[[1.sections.2.questions.choices]]
+answer = "Korsyka"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "Szwecja"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Australla"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Francja"
+correct = false
+
+[[1.sections.2.questions]]
+question = "Nazwa tej trasy (GRAN TURISMO 2) brzmi: [img]"
+
+[[1.sections.2.questions.choices]]
+answer = "Autumn Ring"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Trial Mountain"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Midfield Raceway"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "Grindelwald"
+correct = false
+
+[[1.sections.2.questions]]
+question = "To jest samochód marki (GRAN TURISMO 2): [img]"
+
+[[1.sections.2.questions.choices]]
+answer = "Vector"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Nissan"
+correct = true
+
+[[1.sections.2.questions.choices]]
+answer = "Venturi"
+correct = false
+
+[[1.sections.2.questions.choices]]
+answer = "Lotus"
+correct = false
+
+[1.sections.3]
+introduction = """
+Witam! A teraz kilka pytań od Wiejskiego Głupka. Niektóre mogą okazać się nieco dziwne, ale taki już jestem - Wiejski Głupek. [HIV]
+"""
+
+[[1.sections.3.questions]]
+question = "Co oznacza skrót EA?"
+
+[[1.sections.3.questions.choices]]
+answer = "ELECTRIC ANGELS"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "ELECTRONIC ARTS"
+correct = true
+
+[[1.sections.3.questions.choices]]
+answer = "ELECTRONIC ART"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "ELVIS ALIVE!"
+correct = false
+
+[[1.sections.3.questions]]
+question = """"Transcending history of the world, a tale of soul and sword...". Z której gry pochodzi ten cytat? """
+
+[[1.sections.3.questions.choices]]
+answer = "TEKKEN 2"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "TEKKEN 3"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "SOUL BLADE"
+correct = true
+
+[[1.sections.3.questions.choices]]
+answer = "SOUL CALIBUR"
+correct = false
+
+[[1.sections.3.questions]]
+question = "Tytuł gry, który jest wzorem chemicznym:"
+
+[[1.sections.3.questions.choices]]
+answer = "H2O"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "N2O"
+correct = true
+
+[[1.sections.3.questions.choices]]
+answer = "H2N5"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "2SIO4"
+correct = false
+
+[[1.sections.3.questions]]
+question = """Doomowiec "bez grawitacji" to:"""
+
+[[1.sections.3.questions.choices]]
+answer = "HYBRID"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "FORSAKEN"
+correct = true
+
+[[1.sections.3.questions.choices]]
+answer = "TENKA: LIFEFORCE"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "TREASURES OF THE DEEP"
+correct = false
+
+[[1.sections.3.questions]]
+question = """Bijatyka "dla wariatów" której w zasadzie nie ma :) to:"""
+
+[[1.sections.3.questions.choices]]
+answer = "MORTAL KOMBAT 4"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "THRILL KILL"
+correct = true
+
+[[1.sections.3.questions.choices]]
+answer = "FANTASTIC FOUR"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "CRASH BANDICOOT"
+correct = false
+
+[[1.sections.3.questions]]
+question = "Kto użycza głosu dr. Neo Cortexowi w grze CB2?"
+
+[[1.sections.3.questions.choices]]
+answer = "Arnold Schwarzenegger"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "Enrique Iglesias"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "Britney Spears"
+correct = false
+
+[[1.sections.3.questions.choices]]
+answer = "HIV, wypchaj się!"
+correct = true
+
+[1.sections.4]
+introduction = """
+Teraz kolej na mnie i na bardziej ambitne pytania, niż podane wcześniej:). [Kali]
+"""
+
+[[1.sections.4.questions]]
+question = """"Chicken" - nieoficjalne określenie czegoś związanego z TEKKEN 3 i TTT. Co to tak naprawdę jest?"""
+
+[[1.sections.4.questions.choices]]
+answer = "Wyszczególniony przez Catlorda typ totalnie defensywnego gracza."
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Wyrwanie się z reversala, czyli z przechwytu ciosu."
+correct = true
+
+[[1.sections.4.questions.choices]]
+answer = "Pseudonim jednego z najlepszych Polskich graczy - Łukasza Pęczkowskiego"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Uniknięcie wrogiego ciosu poprzez kucnięcie"
+correct = false
+
+[[1.sections.4.questions]]
+question = "W której z gier możemy kierować największą ilością różnych jednostek bojowych?"
+
+[[1.sections.4.questions.choices]]
+answer = "WARZONE 2100"
+correct = true
+
+[[1.sections.4.questions.choices]]
+answer = "C&C: RED ALERT"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "WARCRAFT 2"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "CIVILIZATION 2"
+correct = false
+
+[[1.sections.4.questions]]
+question = "Która z postaci dostępnych w STREET FIGHTER ALPHA 3 pojawiła się w najstarszej, pierwszej części STREET FIGHTER'a:"
+
+[[1.sections.4.questions.choices]]
+answer = "Vega"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Birdie"
+correct = true
+
+[[1.sections.4.questions.choices]]
+answer = "Guile"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "E.Honda"
+correct = false
+
+[[1.sections.4.questions]]
+question = "Który z eRPeGów posiada największą ilość różnych zakończeń?"
+
+[[1.sections.4.questions.choices]]
+answer = "Final Fantasy VII"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Final Fantasy VIII"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Suikoden 2"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Star Ocean 2"
+correct = true
+
+[[1.sections.4.questions]]
+question = "Byłeś człowiekiem, lecz zostałeś zabity. Powróciłeś jednak w poszukiwaniu zemsty - ale pod postacią wampira. Którą z gier otwiera taka historia?"
+
+[[1.sections.4.questions.choices]]
+answer = "CASTLEVANIA: SYPHONY OF THE NIGHT"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "DRACULA"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "BLOOD OMEN: LEGACY OF KAIN"
+correct = true
+
+[[1.sections.4.questions.choices]]
+answer = "LOK: SOUL REAVER"
+correct = false
+
+[[1.sections.4.questions]]
+question = "Która z niżej wymienionych osób nie jest związana ze światem gier komputerowych?"
+
+[[1.sections.4.questions.choices]]
+answer = "Thomas Solar"
+correct = true
+
+[[1.sections.4.questions.choices]]
+answer = "Sid Meier"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Peter Molyneux"
+correct = false
+
+[[1.sections.4.questions.choices]]
+answer = "Yu Suzuki"
+correct = false
+
+[1.sections.5]
+introduction = """
+Hej! Teraz kolej na moje pytania z różnych "parafii". Nie są łatwe, z góry uprzedzam. [Shiva]
+"""
+
+[[1.sections.5.questions]]
+question = "Jaka jest najwyższa ranga zawodnika (konkretniej - prosiaka :) w HOGS OF WAR?"
+
+[[1.sections.5.questions.choices]]
+answer = "Gunner"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "Hero"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "Legend"
+correct = true
+
+[[1.sections.5.questions.choices]]
+answer = "Commando"
+correct = false
+
+[[1.sections.5.questions]]
+question = "Ile postaci (łącznie z bonusowymi) zaimplementowano w HOT SHOTS 2?"
+
+[[1.sections.5.questions.choices]]
+answer = "6"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "13"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "21"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "26"
+correct = true
+
+[[1.sections.5.questions]]
+question = "Który z poniższych zawodów nie został uwzględniony w THEME PARK WORLD?"
+
+[[1.sections.5.questions.choices]]
+answer = "policjant"
+correct = true
+
+[[1.sections.5.questions.choices]]
+answer = "mechanik"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "dozorca"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "naukowiec"
+correct = false
+
+[[1.sections.5.questions]]
+question = "W ilu strojach występuje Lara w TOMB RAIDER 3?"
+
+[[1.sections.5.questions.choices]]
+answer = "4"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "5"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "6"
+correct = true
+
+[[1.sections.5.questions.choices]]
+answer = "7"
+correct = false
+
+[[1.sections.5.questions]]
+question = "Z której gry pochodzi bohater imieniem Roper?"
+
+[[1.sections.5.questions.choices]]
+answer = "LEGEND OF LEAIA"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "URBAN CHAOS"
+correct = true
+
+[[1.sections.5.questions.choices]]
+answer = "DINO CRISIS"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "NIGHTMARE CREATURES"
+correct = false
+
+[[1.sections.5.questions]]
+question = "Jedna z poniższych dyscyplin olimpijskich nie została umieszczona w INT. TRACK AND FIELD 2000. Która?"
+canceled = true
+
+[[1.sections.5.questions.choices]]
+answer = "trójskok"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "skoki do wody"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = "łucznictwo"
+correct = false
+
+[[1.sections.5.questions.choices]]
+answer = """skok przez "konia""""
+correct = false
+
+[1.sections.6]
+introduction = """
+Teraz moje pytania. Kilka łatwych, kilka trudnych. Może uda Wam się trafić:)... [Kujot]
+"""
+
+[[1.sections.6.questions]]
+question = "Jak uśmiercony został wampir Vorador w BLOOD OMEN: LOK?"
+
+[[1.sections.6.questions.choices]]
+answer = "przebity kołkiem"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "ścięty"
+correct = true
+
+[[1.sections.6.questions.choices]]
+answer = "spalony światłem słonecznym"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "oblany wodą święconą"
+correct = false
+
+[[1.sections.6.questions]]
+question = "W której części STREET FIGHTERa pojawił się zawodnik imieniem Sawada"
+
+[[1.sections.6.questions.choices]]
+answer = "STREET FIGHTER EX3"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "STREET FIGHTER ALPHA2 GOLD"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "STREET FIGHTER: THE MOVIE"
+correct = true
+
+[[1.sections.6.questions.choices]]
+answer = "STREET FIGHTER 2 TURBO HYPER FIGHTNING"
+correct = false
+
+[[1.sections.6.questions]]
+question = "Ile postaci do wyboru oddano Graczowi w LOADED?"
+
+[[1.sections.6.questions.choices]]
+answer = "5"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "6"
+correct = true
+
+[[1.sections.6.questions.choices]]
+answer = "7"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "8"
+correct = false
+
+[[1.sections.6.questions]]
+question = "Z jakiej bijatyki pochodzi postać imieniem Sho Shinijo?"
+
+[[1.sections.6.questions.choices]]
+answer = "EVIL ZONE"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "SAMURAI SHODOWN 3"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "TOSHINDEN"
+correct = true
+
+[[1.sections.6.questions.choices]]
+answer = "KING OF FIGHTERS '98"
+correct = false
+
+[[1.sections.6.questions]]
+question = "Który z wymienionych stworów nie straszył w pierwszej części RESIDENT EVIL?"
+
+[[1.sections.6.questions.choices]]
+answer = "rekin"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "doberman"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "kruk"
+correct = false
+
+[[1.sections.6.questions.choices]]
+answer = "krokodyl"
+correct = true
+
+[1.sections.7]
+introduction = """
+Tu Loki. Takie tam 2 pytanka przygotowałem. No to sru! [Loki]
+"""
+
+[[1.sections.7.questions]]
+question = """Głównym "bohaterem" serii DENSHA DE GO! to:"""
+
+[[1.sections.7.questions.choices]]
+answer = "samolot"
+correct = false
+
+[[1.sections.7.questions.choices]]
+answer = "pociąg"
+correct = true
+
+[[1.sections.7.questions.choices]]
+answer = "emeryt"
+correct = false
+
+[[1.sections.7.questions.choices]]
+answer = "motocykl"
+correct = false
+
+[[1.sections.7.questions]]
+question = """"Sangoku Musou" to japońska nazwa:"""
+
+[[1.sections.7.questions.choices]]
+answer = "serii ligowego ISS-a"
+correct = false
+
+[[1.sections.7.questions.choices]]
+answer = "bijatyka DYNASTY WARRIORS"
+correct = true
+
+[[1.sections.7.questions.choices]]
+answer = "strzelaniny kosmicznej STAR IXION"
+correct = false
+
+[[1.sections.7.questions.choices]]
+answer = "sieci sklepów w Tokio"
+correct = false
+
+[1.sections.8]
+introduction = """
+Teraz dziedzina sportowa. Macie za swoje :) [Koso]
+"""
+
+[[1.sections.8.questions]]
+question = "Który z wymienionych piłkarzy jako jedyny z tego grona firmował swym nazwiskiem grę piłkarską?"
+
+[[1.sections.8.questions.choices]]
+answer = "Gabriel Batistuta"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "Alexi Lalas"
+correct = true
+
+[[1.sections.8.questions.choices]]
+answer = "Zinedine Zidane"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "Fernando Hierro"
+correct = false
+
+[[1.sections.8.questions]]
+question = "Którego koszykarza ZAWSZE brakowało kolejnych edycjach NBA LIVE, począwszy od roku 1996 a skończywszy na 1998?"
+
+[[1.sections.8.questions.choices]]
+answer = "Kevina Garnetta"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "Karla Malone'a"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "Rafała Bigusa"
+correct = true
+
+[[1.sections.8.questions.choices]]
+answer = "Roberta Horry'ego"
+correct = false
+
+[[1.sections.8.questions]]
+question = "W której z podanych gier do dyspozycji Gracza oddano fikcyjnych piłkarzy (tj. z wymyślonymi nazwiskami)?"
+
+[[1.sections.8.questions.choices]]
+answer = "FIFA 2000"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "FIFA: ROAD TO THE WORLD CUP"
+correct = false
+
+[[1.sections.8.questions.choices]]
+answer = "w żadnej z wymienionych"
+correct = true
+
+[1.sections.9]
+introduction = """
+Sasza podaje swoje pytania. Ruszcie trochę głową, a zadanie okaże się proste. [Sasza]
+"""
+
+[[1.sections.9.questions]]
+question = "Podaj imię widmowego rycerza, z którym dane było zmierzyć się Kainowi."
+
+[[1.sections.9.questions.choices]]
+answer = "Malek"
+correct = true
+
+[[1.sections.9.questions.choices]]
+answer = "Raziel"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Bulka"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Dordo"
+correct = false
+
+[[1.sections.9.questions]]
+question = "Która z poniższych postaci zmarła wskutek działania wirusa Fox Hound w MGS?"
+
+[[1.sections.9.questions.choices]]
+answer = "Revolver Ocelot"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Psycho Mantis"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Decoy Octopus"
+correct = true
+
+[[1.sections.9.questions.choices]]
+answer = "Medlin"
+correct = false
+
+[[1.sections.9.questions]]
+question = "Jak nazywa się mucha latająca wokół tytułowego smoka w SPYRO THE DRAGON?"
+
+[[1.sections.9.questions.choices]]
+answer = "Sparx"
+correct = true
+
+[[1.sections.9.questions.choices]]
+answer = "Spyrax"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Sporyx"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Sprynx"
+correct = false
+
+[[1.sections.9.questions]]
+question = """Jak nazywa się autor książek, na podstawie których powstała seria "DISCWORLD"? """
+
+[[1.sections.9.questions.choices]]
+answer = "Terry Pratchett"
+correct = true
+
+[[1.sections.9.questions.choices]]
+answer = "J.R.R. Tolkien"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Ron Howard"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Tony Dewito"
+correct = false
+
+[[1.sections.9.questions]]
+question = "Jaki jest kolor sukni zabójczyni w MISSION IMPOSSIBLE, próbującej zgładzić Ethana Hunta na przyjęciu w ambasadzie?"
+
+[[1.sections.9.questions.choices]]
+answer = "Czerwony"
+correct = true
+
+[[1.sections.9.questions.choices]]
+answer = "Zielony"
+correct = false
+
+[[1.sections.9.questions.choices]]
+answer = "Niebieski"
+correct = false
