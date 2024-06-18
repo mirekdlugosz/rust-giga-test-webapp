@@ -5,6 +5,10 @@ fn ret_false() -> bool {
     false
 }
 
+
+pub(crate) type UserResponseData = HashMap<String, UserResponse>;
+pub(crate) type QuestionsDB = HashMap<String, &'static Question>;
+
 #[derive(Clone, Debug, Deserialize, Default)]
 pub(crate) struct Test(BTreeMap<String, TestPart>);
 
@@ -19,6 +23,15 @@ impl Test {
             .flat_map(|section| section.questions.iter())
             .map(|question| (question.id.clone(), question))
             .collect()
+    }
+
+    pub(crate) fn get_part_questions(&self, part_id: &str) -> Vec<&Question> {
+        match self.0.get(part_id) {
+            None => Default::default(),
+            Some(part) => part.sections.iter()
+                .flat_map(|section| section.1.questions.iter())
+                .collect(),
+        }
     }
 }
 
@@ -36,7 +49,7 @@ pub(crate) struct Section {
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct Question {
-    id: String,
+    pub(crate) id: String,
     question: String,
     choices: BTreeMap<char, AnswerChoice>,
     canceled: bool,
@@ -130,8 +143,8 @@ impl Section {
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub(crate) struct UserResponse {
-    user_answer: char,
-    correct_answer: char,
+    pub(crate) user_answer: char,
+    pub(crate) correct_answer: char,
 }
 
 pub(crate) struct TestStateMainPageElem {

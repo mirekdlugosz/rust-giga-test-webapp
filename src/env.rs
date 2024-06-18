@@ -5,7 +5,7 @@ use std::sync::OnceLock;
 use std::time::Duration;
 
 use crate::routes::MetadataRoutes;
-use crate::models::{Test, RawTest, Question};
+use crate::models::{Test, RawTest, Question, QuestionsDB};
 
 pub struct Metadata<'a> {
     pub title: String,
@@ -110,7 +110,7 @@ pub fn giga_test() -> &'static Test {
     })
 }
 
-pub fn giga_test_questions() -> &'static HashMap<String, &'static Question> {
+pub fn giga_test_questions() -> &'static QuestionsDB {
     static QUESTIONS_DB: OnceLock<HashMap<String, &Question>> = OnceLock::new();
 
     QUESTIONS_DB.get_or_init(|| giga_test().get_questions())
