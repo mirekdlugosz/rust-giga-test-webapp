@@ -1,11 +1,11 @@
+use std::collections::HashMap;
 use std::net::SocketAddr;
 use std::num::ParseIntError;
 use std::sync::OnceLock;
 use std::time::Duration;
 
 use crate::routes::MetadataRoutes;
-use crate::models::Test;
-use crate::models::RawTest;
+use crate::models::{Test, RawTest, Question};
 
 pub struct Metadata<'a> {
     pub title: String,
@@ -108,4 +108,10 @@ pub fn giga_test() -> &'static Test {
             .unwrap_or_default()
             .into()
     })
+}
+
+pub fn giga_test_questions() -> &'static HashMap<String, &'static Question> {
+    static QUESTIONS_DB: OnceLock<HashMap<String, &Question>> = OnceLock::new();
+
+    QUESTIONS_DB.get_or_init(|| giga_test().get_questions())
 }

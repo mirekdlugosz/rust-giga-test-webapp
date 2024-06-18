@@ -1,9 +1,20 @@
 {% extends "base.html" %}
 
 {%- block content -%}
-{% for czesc in giga_test_parts %}
-{{ czesc }}
+<ul>
+{% for test_elem in tests_state %}
+    <li>
+        <a href="/czesc-{{ test_elem.test_id }}">Giga Test cz. {{ test_elem.test_id }}</a>
+    {% if giga_test_finished %}
+        <span class="correct">{{ test_elem.answered_good_q }}</span>
+        <span class="incorrect">{{ test_elem.answered_bad_q }}</span>
+    {% else %}
+        <span class="answered">{{ test_elem.answered_q }}</span>
+    {% endif %}
+    <span class="total">{{ test_elem.total_q }}</span>
+    </li>
 {% endfor %}
+</ul>
 
 <button {% if giga_test_finished %}disabled{% endif %}>Zamknij giga test</button>
 

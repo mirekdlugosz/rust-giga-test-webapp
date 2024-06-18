@@ -1,5 +1,5 @@
-use std::collections::BTreeMap;
-use serde::Deserialize;
+use std::collections::{BTreeMap, HashMap};
+use serde::{Deserialize, Serialize};
 
 fn ret_false() -> bool {
     false
@@ -7,6 +7,20 @@ fn ret_false() -> bool {
 
 #[derive(Clone, Debug, Deserialize, Default)]
 pub(crate) struct Test(BTreeMap<String, TestPart>);
+
+impl Test {
+    pub(crate) fn iter(&self) -> std::collections::btree_map::Iter<'_, String, TestPart> {
+        self.0.iter()
+    }
+
+    pub(crate) fn get_questions(&self) -> HashMap<String, &Question> {
+        self.0.values()
+            .flat_map(|part| part.sections.values())
+            .flat_map(|section| section.questions.iter())
+            .map(|question| (question.id.clone(), question))
+            .collect()
+    }
+}
 
 #[derive(Clone, Debug, Deserialize)]
 pub(crate) struct TestPart {
@@ -56,8 +70,6 @@ pub(crate) struct AnswerChoice {
     answer: String,
     correct: bool,
 }
-
-pub(crate) type TestPartsIterable = Vec<String>;
 
 impl Into<Test> for RawTest {
     fn into(self) -> Test {
@@ -116,6 +128,16 @@ impl Section {
     }
 }
 
-pub(crate) fn get_test_parts(test: &Test) -> TestPartsIterable {
-    test.0.keys().map(|s| s.to_owned()).collect()
+#[derive(Clone, Debug, Deserialize, Serialize)]
+pub(crate) struct UserResponse {
+    user_answer: char,
+    correct_answer: char,
+}
+
+pub(crate) struct TestStateMainPageElem {
+    pub(crate) test_id: String,
+    pub(crate) answered_q: usize,
+    pub(crate) total_q: usize,
+    pub(crate) answered_good_q: usize,
+    pub(crate) answered_bad_q: usize,
 }

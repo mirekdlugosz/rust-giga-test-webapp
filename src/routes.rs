@@ -1,6 +1,8 @@
 use crate::pages::{Index, Part};
 use crate::AppState;
 use crate::env;
+use crate::models::{TestStateMainPageElem, UserResponse};
+use std::collections::HashMap;
 use axum::routing::{get, Router};
 use axum::body::Body;
 use axum::extract::{Form, Json, Path, Query, State};
@@ -13,6 +15,8 @@ use tower::util::ServiceExt;
 
 const GT_RESP_KEY: &str = "giga_test_responses";
 const GT_FINISHED_KEY: &str = "giga_test_finished";
+
+type UserResponseData = HashMap<String, UserResponse>;
 
 pub struct MetadataRoutes {
     pub css: String,
@@ -36,12 +40,25 @@ async fn get_index(
     session: Session,
     request: Request<Body>,
 ) -> Result<impl IntoResponse, Index<'static>> {
-    let giga_test_parts = crate::models::get_test_parts(env::giga_test());
-
-    //let test_responses = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
 
-    Ok(Index::new(giga_test_parts, test_finished).into_response())
+    //let tests
+
+    let index_tests_state: Vec<TestStateMainPageElem> = env::giga_test().iter()
+        .map(|index_elem| {
+            // match na test_finished i policzenie good/bad, albo zera
+            TestStateMainPageElem {
+                test_id: index_elem.0.clone(),
+                answered_q: 0,
+                total_q: 0,
+                answered_good_q: 0,
+                answered_bad_q: 0,
+            }
+        })
+        .collect();
+
+    Ok(Index::new(&index_tests_state, test_finished).into_response())
 }
 
 pub fn routes() -> Router<AppState> {

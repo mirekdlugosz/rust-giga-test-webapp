@@ -1,5 +1,5 @@
 use crate::env;
-use crate::models::Test;
+use crate::models::{Test, TestStateMainPageElem};
 //use crate::routes::paste::{Format, QueryData};
 use askama::Template;
 use axum::http::StatusCode;
@@ -34,19 +34,19 @@ impl From<crate::Error> for ErrorResponse<'_> {
 pub struct Index<'a> {
     meta: &'a env::Metadata<'a>,
     base_path: &'static env::BasePath,
-    giga_test_parts: crate::models::TestPartsIterable,
+    tests_state: &'a [TestStateMainPageElem],
     giga_test_finished: bool,
 }
 
 impl<'a> Index<'a> {
     pub fn new(
-        giga_test_parts: crate::models::TestPartsIterable,
+        tests_state: &'a [TestStateMainPageElem],
         giga_test_finished: bool,
     ) -> Self {
         Self {
             meta: env::metadata(),
             base_path: env::base_path(),
-            giga_test_parts,
+            tests_state,
             giga_test_finished,
         }
     }
