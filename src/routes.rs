@@ -3,7 +3,7 @@ use crate::{AppState, Error};
 use crate::env;
 use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
     TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
-    TestStateMainPageTotals,
+    TestStateMainPageTotals, Section, AnswerChoice,
 };
 use std::collections::HashMap;
 use axum::routing::{get, post, Router};
@@ -96,50 +96,61 @@ fn get_part_state(
     test_part: &TestPart,
     test_responses: &UserResponseData,
 ) -> TestStatePartPage {
+    fn generate_answers(
+        question_id: &str,
+        answer_id: &char,
+        answer: &AnswerChoice,
+        user_answer: Option<char>,
+    ) -> (char, TestStatePartPageAnswerChoice) {
+        let user_selected = match user_answer {
+            None => false,
+            Some(r) => &r == answer_id,
+        };
+        let choice_class = match (user_selected, answer.correct) {
+            (true, true) => "poprawnie".to_string(),
+            (true, false) => "niepoprawnie".to_string(),
+            (false, true) => "poprawnie".to_string(),
+            (false, false) => "".to_string(),
+        };
+        let id = format!("{}_{}", question_id, answer_id).to_string();
+        let obj = TestStatePartPageAnswerChoice {
+            answer: answer.answer.clone(),
+            correct: answer.correct,
+            user_selected,
+            choice_class,
+            id,
+        };
+        (answer_id.clone(), obj)
+    }
+
+    let generate_questions = |question: &Question| {
+        let user_answer = match test_responses.get(&question.id) {
+            None => None,
+            Some(r) => Some(r.user_answer),
+        };
+        let new_answers = question.choices.iter()
+            .map(|(answer_id, answer)| generate_answers(&question.id, answer_id, answer, user_answer))
+            .collect();
+        TestStatePartPageQuestion {
+            id: question.id.clone(),
+            question: question.question.clone(),
+            choices: new_answers,
+            user_answer,
+        }
+    };
+
+    let generate_sections = |section: &Section| {
+        let new_questions = section.questions.iter()
+            .map(generate_questions)
+            .collect();
+        TestStatePartPageSection {
+            introduction: section.introduction.clone(),
+            questions: new_questions,
+        }
+    };
+
     let new_sections = test_part.sections.values()
-        .map(|section| {
-            let new_questions = section.questions.iter()
-                .map(|question| {
-                    let user_answer = match test_responses.get(&question.id) {
-                        None => None,
-                        Some(r) => Some(r.user_answer),
-                    };
-                    let new_answers = question.choices.iter()
-                        .map(|answer| {
-                            let user_selected = match user_answer {
-                                None => false,
-                                Some(r) => &r == answer.0,
-                            };
-                            let choice_class = match (user_selected, answer.1.correct) {
-                                (true, true) => "poprawnie".to_string(),
-                                (true, false) => "niepoprawnie".to_string(),
-                                (false, true) => "poprawnie".to_string(),
-                                (false, false) => "".to_string(),
-                            };
-                            let id = format!("{}_{}", question.id, answer.0).to_string();
-                            let obj = TestStatePartPageAnswerChoice {
-                                answer: answer.1.answer.clone(),
-                                correct: answer.1.correct,
-                                user_selected,
-                                choice_class,
-                                id,
-                            };
-                            (answer.0.clone(), obj)
-                        })
-                        .collect();
-                    TestStatePartPageQuestion {
-                        id: question.id.clone(),
-                        question: question.question.clone(),
-                        choices: new_answers,
-                        user_answer,
-                    }
-                })
-                .collect();
-            TestStatePartPageSection {
-                introduction: section.introduction.clone(),
-                questions: new_questions,
-            }
-        })
+        .map(generate_sections)
         .collect();
 
     TestStatePartPage {
@@ -214,7 +225,6 @@ async fn post_answers(
     let totals = get_index_totals(&index_tests_state);
     Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }
-
 
 async fn submit_test(
     session: Session,
