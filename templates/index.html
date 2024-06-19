@@ -16,6 +16,17 @@
 {% endfor %}
 </ul>
 
+
+{% if giga_test_finished %}
+<p>
+    Razem
+    <span class="correct">poprawnie: {{ totals.answered_good_q }}</span>
+    <span class="incorrect">niepoprawnie: {{ totals.answered_bad_q }}</span>
+    <span class="incorrect">brak odpowiedzi: {{ totals.no_answer }}</span>
+    <span class="total">razem: {{ totals.total_q }}</span>
+</p>
+{% endif %}
+
 <form action="/zakoncz" method="POST">
     <button {% if giga_test_finished %}disabled{% endif %}>Zamknij giga test</button>
 </form>

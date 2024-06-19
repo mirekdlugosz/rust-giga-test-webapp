@@ -160,6 +160,13 @@ pub(crate) struct TestStateMainPageElem {
     pub(crate) answered_bad_q: usize,
 }
 
+pub(crate) struct TestStateMainPageTotals {
+    pub(crate) answered_good_q: usize,
+    pub(crate) answered_bad_q: usize,
+    pub(crate) no_answer: usize,
+    pub(crate) total_q: usize,
+}
+
 #[derive(Clone, Debug, Default, Deserialize)]
 pub(crate) struct TestStatePartPage {
     pub(crate) introduction: String,

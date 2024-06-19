@@ -2,7 +2,9 @@ use crate::pages::{Index, Part};
 use crate::{AppState, Error};
 use crate::env;
 use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
-    TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice};
+    TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
+    TestStateMainPageTotals,
+};
 use std::collections::HashMap;
 use axum::routing::{get, post, Router};
 use axum::body::Body;
@@ -79,6 +81,16 @@ fn get_index_tests_state(
         .collect()
 }
 
+fn get_index_totals(index_tests_state: &[TestStateMainPageElem]) -> TestStateMainPageTotals {
+    let totals = index_tests_state.iter()
+        .fold((0, 0, 0), |init, x| (init.0 + x.answered_good_q, init.1 + x.answered_bad_q, init.2 + x.total_q));
+    TestStateMainPageTotals{
+        answered_good_q: totals.0,
+        answered_bad_q: totals.1,
+        no_answer: totals.2 - totals.0 - totals.1,
+        total_q: totals.2,
+    }
+}
 
 fn get_part_state(
     test_part: &TestPart,
@@ -143,7 +155,8 @@ async fn get_index(
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
     let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
-    Ok(Index::new(&index_tests_state, test_finished).into_response())
+    let totals = get_index_totals(&index_tests_state);
+    Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }
 
 async fn get_part(
@@ -198,7 +211,8 @@ async fn post_answers(
     // FIXME: duplikat
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
     let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
-    Ok(Index::new(&index_tests_state, test_finished).into_response())
+    let totals = get_index_totals(&index_tests_state);
+    Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }
 
 
