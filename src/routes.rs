@@ -3,7 +3,7 @@ use crate::{AppState, Error};
 use crate::env;
 use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
     TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
-    TestStateMainPageTotals, Section, AnswerChoice,
+    TestStateMainPageTotals, Section, AnswerChoice, TestPartTally,
 };
 use std::collections::HashMap;
 use axum::routing::{get, post, Router};
@@ -38,57 +38,55 @@ impl Default for MetadataRoutes {
     }
 }
 
+fn tally_test_part(
+    test_part: &TestPart,
+    test_responses: &UserResponseData
+) -> TestPartTally {
+    let part_questions = test_part.get_questions();
+    let total_q = part_questions.len();
+
+    let (answered_good_q, answered_bad_q) = part_questions.iter()
+        .filter_map(|question| test_responses.get(&question.id))
+        .map(|user_response| user_response.user_answer == user_response.correct_answer)
+        .fold((0, 0), |(t, f), is_correct| {
+            match is_correct {
+                true => (t + 1, f),
+                false => (t, f + 1),
+            }
+        });
+
+    let answered_q = answered_good_q + answered_bad_q;
+
+    TestPartTally::new(
+        answered_q,
+        total_q,
+        answered_good_q,
+        answered_bad_q,
+    )
+}
+
 fn get_index_tests_state(
     test: &Test,
-    questions_db: &QuestionsDB,
     test_responses: &UserResponseData,
     test_finished: bool
 ) -> Vec<TestStateMainPageElem> {
     test.iter()
-        .map(|part| {
-            let test_id = part.0.clone();
-            let part_questions = test.get_part_questions(&test_id);
-            let total_q = part_questions.iter().count();
-
-            let (mut answered_q, mut answered_good_q, mut answered_bad_q) = (0, 0, 0);
-
-            for part_question in part_questions {
-                let question_id = &part_question.id;
-                match test_responses.get(question_id) {
-                    None => continue,
-                    Some(user_response) => {
-                        if ! test_finished {
-                            answered_q += 1;
-                            continue;
-                        }
-                        if user_response.user_answer == user_response.correct_answer {
-                            answered_good_q += 1;
-                        } else {
-                            answered_bad_q += 1;
-                        }
-                    }
-                }
-            }
-
-            TestStateMainPageElem {
-                test_id,
-                answered_q,
-                total_q,
-                answered_good_q,
-                answered_bad_q,
-            }
+        .map(|(test_id, part)| {
+            let part_tally = tally_test_part(part, test_responses);
+            TestStateMainPageElem::from(test_id, part_tally)
         })
         .collect()
 }
 
 fn get_index_totals(index_tests_state: &[TestStateMainPageElem]) -> TestStateMainPageTotals {
-    let totals = index_tests_state.iter()
-        .fold((0, 0, 0), |init, x| (init.0 + x.answered_good_q, init.1 + x.answered_bad_q, init.2 + x.total_q));
+    let (answered_good_q, answered_bad_q, total_q) = index_tests_state.iter()
+        .fold((0, 0, 0), |(g, b, t), x| (g + x.answered_good_q, b + x.answered_bad_q, t + x.total_q));
+    let no_answer = total_q - answered_good_q - answered_bad_q;
     TestStateMainPageTotals{
-        answered_good_q: totals.0,
-        answered_bad_q: totals.1,
-        no_answer: totals.2 - totals.0 - totals.1,
-        total_q: totals.2,
+        answered_good_q,
+        answered_bad_q,
+        no_answer,
+        total_q,
     }
 }
 
@@ -165,7 +163,7 @@ async fn get_index(
 ) -> Result<impl IntoResponse, Index<'static>> {
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-    let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
+    let index_tests_state = get_index_tests_state(env::giga_test(), &test_responses, test_finished);
     let totals = get_index_totals(&index_tests_state);
     Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }
@@ -221,7 +219,7 @@ async fn post_answers(
 
     // FIXME: duplikat
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-    let index_tests_state = get_index_tests_state(env::giga_test(), env::giga_test_questions(), &test_responses, test_finished);
+    let index_tests_state = get_index_tests_state(env::giga_test(), &test_responses, test_finished);
     let totals = get_index_totals(&index_tests_state);
     Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }

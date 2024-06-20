@@ -29,20 +29,20 @@ impl Test {
             .collect()
     }
 
-    pub(crate) fn get_part_questions(&self, part_id: &str) -> Vec<&Question> {
-        match self.0.get(part_id) {
-            None => Default::default(),
-            Some(part) => part.sections.iter()
-                .flat_map(|section| section.1.questions.iter())
-                .collect(),
-        }
-    }
 }
 
 #[derive(Clone, Debug, Default, Deserialize)]
 pub(crate) struct TestPart {
     pub(crate) introduction: String,
     pub(crate) sections: BTreeMap<String, Section>,
+}
+
+impl TestPart {
+    pub(crate) fn get_questions(&self) -> Vec<&Question> {
+        self.sections.iter()
+            .flat_map(|(_, section)| section.questions.iter())
+            .collect()
+    }
 }
 
 #[derive(Clone, Debug, Deserialize)]
@@ -146,6 +146,29 @@ impl Section {
     }
 }
 
+pub(crate) struct TestPartTally {
+    answered_q: usize,
+    total_q: usize,
+    answered_good_q: usize,
+    answered_bad_q: usize,
+}
+
+impl TestPartTally {
+    pub(crate) fn new(
+        answered_q: usize,
+        total_q: usize,
+        answered_good_q: usize,
+        answered_bad_q: usize,
+    ) -> Self {
+        Self {
+            answered_q,
+            total_q,
+            answered_good_q,
+            answered_bad_q,
+        }
+    }
+}
+
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub(crate) struct UserResponse {
     pub(crate) user_answer: char,
@@ -158,6 +181,19 @@ pub(crate) struct TestStateMainPageElem {
     pub(crate) total_q: usize,
     pub(crate) answered_good_q: usize,
     pub(crate) answered_bad_q: usize,
+}
+
+impl TestStateMainPageElem {
+    pub(crate) fn from(test_id: &str, test_part_tally: TestPartTally) -> Self {
+        let TestPartTally { answered_q, total_q, answered_good_q, answered_bad_q } = test_part_tally;
+        Self {
+            test_id: test_id.to_string(),
+            answered_q,
+            total_q,
+            answered_good_q,
+            answered_bad_q,
+        }
+    }
 }
 
 pub(crate) struct TestStateMainPageTotals {
