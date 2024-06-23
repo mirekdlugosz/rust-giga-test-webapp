@@ -1,6 +1,11 @@
 [1]
 introduction = """
 Witamy w pierwszej z sześciu części Giga Testu, w którym główną nagrodą jest nic innego jak superkonsola PlayStation 2. Tak, tak, Drodzy Czytelnicy, jeden z Was wyjdzie stąd (wręczenie nagrody odbędzie się w Redakcji) z tą właśnie konsolą, ale zanim to nastąpi - będzie musiał wykazać się niebagatelnyą wiedzą w zakresie gier na PlayStation (i nie tylko), odpowiadając prawidłowo na największą liczę pytań spośród 350, jakie postawimy w 6 kolejnych wydaniach PE.
+
+Aby do samego końca nie było wiadomo, kto ma największą szansę na nagrodę, w międzyczasie nie będziemy przedstawiać żadnych rankingów. Takowy powstanie dopiero na końcu, po przebrnięciu przez wszystkie sześć tur. Wtedy dopiero każdy z Was przekona się jak wypadł na tle innych uczestników. Żeby wszystko było jasne - powtarzamy: ZDOBYWCA PIERWSZEGO MIEJSCA ZOSTANIE ZAPROSZONY DO REDAKCJI I OSOBIŚCIE ODBIERZE KONSOLĘ PLAYSTATION 2.
+
+Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(Red.)zioli. Podpowiadamy, że na każde z pytań jest tylko jedna prawidłowa odpowiedż, którą najlepiej zaznaczyć krzyżykiem, bądź zamalować odpowiedni kwadracik. Wiemy, iż z bólem serca przychodzi Wam wycinanie czegokolwiek z PE i mając to na uwadze umożliwiliśmy Wam "bezbolesne" pozbycie się tych czterech stron (w związku z tym nie przyjmujemy kserokopii). Niczego nie żałujcie: WYRYWAJCIE, WYPEŁNIAJCIE, WYSYŁAJCIE I WYGRYWAJCIE! Na odpowiedzi z pierwszej edycji (bieżącej) czekamy do 1 listopada (potem podkręcimy tempo), więc nie spieszcie się i jeśli czegoś nie wiecie albo nie jesteście pewni, połączcie siły, spytajcie znajomych (HIV: Nie pomagaj kumplowi, nie pozwól mu spisać swoich odpowiedzi, trzaśnij mu z
+flaczka - pomyśl, co się stanie, jeśli to ON wygra, a nie TY! Chyba sobie nie podarujesz, co?), poszukajcie w prasie, ponieważ jest o co walczyć a każdy błąd może być na wagę złota. Na kopercie prosimy o dopisek "GIGA TEST". Zaczynamy!
 """
 
 [1.sections]
@@ -1124,4 +1129,1338 @@ correct = false
 
 [[1.sections.9.questions.choices]]
 answer = "Niebieski"
+correct = false
+
+[2]
+introduction = """
+Przed Wami druga część GIGA TESTU, na wyniki czekamy do 15 listopada (podkręcamy tempo). Zanim zaczniecie wypełniać, polecamy zaznajomić się z kilkoma sugestiami:
+
+- 1 część GIGA TESTU należy przysyłać do 1 listopada, a nie jak ktoś nieopatrznie zrozumiał - wysyłać od razu wszystkie 6 części
+- nie stosujcie zalewających mazaków czy cienkopisów, które przebijają na drugą stronę
+- nagroda będzie do odebrania w Redakcji, więc trzeba być przygotowanym na przyjazd do KATOWIC, bo inaczej nie da rady (kto chciałby dostać mazaka zamiast PS2? ;)
+- zwycięzcą konkursu będzie osoba, która odpowie prawidłowo na NAJWIĘKSZĄ ILOŚĆ PYTAŃ, niekoniecznie na wszystkie
+- w przypadku, gdy znajdą się osoby o tej samej liczbie dobrych odpowiedzi, zorganizujemy "dogrywkę" (głupio by było przegrać PS2 na drodze losowania, no nie?)
+- kto odpowie na wszystkie 350 pytań (prawdopodobnie tyle ich będzie), będzie miał dodatkowo szansę na współpracę z naszym magazynem (bo to oznacza, że ma mały komputer pod kopułą)
+- pamiętajcie o dopisku na kopercie "GIGA TEST"
+"""
+
+[2.sections]
+
+[2.sections.1]
+introduction = """
+W poprzedniej edycji zabrakło moich pytań o RPG (oczywiście), bo się nie zmieściły. Teraz pora na nadrobienie zaległości. [Star]
+"""
+
+[[2.sections.1.questions]]
+question = "Jaką anomalię leczy w serii FINAL FANTASY przedmiot Soft?"
+
+[[2.sections.1.questions.choices]]
+answer = "Silence"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Petrification"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Paralysis"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Confuse"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Od czego zależy siła ostatecznej broni Barreta w FFVII?"
+
+[[2.sections.1.questions.choices]]
+answer = "Od ilości HP"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Od ilości MP"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Od materii w slotach"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Od ilości zabitych wrogów"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Jak nazywał się statek Baala w grze GRANDIA?"
+
+[[2.sections.1.questions.choices]]
+answer = "Ragnarock"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Pandora"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Grandeur"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Vermilion"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Którą z technik ataku posługiwał się Ernest ze STAR OCEAN: TSS?"
+
+[[2.sections.1.questions.choices]]
+answer = "Cloud Dust"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Crescend Wave"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Spread Ray"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Ripper Blast"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Podczas zakończenia którego z państw w BRIGANDINE może zostać zabity Bulnoil"
+
+[[2.sections.1.questions.choices]]
+answer = "Iscalio"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Norgard"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Caerfeon"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Esgares"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Jak nazywał się ostatni czar Runu, który posiadał Jowy z SUIKODEN 2?"
+
+[[2.sections.1.questions.choices]]
+answer = "Hungry Friend"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Final Judgement"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Piercing Death"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Black Shadow"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Do kogo należy ten mech z XENOGEARS? [img]"
+
+[[2.sections.1.questions.choices]]
+answer = "Feia"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Citana"
+correct = true
+
+[[2.sections.1.questions.choices]]
+answer = "Maril"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Billy'ego"
+correct = false
+
+[[2.sections.1.questions]]
+question = "Kto śpiewał słynną piosenkę miłosną z FFVIII?"
+
+[[2.sections.1.questions.choices]]
+answer = "Utada Hikaru"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Megumi Hayashibara"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Ayumi Hamasaki"
+correct = false
+
+[[2.sections.1.questions.choices]]
+answer = "Faye Wong"
+correct = true
+
+[2.sections.2]
+introduction = """
+Teraz kolej na mnie, bo moje pytania się ostatnio zawieruszyły (jak ja sam zresztą :) [Mysza]
+"""
+
+[[2.sections.2.questions]]
+question = "Bohater gry MGS, Solid Snake, pali:"
+
+[[2.sections.2.questions.choices]]
+answer = "drewnianą fajkę"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "pierdy"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "skręta"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "papierosy"
+correct = true
+
+[[2.sections.2.questions]]
+question = "W SILENT HILL, w psiej budzie znajdowałeś:"
+
+[[2.sections.2.questions.choices]]
+answer = "dwa wściekłe psy-zombie"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "klucz do drzwi"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "latarkę"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = """zakrwawione "ringo""""
+correct = false
+
+[[2.sections.2.questions]]
+question = "Twórcy OMEGA BOOST nie byli nowicjuszami. Wypuścili na PSX'a wcześniej inny tytuł. Był to:"
+
+[[2.sections.2.questions.choices]]
+answer = "ROGUE TRIP"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "EINHANDER"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "MOTORHEAD"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "GRAN TURISMO"
+correct = true
+
+[[2.sections.2.questions]]
+question = "Do PlayStation nie można podłączyć:"
+
+[[2.sections.2.questions.choices]]
+answer = "maty"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "trąbki"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "batuty"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "perkusji"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Wcielasz się w więźnia podawanego neurotycznym eksperymentom, co jakiś czas musisz łykać różnokolorowe pigułki, robić sobie zastrzyki, aby nie zwariować... O jakiej grze jest mowa?"
+
+[[2.sections.2.questions.choices]]
+answer = "CYBERNETIC EMPIRE"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "ECHO NIGHT"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "GALERIANS"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "NIGHTMARE CREATURES 2"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Który ze sportowców nie jest w ogóle związany z PlayStation?"
+
+[[2.sections.2.questions.choices]]
+answer = "Tony Hawk"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Mat Hoffman"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Jeremy Mc Grath"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Leon Gray"
+correct = true
+
+[[2.sections.2.questions]]
+question = "Bohater gry KLONOA latał dzięki:"
+
+[[2.sections.2.questions.choices]]
+answer = "czapeczce ze śmigłem"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = """wielkim uszom ("klaskał uszami”) """
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "magicznym skrzydłom"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "to bujda! Bohater tej gry kopał tunele, a nie latał!!!"
+correct = false
+
+[2.sections.1]
+introduction = """
+Moje pytania nie są trudne, bo wymyślanie takich jest dość żmudne. Każdy Czytelnik poradzi sobie, wystarczy tylko pogrzebać w głowie. Trochę o sprzęcie, trochę o grach - bułeczka z masłem, żaden to strach. [Norby]
+"""
+
+[[2.sections.2.questions]]
+question = "Który model PlayStation nie posiada portu PARALLEL?"
+
+[[2.sections.2.questions.choices]]
+answer = "SCPH-7002"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "SCPH-7502"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "SCPH-9002"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "SCPH-5502"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Co to jest NET YAROZE?"
+
+[[2.sections.2.questions.choices]]
+answer = "Oficjalny serwis internetowy firmy SONY poświęcony konsoli PlayStation"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Przystawka do PlayStation pozwalająca na dostęp do Internetu za pomocą konsoli"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Specjalny model konsoli pozwalający na podłączenie jej z komputerem i tworzenie prostych gier i programów na PlayStation"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "Emulator konsoli pozwalający na wczytywanie gier z PlayStation na komputerze domowym"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Który z podanych kontrolerów nie został nigdy wyprodukowany przez firmę NAMCO?"
+
+[[2.sections.2.questions.choices]]
+answer = "JOGCON"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "NEGCON"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "REGCON"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "GUNCON"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Jaka była pierwsza gra obsługująca pistolet na PlayStation?"
+
+[[2.sections.2.questions.choices]]
+answer = "TIME CRISIS"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "HORNED OWL"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "DIE HARD TRILOGY"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "AREA 51"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Kro tworzy duet komandosów w grze METAL SLUG?"
+
+[[2.sections.2.questions.choices]]
+answer = "Heavy & Groovy"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Snake & Allen"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Marco & Tarma"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "Levy & Borys"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Pod jaką nazwą została wydana w Europie japońska gra INTELLIGENT QUBE?"
+
+[[2.sections.2.questions.choices]]
+answer = "BLAST CHAMBER"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "DEVIL DICE"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "KURUSHI"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "Q-BERT"
+correct = false
+
+[[2.sections.2.questions]]
+question = "Jaka firma software'owa została wykupiona przez SONY w 1993 roku?"
+
+[[2.sections.2.questions.choices]]
+answer = "ATARI"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "COMMODORE"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "PSYGNOSIS"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "NAMCO"
+correct = false
+
+[[2.sections.2.questions]]
+question = "W którym europejskim kraju oficjalna premiera PlayStation odbyła się tydzień wcześniej, niż w pozostałych?"
+
+[[2.sections.2.questions.choices]]
+answer = "Francja"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Holandia"
+correct = false
+
+[[2.sections.2.questions.choices]]
+answer = "Niemcy"
+correct = true
+
+[[2.sections.2.questions.choices]]
+answer = "Wielka Brytania"
+correct = false
+
+[2.sections.3]
+introduction = """
+Najtrudniejsze pytania odłożyłem sobie na ostatnią część GIGA TEST'u. Na razie same prościzny. [Mr.Ściera]
+"""
+
+[[2.sections.3.questions]]
+question = "Która z tych gier na PSX ukazała się najwcześniej?"
+
+[[2.sections.3.questions.choices]]
+answer = "BLACK DAWN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "DIE HARD TRILOGY"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "CYBER SPEED"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "CRASH BANDICOOT"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Która z tych gier nie obsługuje Multi-Tapa na PSX?"
+
+[[2.sections.3.questions.choices]]
+answer = "CIRCUIT BREAKER"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "DEVIL DICE"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "RALLY CROSS"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "VIGILANTE 8"
+correct = true
+
+[[2.sections.3.questions]]
+question = "Jakiego zadania nie było w DIE HARD TRILOGY?"
+
+[[2.sections.3.questions.choices]]
+answer = "strzelanina na lotnisku"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "latanie śmigłowcem"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "jazda samochodem po mieście"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "bieganie po wieżowcu"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Z jakiej gry pochodzi to zdjęcie? [img]"
+
+[[2.sections.3.questions.choices]]
+answer = "MECHWARRIOR 2"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "OMEGA BOOST"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "KRAZY IVAN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "ARMORED CORE"
+correct = false
+
+[[2.sections.3.questions]]
+question = """W jakiej grze traktującej o skateboardingu zaliczamy "technical lines"?"""
+
+[[2.sections.3.questions.choices]]
+answer = "TONY HAWK'S SKATEBOARDING"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "THRASHER: SKATE & DESTROY"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "GRIND SESSION"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "STREET SK8TER 2"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Która z tych firm nie ma w swoim dorobku tenisa ziemnego na PSX?"
+
+[[2.sections.3.questions.choices]]
+answer = "EA"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "UBI SOFT"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "GREMLIN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "NAMCO"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Która z tych gier nie została wydana przez PSYGNOSIS?"
+
+[[2.sections.3.questions.choices]]
+answer = "Alien Trilogy"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "Overboard"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "Krazy Ivan"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "G-Police"
+correct = false
+
+[[2.sections.3.questions]]
+question = "W SUPER PUZZLE FIGHTER 2 TURBO występują postacie z:"
+
+[[2.sections.3.questions.choices]]
+answer = "STREET FIGHTER i DARKSTALKERS"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "STREET FIGHTER i X-MEN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "STREET FIGHTER, DARKSTALKERS i X-MEN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "tylko ze STREET FIGHTER"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Jaki jest tytuł tej gry? [img]"
+
+[[2.sections.3.questions.choices]]
+answer = "METAL SLUG"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "RAPID RELOAD"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "STRIDER 2"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "CASTLEVANIA"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Która gra tu nie pasuje?"
+
+[[2.sections.3.questions.choices]]
+answer = "TENKA"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "ONE"
+correct = true
+
+[[2.sections.3.questions.choices]]
+answer = "DEFCON 5"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "EPIDEMIC"
+correct = false
+
+[[2.sections.3.questions]]
+question = "Ile gier z serii TEST DRIVE pojawiło się do tej pory na PSX?"
+
+[[2.sections.3.questions.choices]]
+answer = "3"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "4"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "5"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "6"
+correct = true
+
+[[2.sections.3.questions]]
+question = "Która z tych gier powstała z myślą o PlayStation i nie jest konwersją z innej platformy?"
+
+[[2.sections.3.questions.choices]]
+answer = "MAGIC CARPET"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "RAYMAN"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "MYST"
+correct = false
+
+[[2.sections.3.questions.choices]]
+answer = "DISRUPTOR"
+correct = true
+
+[2.sections.4]
+introduction = """
+Pytania banalne, bułka z masłem, łatwizna, "kajne problime"...:). [Kujot]
+"""
+
+[[2.sections.4.questions]]
+question = "Jak dopełnił żywota wilkołak ze SKULLMONKEYS (fotka poniżej): [img]"
+
+[[2.sections.4.questions.choices]]
+answer = "został zeżarty przez zieloną łasicę"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "został przecięty na pół nożyczkami"
+correct = true
+
+[[2.sections.4.questions.choices]]
+answer = "udławił się widelcem"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "gość wciąż żyje (i ma się dobrze :)"
+correct = false
+
+[[2.sections.4.questions]]
+question = """Ile trafień zadaje "Tiger Blow" Sagata w STREET FIGHTER ALPHA3, wykonany w AISM, z High Punchem?"""
+
+[[2.sections.4.questions.choices]]
+answer = "4"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "5"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "6"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "7"
+correct = true
+
+[[2.sections.4.questions]]
+question = "Ile CZĘŚCI gry R-TYPE pojawiło się na PlayStation?"
+
+[[2.sections.4.questions.choices]]
+answer = "1"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "2"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "3"
+correct = true
+
+[[2.sections.4.questions.choices]]
+answer = "4"
+correct = false
+
+[[2.sections.4.questions]]
+question = "Która z kapel nie znalazła się na soundtracku w grze TONY HAWK'S SKATEBOARDING?"
+
+[[2.sections.4.questions.choices]]
+answer = "Dead Kennedy's"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "Primus"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "Minor Threat"
+correct = true
+
+[[2.sections.4.questions.choices]]
+answer = "Suicidal Tendencies"
+correct = false
+
+[[2.sections.4.questions]]
+question = "Czym steruje się w grze IN THE HUNT?"
+
+[[2.sections.4.questions.choices]]
+answer = "statkiem kosmicznym"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "komandosem"
+correct = false
+
+[[2.sections.4.questions.choices]]
+answer = "łodzią podwodną"
+correct = true
+
+[[2.sections.4.questions.choices]]
+answer = "kroczącym mechem"
+correct = false
+
+[2.sections.5]
+introduction = """
+Gamera zadaje pytania. Nie będzie łatwo, oj nie. Zaczynamy.
+"""
+
+[[2.sections.5.questions]]
+question = "Po skończonej misji w kosmosie i zabiciu bossa w DUKE NUKEM 3D pojawia się filmik, w którym Duke:"
+
+[[2.sections.5.questions.choices]]
+answer = "dobija bossa"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "odlatuje na Ziemię"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "kopie w głowę bossa, przez co ta wylatuje w kosmos"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = """urywa bossowi łeb i robi "kaka" do jego karku"""
+correct = true
+
+[[2.sections.5.questions]]
+question = "W trzeciej części przygód Lary, po zaliczeniu odpowiedniej ilości sekretów odkrywa się dodatkowy poziom. W której części świata mamy przyjemność go zaliczyć?"
+
+[[2.sections.5.questions.choices]]
+answer = "w Londynie"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "w Egipcie"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "w Newadzie"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "w Wenecji"
+correct = false
+
+[[2.sections.5.questions]]
+question = "W MEDAL OF HONOR, podczas wczytywania gry przed każdą misją, pojawia się plakat stojącego żołnierza z napisem nad jego głową. Jaki to tekst?"
+
+[[2.sections.5.questions.choices]]
+answer = "Mission!"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "On to Victory!"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "Loading!"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "nic nie jest napisane"
+correct = false
+
+[[2.sections.5.questions]]
+question = """Demko początkowe w ALIEN TRILOGY pasuje do scenariusza jednej z części "Obcego". O którą część chodzi?"""
+
+[[2.sections.5.questions.choices]]
+answer = "pierwszą"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "drugą"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "z trzecią"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "z czwartą"
+correct = false
+
+[[2.sections.5.questions]]
+question = """Jak nazywała się japońska, pierwsza część znanego "symulatora" firmy NAMCO?"""
+
+[[2.sections.5.questions.choices]]
+answer = "Air Combat"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "Ace Combat"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "Ace Combat Electrosphere"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "Agile Warrior"
+correct = false
+
+[[2.sections.5.questions]]
+question = """Którego miasta nie mamy okazji "zwiedzać" w grze DRIVER?"""
+
+[[2.sections.5.questions.choices]]
+answer = "Miami"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "New York"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "San Francisco"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "Chicago"
+correct = true
+
+[[2.sections.5.questions]]
+question = "Który kierowca zasiadł w bolidzie Jordana w F1 '97? [nie przesadzasz? Mr.Ś]"
+
+[[2.sections.5.questions.choices]]
+answer = "J. Alesi"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "D. Hill"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "R. Schumacher"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "H. H. Frentzen"
+correct = false
+
+[[2.sections.5.questions]]
+question = "Jaką sprawność dostaje się po zabiciu pierwszego bossa w grze LEGACY OF KAIN: SOUL REAVER?"
+
+[[2.sections.5.questions.choices]]
+answer = "wspinanie po ścianach"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "latanie"
+correct = false
+
+[[2.sections.5.questions.choices]]
+answer = "przechodzenie przez kraty"
+correct = true
+
+[[2.sections.5.questions.choices]]
+answer = "pływanie"
+correct = false
+
+[2.sections.6]
+introduction = """
+Pierdzący Oszołom się nie wysilił, bo mu się nie chciało. [HIV]
+"""
+
+[[2.sections.6.questions]]
+question = """"4 ramki" (NTSC) to:"""
+
+[[2.sections.6.questions.choices]]
+answer = "240 FPS-ów"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "60 FPS-ów"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "15 FPS-ów"
+correct = true
+
+[[2.sections.6.questions.choices]]
+answer = "30 FPS-ów"
+correct = false
+
+[[2.sections.6.questions]]
+question = """Mokujin w wersji "złotej" ma ksywę: """
+
+[[2.sections.6.questions.choices]]
+answer = "Mokujin 2"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "Tetsujin"
+correct = true
+
+[[2.sections.6.questions.choices]]
+answer = "Goldie"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "Goldwood"
+correct = false
+
+[[2.sections.6.questions]]
+question = "W której grze musisz łapać małpy?"
+
+[[2.sections.6.questions.choices]]
+answer = "40 WINKS"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "APE ESCAPE"
+correct = true
+
+[[2.sections.6.questions.choices]]
+answer = "MONKEY ISLAND"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "SKULLMONKEYS"
+correct = false
+
+[[2.sections.6.questions]]
+question = "Wydawcą tej gry jest firma (screen, poniżej): [img]"
+
+[[2.sections.6.questions.choices]]
+answer = "GT INTERACTIVE"
+correct = true
+
+[[2.sections.6.questions.choices]]
+answer = "NAMCO"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "PSYGNOSIS"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "GREMLIN"
+correct = false
+
+[[2.sections.6.questions]]
+question = "Ta gra (poniżej) znalazła się na składance: [img]"
+
+[[2.sections.6.questions.choices]]
+answer = "CAPCOM 1"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "CAPCOM 2"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "CAPCOM 3"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "CAPCOM 4"
+correct = true
+
+[[2.sections.6.questions]]
+question = "Podaj tytuł tej gry: [img]"
+
+[[2.sections.6.questions.choices]]
+answer = "TRASH IT"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "DODGEM ARENA"
+correct = true
+
+[[2.sections.6.questions.choices]]
+answer = "HYBRID"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "SPIDER"
+correct = false
+
+[[2.sections.6.questions]]
+question = """"Prędzej świnie będą latać...". Ten cytat po raz pierwszy padł w:"""
+
+[[2.sections.6.questions.choices]]
+answer = "recenzji TOCA"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "recenzji TOCA 2"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "recenzji TOCA: WTC"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "zapowiedzi TOCA 2"
+correct = true
+
+[[2.sections.6.questions]]
+question = "Nikki to bohater gry:"
+canceled = true
+
+[[2.sections.6.questions.choices]]
+answer = "PANDEMONIUM"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "PANDEMONIUM 2"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "PITFALL 3D"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "żadnej z nich"
+correct = false
+
+[[2.sections.6.questions]]
+question = "Która z tych gier nie jest wyświetlana w podwyższonej/wysokiej rozdzielczości?"
+
+[[2.sections.6.questions.choices]]
+answer = "TEKKEN 3"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "RAPID RACER"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "TOBAL 2"
+correct = false
+
+[[2.sections.6.questions.choices]]
+answer = "RIVAL SCHOOLS"
+correct = true
+
+[2.sections.7]
+introduction = """
+Macie tu kolejne pytania z serii "Dziwny jest ten świat" :) [Loki]
+"""
+
+[[2.sections.7.questions]]
+question = "W której z poniższych piłek nie jest możliwe sfaulowanie bramkarza:"
+
+[[2.sections.7.questions.choices]]
+answer = "FIFA '98: WC"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "ADIDAS POWER SOCCER"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "ISS PRO '98"
+correct = true
+
+[[2.sections.7.questions.choices]]
+answer = "FIFA '99"
+correct = false
+
+[[2.sections.7.questions]]
+question = """Które z poniżych "krzaczków" są logiem Tekkena (zagadka wzrokowa):"""
+
+[[2.sections.7.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "[img]"
+correct = true
+
+[[2.sections.7.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[2.sections.7.questions]]
+question = "Która z poniższych gier nigdy nie ukazała się na PSX:"
+
+[[2.sections.7.questions.choices]]
+answer = "THEME HOSPITAL"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "RAILROAD TYCOON"
+correct = true
+
+[[2.sections.7.questions.choices]]
+answer = "THEME PARK WORLD"
+correct = false
+
+[[2.sections.7.questions.choices]]
+answer = "TRANSPORT TYCOON"
+correct = false
+
+[2.sections.8]
+introduction = """
+Dlaczego ja jestem na samym końcu? Ściera, nie mścij się na mnie... Tym razem pytania dotyczące głównie RPG'ów, choć trzeba też będzie wykazać się nieco szerszą wiedzą związaną z tematyką gier - w końcu bycie graczem to nie tylko siedzenie przed telewizorem/monitorem. No to jedziemy! [Kali]
+"""
+
+[[2.sections.8.questions]]
+question = "Często gry powstają na podstawie książek, czasami nawet wielcy pisarze uczestniczą w ich produkcji. Który z pisarzy nie jest jednak związany z żadną grą komputerową?"
+
+[[2.sections.8.questions.choices]]
+answer = "Hovard Philip Lovecraft"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Gene Wolfe"
+correct = true
+
+[[2.sections.8.questions.choices]]
+answer = "Roger Zelazny"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Terry Pratchett"
+correct = false
+
+[[2.sections.8.questions]]
+question = """Często gwiazdy muzyki tworzą ścieżki dźwiękowe do gier, czasem w grze można usłyszeć różnych znanych artystów - to wszystko ma podnosić atrakcyjność tytułu. Którą więc grę promował utworek "Wankers on Duty" Da Hool'a?"""
+
+[[2.sections.8.questions.choices]]
+answer = "GRAND THEFT AUTO 2"
+correct = true
+
+[[2.sections.8.questions.choices]]
+answer = "WIPEOUT"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "URBAN CHAOS"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "ROLLCAGE"
+correct = false
+
+[[2.sections.8.questions]]
+question = "Która z gier miała wielkie problemy z opuszczeniem Japonii z powodu fabuły, która miała wiele powiązań z Biblią?"
+
+[[2.sections.8.questions.choices]]
+answer = "STAR OCEAN 2"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "LEGACY OF KAIN"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "XENOGEARS"
+correct = true
+
+[[2.sections.8.questions.choices]]
+answer = "LEGEND OF LEGAIA"
+correct = false
+
+[[2.sections.8.questions]]
+question = "Jaką nazwę w USA nosi europejski WIPEOUT 2097?"
+
+[[2.sections.8.questions.choices]]
+answer = "WIPEOUT 2"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "WIPEOUT 2097"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "WIPEOUT STRIKES BACK"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "WIPEOUT XL"
+correct = true
+
+[[2.sections.8.questions]]
+question = "W serii FINAL FANTASY jest tylko kilka łączników, elementów wspólnych dla kolejnych części. Jednym z nich jest pewna postać, którą można spotkać w prawie każdej odsłonie - któż to jest?"
+
+[[2.sections.8.questions.choices]]
+answer = "Cid"
+correct = true
+
+[[2.sections.8.questions.choices]]
+answer = "Kefka"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Irvine"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Vincent"
+correct = false
+
+[[2.sections.8.questions]]
+question = "Poniżej są podane imiona głównych bohaterów RPG'ów. Którego z nich nie można było spotkać w żadnej tego gatunku grze na PlayStation?"
+
+[[2.sections.8.questions.choices]]
+answer = "Ryu"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Justin"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Fei"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "Link"
+correct = true
+
+[[2.sections.8.questions]]
+question = """Co dawało zebranie wszystkich siedmiu kryształów "Prism" w VANDAL HEARTS II:"""
+
+[[2.sections.8.questions.choices]]
+answer = "otwierało drzwi do grobowca kultowej postaci - St. Nirvath"
+correct = true
+
+[[2.sections.8.questions.choices]]
+answer = "skupiało w głównym bohaterze siły 7 żywiołów"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "możliwość połączenia ich i wykucia miecza Vandal Heart"
+correct = false
+
+[[2.sections.8.questions.choices]]
+answer = "dostęp do nowej lokalizacji - siedmiopiętrowej wieży Rainbow"
 correct = false
