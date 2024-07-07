@@ -4,8 +4,7 @@ Witamy w pierwszej z sześciu części Giga Testu, w którym główną nagrodą 
 
 Aby do samego końca nie było wiadomo, kto ma największą szansę na nagrodę, w międzyczasie nie będziemy przedstawiać żadnych rankingów. Takowy powstanie dopiero na końcu, po przebrnięciu przez wszystkie sześć tur. Wtedy dopiero każdy z Was przekona się jak wypadł na tle innych uczestników. Żeby wszystko było jasne - powtarzamy: ZDOBYWCA PIERWSZEGO MIEJSCA ZOSTANIE ZAPROSZONY DO REDAKCJI I OSOBIŚCIE ODBIERZE KONSOLĘ PLAYSTATION 2.
 
-Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(Red.)zioli. Podpowiadamy, że na każde z pytań jest tylko jedna prawidłowa odpowiedż, którą najlepiej zaznaczyć krzyżykiem, bądź zamalować odpowiedni kwadracik. Wiemy, iż z bólem serca przychodzi Wam wycinanie czegokolwiek z PE i mając to na uwadze umożliwiliśmy Wam "bezbolesne" pozbycie się tych czterech stron (w związku z tym nie przyjmujemy kserokopii). Niczego nie żałujcie: WYRYWAJCIE, WYPEŁNIAJCIE, WYSYŁAJCIE I WYGRYWAJCIE! Na odpowiedzi z pierwszej edycji (bieżącej) czekamy do 1 listopada (potem podkręcimy tempo), więc nie spieszcie się i jeśli czegoś nie wiecie albo nie jesteście pewni, połączcie siły, spytajcie znajomych (HIV: Nie pomagaj kumplowi, nie pozwól mu spisać swoich odpowiedzi, trzaśnij mu z
-flaczka - pomyśl, co się stanie, jeśli to ON wygra, a nie TY! Chyba sobie nie podarujesz, co?), poszukajcie w prasie, ponieważ jest o co walczyć a każdy błąd może być na wagę złota. Na kopercie prosimy o dopisek "GIGA TEST". Zaczynamy!
+Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(Red.)zioli. Podpowiadamy, że na każde z pytań jest tylko jedna prawidłowa odpowiedż, którą najlepiej zaznaczyć krzyżykiem, bądź zamalować odpowiedni kwadracik. Wiemy, iż z bólem serca przychodzi Wam wycinanie czegokolwiek z PE i mając to na uwadze umożliwiliśmy Wam "bezbolesne" pozbycie się tych czterech stron (w związku z tym nie przyjmujemy kserokopii). Niczego nie żałujcie: WYRYWAJCIE, WYPEŁNIAJCIE, WYSYŁAJCIE I WYGRYWAJCIE! Na odpowiedzi z pierwszej edycji (bieżącej) czekamy do 1 listopada (potem podkręcimy tempo), więc nie spieszcie się i jeśli czegoś nie wiecie albo nie jesteście pewni, połączcie siły, spytajcie znajomych (HIV: Nie pomagaj kumplowi, nie pozwól mu spisać swoich odpowiedzi, trzaśnij mu z flaczka - pomyśl, co się stanie, jeśli to ON wygra, a nie TY! Chyba sobie nie podarujesz, co?), poszukajcie w prasie, ponieważ jest o co walczyć a każdy błąd może być na wagę złota. Na kopercie prosimy o dopisek "GIGA TEST". Zaczynamy!
 """
 
 [1.sections]
@@ -874,7 +873,7 @@ answer = "STREET FIGHTER: THE MOVIE"
 correct = true
 
 [[1.sections.6.questions.choices]]
-answer = "STREET FIGHTER 2 TURBO HYPER FIGHTNING"
+answer = "STREET FIGHTER 2 TURBO HYPER FIGHTING"
 correct = false
 
 [[1.sections.6.questions]]
@@ -2463,4 +2462,3431 @@ correct = false
 
 [[2.sections.8.questions.choices]]
 answer = "dostęp do nowej lokalizacji - siedmiopiętrowej wieży Rainbow"
+correct = false
+
+[3]
+introduction = """
+Trzecie podejście do GT, jak widać, odbiega od przyjętych standardów - przygotowaliśmy go głównie z myślą o wzrokowcach. Przed Wami 30 pytań związanych z rozpoznaniem gry na obrazku. Na wyniki tej edycji GT czekamy do 1 grudnia.
+
+Zanim zaczniecie wypełniać odpowiednie pola, polecamy zaznajomić się z kilkoma wytycznymi:
+- nie stosujcie zalewających mazaków czy cienkopisów, które przebijają na drugą stronę
+- nagroda będzie do odebrania w Redakcji, więc trzeba być przygotowanym na przyjazd do KATOWIC, bo inaczej nie da rady (kto chciałby dostać mazaka zamiast PS2;)?
+- zwycięzcą konkursu będzie osoba, która odpowie prawidłowo na NAJWIĘKSZĄ ILOŚĆ PYTAŃ, niekoniecznie na wszystkie
+- w przypadku, gdy znajdą się osoby o tej samej liczbie dobrych odpowiedzi, zorganizujemy "dogrywkę" (głupio by było przegrać PS2 na drodze losowania, no nie?)
+- kto odpowie na wszystkie 350 pytań (prawdopodobnie tyle ich będzie), będzie miał dodatkowo szansę na współpracę z naszym magazynem (bo to oznacza, że ma mały komputer pod kopułą)
+- pamiętajcie o dopisku na kopercie "GIGA TEST"
+"""
+
+[3.sections]
+
+[3.sections.1]
+introduction = """
+Rozpoznaj grę na ilustracji
+"""
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "APOCALYPSE"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "ONE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MEDIEVIL"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WILD 9"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "AUTO DESTRUCT"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TWISTED METAL 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "CRIME KILLERS"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "DRIVE & SHOOTING"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "BLACK DOWN"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "THUNDERHAWK 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "GUNSHIP"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "HARRIER ATTACK"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "LEGEND OF LEGAIA"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "NINJA"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SOUL REAVER"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WAR GODS"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "WACKY RACES"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MUPPET RACEMANIA"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "ANIMANIACS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MOTOR TOON GP"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "AMERZONE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "CHRONO CROSS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "FINAL FANTASY 7"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "PERFECT WEAPON"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "RALLY MASTERS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "COLIN MCRAE 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RALLY CROSS 2"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "RALLY THE EUROPE"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "QUAKE 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "CRASH 3: WARPED"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DIE HARD TRILOGY 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SHADOW MASTER"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "LE MANS 24 HOURS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SPORTS CAR GT"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "GRAN TURISMO 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "NFS: PORSHE UNLEASHED"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "STREET SK8TER 2"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "GRIND SESSION"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TONNY HAWK'S SKATEBOARDING"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MTV SKATEBOARDING"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "NINJA"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SAMURAI SHODOWN"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "T'AI FU"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "GUILY GEAR"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "TINY TANK"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "TANK RACER"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BATTLE TANX"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TANK BEER"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "WARGAMES"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "FRONT MISSION 3"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DEFCON 5"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SOVIET STRIKE"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "SAND BANDITS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SW: PHANTOM MENACE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "APOCALYPSE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WILD 9"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "XENOGEARS"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "MECHWARRIOR 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MICRO MANIACS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "POWERBOAT RACING"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "FADE TO BLACK"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MGS VR"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "ASSAULT RINGS"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "TO NIE JEST GRA NA PSX"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "V-RALLY 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DESTRUCTION DERBY 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DEMOLITION DERBY"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DESTRUCTION DERBY RAW"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "ECHO NIGHT"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "RESIDENT EVIL"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TECMO DECEPTION"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "NIGHTMARE CREATURES"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "GEKIDO"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "CRISIS BEAT"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "FIGHTING FORCE"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "WWF WARZONE"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "OMEGA BOOST"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "MACROSS VFX"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "COLONY WARS 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "JUPITER STRIKE"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "RC DE GO!"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RE-VOLT"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BUGGY"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "RADIO CONTROL RACING"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "GUARDIAN'S CRUSADE"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "ALUNDRA 2"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BREATH OF FIRE 3"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "AZURE DREAMS"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "SYDNEY 2000"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WILD RAPIDS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "KAYAKOS MADNESS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RUSH DOWN"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "PONG"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "GALACTIC EMPIRE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "MISSILE COMMAND"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SPACE INVADERS"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "MOHO"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "KKN&D"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RELOADED"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WARZONE 2100"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "MAD DOGS ON THE TRACK"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "CHOCOBO RACING"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TOCA TOURING CARS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "SPEED FREAKS"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "WIPEOUT 2097"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WIP3OUT"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "KILLER LOOP"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "WIPEOUT"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "PARAPPA THE RAPPER"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BISHI BASHI SPECIAL"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "UM JAMMER LAMMY"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "TV DJ (PS2)"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "THIS IS FOOTBALL"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "FIFA 2000"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "LIBERO GRANDE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "ISS PRO EVOLUTION"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "HEART OF DARKNESS"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TOMBI!"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "TOMBI! 2"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "KLONOA"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "COUNTDOWN VAMPIRES"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RESIDENT EVIL"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "RESIDENT EVIL 3"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "DINO CRISIS"
+correct = true
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "AIR COMBAT"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "HARRIER ATTACK"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "ACE COMBAT 3: ELECTROSPHERE"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "AGILE WARRIOR"
+correct = false
+
+[[3.sections.1.questions]]
+question = "[img]"
+
+[[3.sections.1.questions.choices]]
+answer = "BLAZE & BLADE"
+correct = true
+
+[[3.sections.1.questions.choices]]
+answer = "BLAZDE & BLAZE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BLADE & BRONZE"
+correct = false
+
+[[3.sections.1.questions.choices]]
+answer = "BLADE BOUND"
+correct = false
+
+[4]
+introduction = """
+Ludzie, ludzie!!! Czy Wy się dobrze czujecie?!? Wcale nie chcieliśmy, żeby każdy Czytelnik PSX EXTREME uczestniczył w GIGA TEŚCIE! Aż wstyd się przyznać, że Star, który został oddelegowany do sprawdzania wyników (co za pechowiec:) każdego dnia wysyła pod Waszym adresem bardzo niecenzuralne słowa, gdy Pani Listonosz wchodzi do Redakcji ze stertą kopert. Toż to przecież większy zalew korespondencji niźli zeszłoroczna ankieta (przy okazji pragniemy poinformować, że kolejną ankietę zamieścimy za miesiąc)! Star co dzień wertuje nadchodzące GIGA TESTY i kręci nosem, bo podobno nie doszła jeszcze ani jedna prawidłowo wypełniona część pierwsza (nie mam pewności, przecież nie sprawdziłem wszystkich GT - Star). A zatem szansę ma jeszcze każdy z Was. Zdecydowaliśmy się na zrobienie rankingu obejmującego co najmniej 250 uczestników, który wedle obietnic zamieścimy dopiero po zakończeniu zmagań, czyli w okolicach marca-kwietnia.
+
+Przed Wami czwarte poejście, którego wyniki należy podesłać do 15 stycznia 2001 r. Powodzenia!
+
+PS. Unieważniamy następujące pytania: nr 42 z GT1, ponieważ okazało się, że TRACK & FIELD 2000 różni się w wersji JAP, USA i PAL, oraz pytanie nr 112 z GT2, ponieważ HIV jest głupi. Za te pytania nie będą przyznawane punkty! Sorry.
+"""
+
+[4.sections]
+
+[4.sections.1]
+introduction = """
+To znowu ja! Tym razem nieco łatwiejsze pytanka, a nawet nie wszystkie z eRPeGów.
+"""
+
+[[4.sections.1.questions]]
+question = "Jak się nazywa ostatni boss w grze WARHAWK?"
+
+[[4.sections.1.questions.choices]]
+answer = "Karsh"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Kreel"
+correct = true
+
+[[4.sections.1.questions.choices]]
+answer = "Krelian"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Keldon"
+correct = false
+
+[[4.sections.1.questions]]
+question = "Do jakiego typu zalicza się gra PHILOSOMA?"
+
+[[4.sections.1.questions.choices]]
+answer = "strzelanina"
+correct = true
+
+[[4.sections.1.questions.choices]]
+answer = "platformówka"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "logiczna"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "strategia"
+correct = false
+
+[[4.sections.1.questions]]
+question = "Jak ma na nazwisko Barret z FFVII?"
+
+[[4.sections.1.questions.choices]]
+answer = "Walace"
+correct = true
+
+[[4.sections.1.questions.choices]]
+answer = "Walters"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Veldor"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Valentine"
+correct = false
+
+[[4.sections.1.questions]]
+question = "Kto jest partnerem Pearl w LEGEND OF MANA?"
+
+[[4.sections.1.questions.choices]]
+answer = "Gilbert"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Larc"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Rubens"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Elazul"
+correct = true
+
+[[4.sections.1.questions]]
+question = "Ile poziomów ma wieża-labirynt w AZURE DREAMS?"
+
+[[4.sections.1.questions.choices]]
+answer = "20"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "30"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "40"
+correct = true
+
+[[4.sections.1.questions.choices]]
+answer = "50"
+correct = false
+
+[[4.sections.1.questions]]
+question = "Jak nazywa się główny mąciciel w grze NIGHTMARE CREATURES?"
+
+[[4.sections.1.questions.choices]]
+answer = "Robert Marlow"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Adam Crowley"
+correct = true
+
+[[4.sections.1.questions.choices]]
+answer = "Frederic Villiant"
+correct = false
+
+[[4.sections.1.questions.choices]]
+answer = "Frank Estain"
+correct = false
+
+[4.sections.2]
+introduction = """
+No to jazda - lecą pytanka ode mnie. Myślisz, że znajdziesz tu poprawne odpowiedzi? Ghe, ghe! A kto Ci powiedział, że takowe zamieściłem:)...
+"""
+
+[[4.sections.2.questions]]
+question = "Gra IRON SOLDIER, której trzecia część ukazała się niedawno na PSX'a, ma swoje korzenie na innej płattormie. A mianowicie:"
+
+[[4.sections.2.questions.choices]]
+answer = "Saturn"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "Jaguar"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "SNES"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "Game Gear"
+correct = false
+
+[[4.sections.2.questions]]
+question = """Swego czasu SONY wydało produkcję, którą ochrzciło mianem "XXX BLASTO". Jej główny bohater był:"""
+
+[[4.sections.2.questions.choices]]
+answer = "zielonym kosmitą"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "członkiem grupy najemników"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "superbohaterem o randze kapitana"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "kotem"
+correct = false
+
+[[4.sections.2.questions]]
+question = "Który z tytułów nigdy nie ukazał się na PlayStation?"
+
+[[4.sections.2.questions.choices]]
+answer = "ZAP SNOWBOARDING TRIX"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "VMX RACING"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "COURIER CRISIS"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "WILD 6"
+correct = true
+
+[[4.sections.2.questions]]
+question = "Tytuł ten umożliwia jednoczesną grę padem i myszką. Chodzi o:"
+
+[[4.sections.2.questions.choices]]
+answer = "STRIDER 2"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "PSYCHIC FORCE 2"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "QUAKE 2"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "FIGHTING FORCE 2"
+correct = false
+
+[[4.sections.2.questions]]
+question = "Miernik wykazujący poziom strachu bohatera zaimplementowano w grze:"
+
+[[4.sections.2.questions.choices]]
+answer = "SILENT HILL"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "SYPHON FILTER"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "EVIL ZONE"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "FEAR EFFECT"
+correct = true
+
+[[4.sections.2.questions]]
+question = "Którą z kolei grą z serii ARMY MAN, wydaną na PSX'a, był SARGE HEROES?"
+
+[[4.sections.2.questions.choices]]
+answer = "pierwszą"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "drugą"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "trzecią"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "czwartą"
+correct = false
+
+[[4.sections.2.questions]]
+question = "Na ścieżce dźwiękowej do ROLLCAGE można było usłyszeć m.in. kawałek zrobiony przez:"
+
+[[4.sections.2.questions.choices]]
+answer = "Chemical Brothers"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "The Prodigy"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "Fat Boy Slima"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "DJ Mniamosa"
+correct = false
+
+[[4.sections.2.questions]]
+question = "Która gra nie przedstawia ujęcia akcji a'la RESIDENT EVIL?"
+
+[[4.sections.2.questions.choices]]
+answer = "CYBERNETIC EMPIRE"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "DEEP FREEZE"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "SOUL OF SAMURAI"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "MEN IN BLACK"
+correct = false
+
+[[4.sections.2.questions]]
+question = "Bohater gry od PSYGNOSIS, zatytułowanej KINGSLEY'S ADVENTURE, jest:"
+
+[[4.sections.2.questions.choices]]
+answer = "saperem podkładającym bomby"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "futurystycznym kotem"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "walecznym lisem"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = "A gdzie tam! PSYGNOSIS nigdy nie wydało takiej gry!"
+correct = false
+
+[[4.sections.2.questions]]
+question = "W grze X-FILES nie dysponujesz:"
+
+[[4.sections.2.questions.choices]]
+answer = "lornetką"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "lupą"
+correct = true
+
+[[4.sections.2.questions.choices]]
+answer = """"komórką""""
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "elektrycznym paralizatorem"
+correct = false
+
+[[4.sections.2.questions]]
+question = "W COUNTDOWN VAMPIRES masz możliwość skorzystania z:"
+
+[[4.sections.2.questions.choices]]
+answer = "automatu do robienia zdjęć"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "bankomatu"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = "tarczy do rzucania strzałkami"
+correct = false
+
+[[4.sections.2.questions.choices]]
+answer = """"jednorękiego bandyty""""
+correct = true
+
+[4.sections.3]
+introduction = """
+Przyszła kolej na moje pytanka:). Nie są trudne, a nawet gdyby sprawiły Wam jakieś kłopoty, to uważam, że i tak warto się pomęczyć. W końcu na zwycięzcę czeka nowiutka PS2!
+"""
+
+[[4.sections.3.questions]]
+question = "Który z tych tytułów zrobiło CODEMASTERS?"
+
+[[4.sections.3.questions.choices]]
+answer = "LMA MANAGER"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "PREMIER MANAGER 2000"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "PLAYER MANAGER 2000"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "FA PREMIER LEAGUE ALL STAR MAN."
+correct = false
+
+[[4.sections.3.questions]]
+question = "W którym z podanych tytułów występuje postać przedstawiona na zdjęciu? [img]"
+
+[[4.sections.3.questions.choices]]
+answer = "ZERO DIVIDE"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "RISE 0F THE ROBOTS"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "STAR WARS: MASTERS OF TERAS KASI"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "CRITICOM"
+correct = true
+
+[[4.sections.3.questions]]
+question = "Która z pań wcieli się w rolę Lary Croft w ekranizacji słynnej gierki o przygodach słynnej archeolog?"
+
+[[4.sections.3.questions.choices]]
+answer = "Kasia Figura"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Hivanna"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Angelina Jolie"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "Irena Kwiatkowska"
+correct = false
+
+[[4.sections.3.questions]]
+question = "Jaką maksymalną liczbę zabitych przeciwników można uzyskać w grze METAL GEAR SOLID (na poziomie Hard)? Chodzi o statystyki po zakończeniu gry, tam gdzie przyznawana jest ranga."
+
+[[4.sections.3.questions.choices]]
+answer = "1999"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "699"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "999"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "9999"
+correct = false
+
+[[4.sections.3.questions]]
+question = "W jakim teamie, w grze FORMULA 1'96, jeździł francuski kierowca Jean Alesi?"
+
+[[4.sections.3.questions.choices]]
+answer = "Minardi"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Prost"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Ferrari"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "Sauber"
+correct = false
+
+[[4.sections.3.questions]]
+question = "Której z postaci nie uświadczysz w grze WAR GODS?"
+
+[[4.sections.3.questions.choices]]
+answer = "Tak"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Maximus"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Gorm"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "CY-5"
+correct = false
+
+[[4.sections.3.questions]]
+question = "Podaj nazwę miasteczka sąsiadującego z Silent Hill."
+
+[[4.sections.3.questions.choices]]
+answer = "Brahnsville"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Brahms"
+correct = true
+
+[[4.sections.3.questions.choices]]
+answer = "Bansville"
+correct = false
+
+[[4.sections.3.questions.choices]]
+answer = "Bransville"
+correct = false
+
+[4.sections.4]
+introduction = """
+Oto pierwsza porcja wyalienowanych pytań. Możecie mówić o sporym szczęściu, ponieważ postanowiłem spuścić z tonu...
+"""
+
+[[4.sections.4.questions]]
+question = "Która z gier nie oferowała widoku z kabiny kierowcy?"
+
+[[4.sections.4.questions.choices]]
+answer = "COLIN MC RAE RALLY"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "NEED FOR SPEED"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "WIP3OUT"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "MOTORHEAD"
+correct = true
+
+[[4.sections.4.questions]]
+question = "Która z gier zajmuje największą ilość kompaktów?"
+
+[[4.sections.4.questions.choices]]
+answer = "D"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "FINAL FANTASY 7"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "LEGEND OF DRAGOON"
+correct = true
+
+[[4.sections.4.questions.choices]]
+answer = "DUNE 2000"
+correct = false
+
+[[4.sections.4.questions]]
+question = "Jaki tytuł nosi amerykańska wersja V-RALLY"
+
+[[4.sections.4.questions.choices]]
+answer = "NEED FOR SPEED VS V-RALLY"
+correct = true
+
+[[4.sections.4.questions.choices]]
+answer = "V-RALLY"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "RALLY MASTERS"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "RALLY USA"
+correct = false
+
+[[4.sections.4.questions]]
+question = "Która z gier nie ma nic wspólnego z czołgami?"
+
+[[4.sections.4.questions.choices]]
+answer = "ASSAULT RIGS"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "RETURN FIRE"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "STEEL REIGN"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "TIGER SHARK"
+correct = true
+
+[[4.sections.4.questions]]
+question = "Która z gier dostała najniższą ocenę na łamach PE?"
+
+[[4.sections.4.questions.choices]]
+answer = "MEDIEVIL 2"
+correct = true
+
+[[4.sections.4.questions.choices]]
+answer = "WIP3OUT"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "N2O"
+correct = false
+
+[[4.sections.4.questions.choices]]
+answer = "TENCHU"
+correct = false
+
+[4.sections.5]
+introduction = """
+Kilka pytań "screenowych", za to dosyć trudnych. Może komuś uda się zgadnąć.
+"""
+
+[[4.sections.5.questions]]
+question = "Jak nazywa się jegomość ze zdjęcia (seria FINAL FANTASY) [img]"
+
+[[4.sections.5.questions.choices]]
+answer = "Sephiroth"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "Siegfrid"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "Seifer"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "Setzer"
+correct = true
+
+[[4.sections.5.questions]]
+question = "Z introdukcji jakiej gry pochodzi ten kadr? [img]"
+
+[[4.sections.5.questions.choices]]
+answer = "ELEMENTAL GEARBOLT"
+correct = true
+
+[[4.sections.5.questions.choices]]
+answer = "ALUNDRA"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "LUNAR: SSS"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "SUIKODEN 2"
+correct = false
+
+[[4.sections.5.questions]]
+question = "Jaki tytuł ma ten kawałek? [img]"
+
+[[4.sections.5.questions.choices]]
+answer = "Happy Man"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "Fire"
+correct = false
+
+[[4.sections.5.questions.choices]]
+answer = "Evil Eye"
+correct = true
+
+[[4.sections.5.questions.choices]]
+answer = "Jazzy Cat"
+correct = false
+
+[4.sections.6]
+introduction = """
+Pytania od Wiejskiego Gupka jak zwykle trudności Wam nie przysporzą wielkich... a może jednak?
+"""
+
+[[4.sections.6.questions]]
+question = "Podtytuł platformówki 3D, w której głównym bohaterem jest Królik Bugs, to:"
+
+[[4.sections.6.questions.choices]]
+answer = "LOST IN TIME"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "GET IN THE TOMORROW"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "UNDERGROUND"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "DIGGING FOR CARROT"
+correct = false
+
+[[4.sections.6.questions]]
+question = "NAMCO wydało na PSX tylko 1 serię liczącą 4 części, tj.:"
+
+[[4.sections.6.questions.choices]]
+answer = "TEKKEN"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "ACE COMBAT"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "RIDGE RACER"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "TIME CRIZIS"
+correct = false
+
+[[4.sections.6.questions]]
+question = "W tej grze kierujesz poczynaniami lasek z zespołu Spice Girls:"
+
+[[4.sections.6.questions.choices]]
+answer = "SPICY SPECIAL"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "SPICE GIRLS SHOW"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "SPICE WORLD"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "HOT CHICS TURBO"
+correct = false
+
+[[4.sections.6.questions]]
+question = "Czołg z oczami i szerokim uśmiechem to główny bohater gry:"
+
+[[4.sections.6.questions.choices]]
+answer = "TANK ASSAULT"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "TINY TANK"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "TIGER SHARK"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "SMELLY TANK"
+correct = false
+
+[[4.sections.6.questions]]
+question = """Facet "nie ma serca", ale ma imię:"""
+
+[[4.sections.6.questions.choices]]
+answer = "Akuji"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "Brad"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "Asterix"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "George"
+correct = false
+
+[[4.sections.6.questions]]
+question = """"Symulator" walki:"""
+
+[[4.sections.6.questions.choices]]
+answer = "TOY STORY 2"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "BUSHIDO BLADE"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "TEKKEN"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "TOBAL"
+correct = false
+
+[[4.sections.6.questions]]
+question = "Można nagiąć fakty i stwierdzić, iż akcja gry CHASE THE EXPRESS opiera się na bazie filmu pt.:"
+
+[[4.sections.6.questions.choices]]
+answer = """"Liberator 2""""
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = """"Trainspotting""""
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = """"Pociąg z forsą""""
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = """"The Perfect Storm""""
+correct = false
+
+[[4.sections.6.questions]]
+question = "Znany wielbicielom wyścigów Colin to:"
+
+[[4.sections.6.questions.choices]]
+answer = "Anglik"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "Hiszpan"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "Amerykanin"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "Szkot"
+correct = true
+
+[[4.sections.6.questions]]
+question = """"TWISTED METAL na wodzie":"""
+
+[[4.sections.6.questions.choices]]
+answer = "VIGILANTE 8 II"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "DEAD IN THE WATER"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "HYDRO THUNDER"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "N.GEN RACING"
+correct = false
+
+[[4.sections.6.questions]]
+question = "Snowhoard w konwencji platformówki:"
+
+[[4.sections.6.questions.choices]]
+answer = "COOLBOARDERS"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "MTV SNOWBOARDING"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "PSYBADEK"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "SNOWBOARD CLASSICS"
+correct = false
+
+[[4.sections.6.questions]]
+question = "Jeden z wymienionych tytułów nie pasuje do pozostałych. Który?"
+
+[[4.sections.6.questions.choices]]
+answer = "XI"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "BUST A MOVE"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "SWING"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "MAGICAL DROP"
+correct = false
+
+[[4.sections.6.questions]]
+question = """Mówią o nim "STUNTMASTER":"""
+
+[[4.sections.6.questions.choices]]
+answer = "JARRETT LABONTE"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "JACKIE CHAN"
+correct = true
+
+[[4.sections.6.questions.choices]]
+answer = "JEREMY MCGRATH"
+correct = false
+
+[[4.sections.6.questions.choices]]
+answer = "BRUCE WILLIS"
+correct = false
+
+[4.sections.7]
+introduction = """
+Nie lubicie mnie? Ja też Was nie lubię. Macie za swoje...
+"""
+
+[[4.sections.7.questions]]
+question = """W której z gier nie wprowadzono, tak modnego ostatnio, elementu "skradania się"?"""
+
+[[4.sections.7.questions.choices]]
+answer = "Metal Gear Solid"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Tommorow Never Dies"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "Syphon Filter"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Tenchu"
+correct = false
+
+[[4.sections.7.questions]]
+question = "Ile MB pamięci graficznej posiada PlayStation 2?"
+
+[[4.sections.7.questions.choices]]
+answer = "4"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "8"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "16"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "32"
+correct = false
+
+[[4.sections.7.questions]]
+question = "Ile reprezentacji narodowych umieszczono w ISS PRO EVOLUTION?"
+
+[[4.sections.7.questions.choices]]
+answer = "49"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "53"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "57"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "61"
+correct = false
+
+[[4.sections.7.questions]]
+question = "Której z ras nie możesz poprowadzić zwycięstwa w DUNE 2000?"
+
+[[4.sections.7.questions.choices]]
+answer = "Ordosów"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Atrydów"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Zergów"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "Harkonnenów"
+correct = false
+
+[[4.sections.7.questions]]
+question = "Tylko jedna z wymienionych serii została wydana na Plejaka aż w pięciu częściach:"
+
+[[4.sections.7.questions.choices]]
+answer = "Twisted Metal"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Need For Speed"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "Wipeout"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Ace Combat"
+correct = false
+
+[[4.sections.7.questions]]
+question = "Który z platformowych bohaterów jest krokodylem?"
+
+[[4.sections.7.questions.choices]]
+answer = "Spyro"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Crash"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Croc"
+correct = true
+
+[[4.sections.7.questions.choices]]
+answer = "Gex"
+correct = false
+
+[[4.sections.7.questions]]
+question = """Zaznacz aktora, który "wcielił" się w głównego bohatera gry APOCALYPSE."""
+
+[[4.sections.7.questions.choices]]
+answer = "Pierce Brosnan"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Chuck Norris"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Bogusław Linda"
+correct = false
+
+[[4.sections.7.questions.choices]]
+answer = "Bruce Willis"
+correct = true
+
+[4.sections.8]
+introduction = """
+Jak zwykle moje pytania są rewelacynie proste. Nic tylko odpowiadać...
+"""
+
+[[4.sections.8.questions]]
+question = "Mokujin to:"
+
+[[4.sections.8.questions.choices]]
+answer = "dumny człowiek"
+correct = false
+
+[[4.sections.8.questions.choices]]
+answer = "waleczny człowiek"
+correct = false
+
+[[4.sections.8.questions.choices]]
+answer = "drewniany człowiek"
+correct = true
+
+[[4.sections.8.questions.choices]]
+answer = "człowiek o stalowych nerwach"
+correct = false
+
+[[4.sections.8.questions]]
+question = "Jak nazywa się bijatyka wyposażona w tryb pseudo RPG?"
+
+[[4.sections.8.questions.choices]]
+answer = "Criticom"
+correct = false
+
+[[4.sections.8.questions.choices]]
+answer = "Ehrgeiz"
+correct = true
+
+[[4.sections.8.questions.choices]]
+answer = "Samurai Shodown"
+correct = false
+
+[[4.sections.8.questions.choices]]
+answer = "Fighter Impact"
+correct = false
+
+[4.sections.9]
+introduction = """
+Na koniec jak zwykle kolej na moje pytania.
+"""
+
+[[4.sections.9.questions]]
+question = "W CIVILIZATION 2 gra zaczyna się 4000 lat p.n.e. A jaka jest górna granica gonitwy do zwycięstwa? Rok:"
+
+[[4.sections.9.questions.choices]]
+answer = "2000"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "2100"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "2200"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "2300"
+correct = false
+
+[[4.sections.9.questions]]
+question = """Ile robotów typu "Jack" przewinęło się przez serię TEKKEN?"""
+
+[[4.sections.9.questions.choices]]
+answer = "2"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "3"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "4"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "5"
+correct = false
+
+[[4.sections.9.questions]]
+question = """Która kobiałka zagrała postać Cammy u boku Jean-Claude Van Damme'a w filmie "Uliczny Wojownik” (czyli STREET FIGHTER)?"""
+
+[[4.sections.9.questions.choices]]
+answer = "Asia Carrera"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "Jenna Jameson"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "Kylie Minogue"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "Nikki Tyler"
+correct = false
+
+[[4.sections.9.questions]]
+question = "Jak dla Rikkimaru skończyła się pierwsza część TENCHU?"
+
+[[4.sections.9.questions.choices]]
+answer = "został w zawalającej się jaskini"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "zabił swojego mistrza"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "został przywódcą klanu"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "popełnił seppuku"
+correct = false
+
+[[4.sections.9.questions]]
+question = "Która z poniższych białogłowych nie wystąpiła jeszcze jako panna Lara Croft?"
+
+[[4.sections.9.questions.choices]]
+answer = "Rhona Mitra"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "Angelina Jolie"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "Nell McAndrew"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "Lara Weller"
+correct = false
+
+[[4.sections.9.questions]]
+question = "Od którego numeru PSX EXTREME zaczął pojawiać się HYDE PARK w podobnej, jak obecnie formie - z wypowiedziami zg(Red.)ów oraz wyszczególnieniem hitów miesiąca?"
+
+[[4.sections.9.questions.choices]]
+answer = "2"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "3"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "4"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "5"
+correct = true
+
+[[4.sections.9.questions]]
+question = "Na końcu PANDEMONIUM! zostały spełnione trzy życzenia głównych bohaterów. Jakie było ostatnie życzenie błazna?"
+
+[[4.sections.9.questions.choices]]
+answer = "żeby wszyscy byli tacy jak on"
+correct = true
+
+[[4.sections.9.questions.choices]]
+answer = "żeby pojawiła się kobieta-błazen"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "żeby zamienił się z królem rolami"
+correct = false
+
+[[4.sections.9.questions.choices]]
+answer = "żeby pojawił się kurczak"
+correct = false
+
+[4.sections.10]
+introduction = """
+A teraz porcja pytań od Mr.X'a, który nie chce pokazać swojej twarzy [Loki, Ściera, nie wydurniajcie się - Star] [Ty kapo - Mr.Ś]
+"""
+
+[[4.sections.10.questions]]
+question = """Z jakiej gry pochodzi ten "loading"? [img]"""
+
+[[4.sections.10.questions.choices]]
+answer = "ROLLCAGE"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "MOTORHEAD"
+correct = true
+
+[[4.sections.10.questions.choices]]
+answer = "CRASH TEAM RACING"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "ALIEN TRILOGY"
+correct = false
+
+[[4.sections.10.questions]]
+question = "Siostra Crasha Bandicoota to:"
+
+[[4.sections.10.questions.choices]]
+answer = "Yokko"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "Coco"
+correct = true
+
+[[4.sections.10.questions.choices]]
+answer = "Choco"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "Baby"
+correct = false
+
+[[4.sections.10.questions]]
+question = "Lei z serii Tekken to oficer policji:"
+
+[[4.sections.10.questions.choices]]
+answer = "japońskiej"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "wietnamskiej"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "chińskiej"
+correct = true
+
+[[4.sections.10.questions.choices]]
+answer = "Interpolu"
+correct = false
+
+[[4.sections.10.questions]]
+question = "Kto użyczył głosu Rincewindowi z Discworld 1 i 2:"
+
+[[4.sections.10.questions.choices]]
+answer = "Michael Palin"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "Eric Idle"
+correct = true
+
+[[4.sections.10.questions.choices]]
+answer = "Terry Jones"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "John Clesee"
+correct = false
+
+[[4.sections.10.questions]]
+question = "Który ze screenów NIE pokazuje gry na PSX?"
+
+[[4.sections.10.questions.choices]]
+answer = "[img]"
+correct = false
+
+[[4.sections.10.questions.choices]]
+answer = "[img]"
+correct = true
+
+[[4.sections.10.questions.choices]]
+answer = "[img]"
+correct = false
+
+[5]
+introduction = """
+Star jest stanowczy - wyrzuca do kosza za późno nadesłane GIGA TESTY (liczy się data na stemplu pocztowym), w związku z czym niektórzy z Was mogą już sobie odpuścić dalszą zabawę - to tak dla oszczędzenia Wam fatygi. Prac przyszło tyle, że na myśl o sprawdzeniu wszystkich Starowi wiesza się komputer - uprzedzamy z góry, że ogłoszenie wyników może ulec przesunięciu o miesiąc (tego naprawdę nie sposób szybciej zrobić). W tym miesiącu zmieściło się mało pytań z powodu Ankiety i Plebiscytu, których uczestnicy GIGA TESTU NIE SĄ ZOBOWIĄZANI WYPEŁNIĆ, aczkolwiek mile widziane będzie podesłanie ich razem z testem. Na GT #5 czekamy do 1 lutego (decyduje data stempla pocztowego).
+"""
+
+[5.sections]
+
+[5.sections.1]
+introduction = """
+W tym miesiącu wszystkie moje pytania będą "na jedno kopyto". Która z wymienionych gier nie pasuje do reszty tytułów? Problem twój polega na tym, że sam musisz się domyśleć, Jakie kryterium przyjąłem przy doborze tytułów. Skojarzenie to przekleństwo... [Mr. Ś]
+"""
+
+[[5.sections.1.questions]]
+question = "Na początek łatwizna:"
+
+[[5.sections.1.questions.choices]]
+answer = "DRIVER"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "GTA"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "SMUGGLER'S RUN"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "COLIN MCRAE RALLY"
+correct = true
+
+[[5.sections.1.questions]]
+question = "A teraz z innej beczki"
+
+[[5.sections.1.questions.choices]]
+answer = "MR. DRILLER"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "TEKKEN 3"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "DINO CRISIS"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "TREASURES OF THE DEEP"
+correct = false
+
+[[5.sections.1.questions]]
+question = "Hmmm, z tym też nie powinieneś mieć trudności"
+canceled = true
+
+[[5.sections.1.questions.choices]]
+answer = "SKULLMONKEYS"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "GEX 3: ETG"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "PANDEMONIUM!"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "TOMBI!"
+correct = false
+
+[[5.sections.1.questions]]
+question = "Na tym pytaniu zagiąłem pół redakcji"
+
+[[5.sections.1.questions.choices]]
+answer = "GRAN TURISMO"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "V-RALLY 2"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "SLEDSTORM"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "NFS: PORSCHE UNLEASHED"
+correct = false
+
+[[5.sections.1.questions]]
+question = "No, pomyśl czy grałeś u kumpla w LOTUS RACING?"
+
+[[5.sections.1.questions.choices]]
+answer = "WILD ENERGY"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "LOTUS RACING"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "PSYCHIC FORCE"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "LASER SHOOT"
+correct = false
+
+[[5.sections.1.questions]]
+question = "Wytęż mózgownicę..."
+
+[[5.sections.1.questions.choices]]
+answer = "METAL GEAR SOLID"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "DIE HARD TRILOGY"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "JUDGE DREDD"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "TOMORROW NEVER DIES"
+correct = false
+
+[[5.sections.1.questions]]
+question = "Oj, z tym będziecie mieli problem"
+
+[[5.sections.1.questions.choices]]
+answer = "NBA SHOOTOUT"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "NHL FACE-OFF"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "FIFA SOCCER"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "NCAA FINAL FOUR"
+correct = false
+
+[[5.sections.1.questions]]
+question = "Prościzna..."
+
+[[5.sections.1.questions.choices]]
+answer = "FINAL FANTASY 7"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "GRANDIA"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "LEGEND OF LEGAIA"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "ETERNAL RING"
+correct = true
+
+[[5.sections.1.questions]]
+question = "Na koniec macie ciężki orzech do zgryzienia"
+
+[[5.sections.1.questions.choices]]
+answer = "RED ALERT"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "GRAN TURISMO 2"
+correct = false
+
+[[5.sections.1.questions.choices]]
+answer = "BUGS BUNNY: LIT"
+correct = true
+
+[[5.sections.1.questions.choices]]
+answer = "HEART OF DARKNESS"
+correct = false
+
+[5.sections.2]
+introduction = """
+Tym razem nie będę nikogo dręczył i zadam kilka łatwiejszych pytań, aby w statystykach liczba trafień nieco wzrosła:). Kujot
+"""
+
+[[5.sections.2.questions]]
+question = "W której części znanego horroru wystąpił szalony naukowiec Birkin?"
+
+[[5.sections.2.questions.choices]]
+answer = "RESIDENT EVIL"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "RESIDENT EVIL 2"
+correct = true
+
+[[5.sections.2.questions.choices]]
+answer = "RESIDENT EVIL 3: NEMESIS"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "RESIDENT EVIL: GUN SURVIVOR"
+correct = false
+
+[[5.sections.2.questions]]
+question = "Pod którą z nazw nie kryje się Summon z FINAL FANTASY 7?"
+
+[[5.sections.2.questions.choices]]
+answer = "Bahamut"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "Bahamut Zero"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "Master Bahamut"
+correct = true
+
+[[5.sections.2.questions.choices]]
+answer = "Neo Bahamut"
+correct = false
+
+[[5.sections.2.questions]]
+question = "Bohatera o jakiej profesji nie można wybrać w DIABLO?"
+
+[[5.sections.2.questions.choices]]
+answer = "Warrior"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "Sorcerer"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "Rogue"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "Paladin"
+correct = true
+
+[[5.sections.2.questions]]
+question = "Co łączy Dana Fortesque i Raziela?"
+
+[[5.sections.2.questions.choices]]
+answer = "brakuje im żuchwy"
+correct = true
+
+[[5.sections.2.questions.choices]]
+answer = "lubią irlandzkie piwo"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "nie noszą bielizny"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "nie kupują w supermarketach"
+correct = false
+
+[[5.sections.2.questions]]
+question = "Ash Lambert to imię głównego bohatera gry:"
+
+[[5.sections.2.questions.choices]]
+answer = "VANDAL HEARTS"
+correct = true
+
+[[5.sections.2.questions.choices]]
+answer = "GRANDIA"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "VAGRANT STORY"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "FINAL FANTASY 5"
+correct = false
+
+[[5.sections.2.questions]]
+question = "Jaki jest prawidłowy skrót oznaczająct PlayStation 2."
+
+[[5.sections.2.questions.choices]]
+answer = "PSX2"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "PS2"
+correct = true
+
+[[5.sections.2.questions.choices]]
+answer = "P2"
+correct = false
+
+[[5.sections.2.questions.choices]]
+answer = "PSY"
+correct = false
+
+[5.sections.3]
+introduction = """
+Oczywiście zapodaję łatwiznę, bo na kacu myślenie kiepsko mi idzie... [HIV]
+"""
+
+[[5.sections.3.questions]]
+question = "Szkodzi mu palenie tytoniu:"
+
+[[5.sections.3.questions.choices]]
+answer = "Gex"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "Solid Snake"
+correct = true
+
+[[5.sections.3.questions.choices]]
+answer = "Casper"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "Crash Bandicoot"
+correct = false
+
+[[5.sections.3.questions]]
+question = "Gra strategiczna pod osłonką rozpierdziawki:"
+
+[[5.sections.3.questions.choices]]
+answer = "HOGS OF WAR"
+correct = true
+
+[[5.sections.3.questions.choices]]
+answer = "DUNE 2000"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "HYBRID"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "INFESTATION"
+correct = false
+
+[[5.sections.3.questions]]
+question = """"Chodzona nawalanka" przypominająca Golden Axe:"""
+
+[[5.sections.3.questions.choices]]
+answer = "GEKIDO"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "LEGEND"
+correct = true
+
+[[5.sections.3.questions.choices]]
+answer = "GOLDEN GOAL"
+correct = false
+
+[[5.sections.3.questions.choices]]
+answer = "PACAPACA PASSION"
+correct = false
+
+[5.sections.4]
+introduction = """
+To znowu ja! Tym razem większość pytań dotyczy RPG, w sumie jednak nie powinny Wam sprawić problemów... a może jednak? [Star]
+"""
+
+[[5.sections.4.questions]]
+question = "Określ, który z tych role-play'ów tu nie pasuje:"
+
+[[5.sections.4.questions.choices]]
+answer = "Brave Fencer Musashi"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Suikoden"
+correct = true
+
+[[5.sections.4.questions.choices]]
+answer = "Threads of Fate"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Alundra"
+correct = false
+
+[[5.sections.4.questions]]
+question = "Który z poniższych eRPeGów nie posiadał możliwości hodowli własnego zwierzątka?"
+
+[[5.sections.4.questions.choices]]
+answer = "Azure Dreams"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Legend of Mana"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Final Fantasy 7"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Wild Arms"
+correct = true
+
+[[5.sections.4.questions]]
+question = "RPG, w którym można wędkować, to:"
+
+[[5.sections.4.questions.choices]]
+answer = "Breath of Fire 3"
+correct = true
+
+[[5.sections.4.questions.choices]]
+answer = "Chrono Cross"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Jade Cocoon"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Vagrant Story"
+correct = false
+
+[[5.sections.4.questions]]
+question = "W której z poniższych gier nie występował żaden wampir?"
+
+[[5.sections.4.questions.choices]]
+answer = "Blood Omen: Legacy of Cain"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Castlevania"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Suikoden 2"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Xenogears"
+correct = true
+
+[[5.sections.4.questions]]
+question = "Jak się nazywał bohater gry Little Big Adventure?"
+
+[[5.sections.4.questions.choices]]
+answer = "Tinker"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Twinsen"
+correct = true
+
+[[5.sections.4.questions.choices]]
+answer = "Thompson"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Terpin"
+correct = false
+
+[[5.sections.4.questions]]
+question = "W którym z poniższych eRPeGów walcząca drużyna liczyła ponad 3 osoby?"
+
+[[5.sections.4.questions.choices]]
+answer = "Final Fantasy 8"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Star Ocen 2"
+correct = true
+
+[[5.sections.4.questions.choices]]
+answer = "Legend of Dragoon"
+correct = false
+
+[[5.sections.4.questions.choices]]
+answer = "Wild Arms"
+correct = false
+
+[5.sections.5]
+introduction = """
+Lecimy z kolejnymi pytankami. Będzie szybko i krótko, bo musze pisać recki... Jutro końcówka, ghe, ghe! [myq].
+"""
+
+[[5.sections.5.questions]]
+question = "Która z wymienionych gier posiadał miernik agresji bohatera?"
+
+[[5.sections.5.questions.choices]]
+answer = "THRILL KILL"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "DEAD IN THE WATER"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "ONE"
+correct = true
+
+[[5.sections.5.questions.choices]]
+answer = "UPRISING X"
+correct = false
+
+[[5.sections.5.questions]]
+question = """Ta pozycja nie miała możliwości załączenia widoku TPP ("zza pleców"):"""
+
+[[5.sections.5.questions.choices]]
+answer = "N2O"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "VIPER"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "BLAST RADIOUS"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "200EC7 LATTICE"
+correct = true
+
+[[5.sections.5.questions]]
+question = "Twoja rola polega na rozwożeniu pizzy. Gra ta jest kieprawa, a jej tytuł to:"
+
+[[5.sections.5.questions.choices]]
+answer = "FELLONY 11-79"
+correct = true
+
+[[5.sections.5.questions.choices]]
+answer = "RADIKAL BIKERS"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "RUNABOUT 2"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "EXPLOSIVE RACING"
+correct = false
+
+[[5.sections.5.questions]]
+question = "W tej grze nie było czarnoskórych bohaterów:"
+
+[[5.sections.5.questions.choices]]
+answer = "VAMPIRE HUNTER D"
+correct = true
+
+[[5.sections.5.questions.choices]]
+answer = "URBAN CHAOS"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "MK: SPECIAL FORCES"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "FINAL FANTASY 7"
+correct = false
+
+[[5.sections.5.questions]]
+question = "W bandziora nie mogłeś się wcielić w:"
+
+[[5.sections.5.questions.choices]]
+answer = "ROAD RUSH: JAILBREAK"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "CRIME KILLER"
+correct = true
+
+[[5.sections.5.questions.choices]]
+answer = "GTA: LONDON"
+correct = false
+
+[[5.sections.5.questions.choices]]
+answer = "THE MISSADVENTURE OF TRON BONE"
+correct = false
+
+[5.sections.6]
+introduction = """
+Dwa szybkie pytanka. [Ace]
+"""
+
+[[5.sections.6.questions]]
+question = "Pierwszy Boss w grze Crash Bandicoot to:"
+
+[[5.sections.6.questions.choices]]
+answer = "Ripper Roo"
+correct = false
+
+[[5.sections.6.questions.choices]]
+answer = "Pinstripe Potaroo"
+correct = false
+
+[[5.sections.6.questions.choices]]
+answer = "Papu Papu"
+correct = true
+
+[[5.sections.6.questions.choices]]
+answer = "Koala Kong"
+correct = false
+
+[[5.sections.6.questions]]
+question = "Wipeout 2097, która nazwa pasuje do umieszczonego obok logo? [img]"
+
+[[5.sections.6.questions.choices]]
+answer = "Felsar"
+correct = false
+
+[[5.sections.6.questions.choices]]
+answer = "Auricom"
+correct = true
+
+[[5.sections.6.questions.choices]]
+answer = "Piranha"
+correct = false
+
+[[5.sections.6.questions.choices]]
+answer = "Qirox"
+correct = false
+
+[6]
+introduction = """
+Przed Wami szósta i zarazem ostatnia edycja GIGA TESTU. Z zapowiadanych 350 pytań zmieściło się 305, ale to chyba nie jest problem, co? Teraz już tylko pozostaje wypełnić GT6 i czekać wytrwale na ogłoszenie wyników... w okolicach maja.
+
+Sprawdzanie takiej ilości nadesłanych płacht zajmuje Starowi sporo czasu, a chyba nikt nie chce, żeby facet się pomylił, nieprawdzać (co prawda to matematyk, ale...)? W następnym numerze postaramy się wrzucić listę prawidłowych odpowiedzi. Swoją drogą - również umieramy z ciekawości, kto wyjdzie stąd z konsolą (no jak, przecież umawialiśmy się, że mój kuzyn - Star) (H: przecież to ja zapłaciłem 5 stówek! Ściera, co on gada?). Pomyślimy również o jakichś nagrodach pocieszenia dla pierwszych 10 "przegranych" oraz oficjalnych zaproszeniach do Redakcji. Po takiej batalii chyba warto się spotkać...
+
+Ściera zabił Wam klina w ubiegłym miesiącu. Został zwyzywany za to od najgorszych, czym się naprawdę przejął. Nawet postanowił unieważnić jedno pytanie (GT5, nr 234), które uznał za niejednoznaczne, czy coś w tym stylu.
+
+PS: w ostatniej edycji zapomniało nam się wrzucić tabelki z miejscem na wpisanie swoich danych - takowa jest dopiero przy Ankiecie, której wypełnienie nie było jednak obowiązkowe. W takim razie jeśli ktoś nie wie, gdzie się podpiąc, to proponujemy strzelić dane na końcu GIGA TESTU (jest tam wolne miejsce) albo podpisać się czytelnie na kopercie.
+"""
+
+[6.sections]
+
+[6.sections.1]
+introduction = """
+Co za alien dopisał mi miesiąc temu to debilne pytanie o skrócie Playa 2 (chociaż to raczej oczywiste:)? Ale do rzeczy - oto kilka obrazków do rozpoznania. Nie ma łatwo... [kujot]
+"""
+
+[[6.sections.1.questions]]
+question = "Ten rasowy umarlak rozkładał się w: [img] [Kujot, co jest na tym screenie? - Mr.Ś]"
+
+[[6.sections.1.questions.choices]]
+answer = "DEATHTRAP DUNGEON"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "DIABLO"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "KOUDELKA"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "WARHAMMER: DARK OMEN"
+correct = true
+
+[[6.sections.1.questions]]
+question = "Z której gry pochodzi ten koleś? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "FADE TO BLACK"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "ONE"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "OVERBLOOD"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "SILENT HILL"
+correct = false
+
+[[6.sections.1.questions]]
+question = "Jak dokładnie nazywa się ta niewiasta? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "!SOPHITIA"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "SOPHITIA"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "SOPHITIA!"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "SOPHITIA!!"
+correct = true
+
+[[6.sections.1.questions]]
+question = "To Ci się spodoba:). Save którego CRASHa ma taką ikonkę? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "CRASH BANDICOOT"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "CRASH BANDICOOT 2"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "CRASH BASH"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "CRASH TEAM RACING"
+correct = false
+
+[[6.sections.1.questions]]
+question = "Nie śliń się, tylko odpowiedz: co to za gra? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "FEAR EFFECT"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "GHOST IN THE SHELL"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "XENOGEARS"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "to nie jest gra na PSX!"
+correct = false
+
+[[6.sections.1.questions]]
+question = "Jaki tytuł nosi ten shooter? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "GAMERA 2000"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "OMEGA BOOST"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "RAYSTORM"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "SPACE DEBRIS"
+correct = false
+
+[[6.sections.1.questions]]
+question = "W jakiej grze można się natknąć na tego debila? [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "ROGUE TRIP"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "TWISTED METAL"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "TWISTED METAL 2"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "VIGILANTE 8"
+correct = false
+
+[[6.sections.1.questions]]
+question = "Oto i ostatni obrazek, a pochodzi on z: [img]"
+
+[[6.sections.1.questions.choices]]
+answer = "CHOCOBO MYSTERIOUS DUNGEON 2"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "FINAL FANTASY IX"
+correct = false
+
+[[6.sections.1.questions.choices]]
+answer = "FINAL FANTASY TACTICS"
+correct = true
+
+[[6.sections.1.questions.choices]]
+answer = "SAGA FRONTIER"
+correct = false
+
+[6.sections.2]
+introduction = """
+Cóż, nowy wiek - czas i na nową porcję pytań. Czy ich debilizm wzniósł się też na nowy poziom? Czy mu podołasz? Sam oceń... [myq]
+"""
+
+[[6.sections.2.questions]]
+question = "Gra SOUL OF SAMURAI, stanowiąca połączenie RESIDENT EVIL z TENCHU, autorstwa KONAMI, początkowo miała nosić inny tytuł. A mianowicie:"
+
+[[6.sections.2.questions.choices]]
+answer = "BLADE OF KATANA"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "SHOGUN ASSASSIN"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "DANCING BLADE"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "WILD WARRIOR"
+correct = false
+
+[[6.sections.2.questions]]
+question = """PSX'owa podróbka Sega Rally, wydana przez jakichś "kosmicznych" developerów z Japonii, notabene dość paściarska, to:"""
+
+[[6.sections.2.questions.choices]]
+answer = "TOGE MAX 2"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "RALLY DE AFRICA"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "DUKES OF HAZARD"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "DESTREGA"
+correct = false
+
+[[6.sections.2.questions]]
+question = "Gra WARSTORM: BATTLE ASSAULT, wydana przez BANDAI, to:"
+
+[[6.sections.2.questions.choices]]
+answer = "Strzelanina TPP"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "Strategia"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "Przygodówka a'la RESIDENT EVIL"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "To bujda! Myszaq tnie w pręta..."
+correct = true
+
+[[6.sections.2.questions]]
+question = "Który z tytułów nigdy nie ukazał się na PSX'a?"
+
+[[6.sections.2.questions.choices]]
+answer = "KONAMI RALLY"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "RUNNING WILD"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "THE UNHOLY WAR"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "ATTACK OF THE SAUCERMAN!"
+correct = false
+
+[[6.sections.2.questions]]
+question = "Tę mało znaną pozycję, w której kamera była skopana na maksa, można przyrównać do MAGIC CARPET (podobna grafika - latasz nad wyspami). Chodzi o:"
+
+[[6.sections.2.questions.choices]]
+answer = "O.D.T."
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "MAGIC CURTAINS"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "V2000"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "SHADOW GUNNER"
+correct = false
+
+[[6.sections.2.questions]]
+question = """Jedna z poniższych pozycji nie przedstawia akcji "z oczu" bohatera (FPP). Jest nią:"""
+
+[[6.sections.2.questions.choices]]
+answer = "HYBRID"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "SOUTH PARK"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "EXHUMED"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "HARD EDGE"
+correct = true
+
+[[6.sections.2.questions]]
+question = "Wiele jest platformówek, ale ta gra zdecydowanie do nich się nie zalicza. Oczywiście to:"
+
+[[6.sections.2.questions.choices]]
+answer = "TINY TOON ADVENTURES"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "BUGS BUNNY: LIT"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "A BUG'S LIFE"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "THE GRINCH"
+correct = false
+
+[[6.sections.2.questions]]
+question = "O sportach przyszłości nie traktował:"
+
+[[6.sections.2.questions.choices]]
+answer = "MOHO"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "STREAK"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "SPEEDBAL"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "VIB-RIBBON"
+correct = true
+
+[[6.sections.2.questions]]
+question = "W ten tytuł nie pograsz razem z kumplem:"
+
+[[6.sections.2.questions.choices]]
+answer = "BISHI BASHI"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "BRAVE FENCER MUSASHI"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "SPIN JAM"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "DANCE!DANCE!DANCE!"
+correct = false
+
+[[6.sections.2.questions]]
+question = "Ten produkt oferował m.in. zjazd na snowboardzie i rowerze górskim:"
+
+[[6.sections.2.questions.choices]]
+answer = "BURNING ROAD"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "NO FEAR DOWNHILL MOUNTAIN BIKING"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "RUSHDOWN"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "WRECKIN' CREW"
+correct = false
+
+[[6.sections.2.questions]]
+question = "Tu mogłeś spotkać czmychające na Twój widok, miauczące koty:"
+
+[[6.sections.2.questions.choices]]
+answer = "TENCHU"
+correct = true
+
+[[6.sections.2.questions.choices]]
+answer = "MGS"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "T'AI-FU"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "VANARK"
+correct = false
+
+[[6.sections.2.questions]]
+question = "Która z tych gier nie jest strzelaniną?"
+
+[[6.sections.2.questions.choices]]
+answer = "B-MOVE"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "R-TYPE DELTA"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "ASTEROIDS"
+correct = false
+
+[[6.sections.2.questions.choices]]
+answer = "KILLER LOOP"
+correct = true
+
+[6.sections.3]
+introduction = """
+Tada!!!  
+A oto i ostatnia porcja pytań.
+"""
+
+[[6.sections.3.questions]]
+question = "Czy na PS2 ukazała się już jakaś gra z gatunku łowienia ryb?"
+
+[[6.sections.3.questions.choices]]
+answer = "Tak"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Tak, ale tyko w Japonii"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Nie"
+correct = true
+
+[[6.sections.3.questions.choices]]
+answer = "O ćo chodzi jakby?"
+correct = false
+
+[[6.sections.3.questions]]
+question = "TIME SPLITTERS jest:"
+
+[[6.sections.3.questions.choices]]
+answer = "Konwersją z PC"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Konwersją z Dreamcasta"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Konwersją z N64"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Grą stworzoną specjalnie dla PS2"
+correct = true
+
+[[6.sections.3.questions]]
+question = "Jak nazywała się baza, którą penetrował Cord w IN COLD BLOOD?"
+
+[[6.sections.3.questions.choices]]
+answer = "Georgia"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Houston"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Volgia"
+correct = true
+
+[[6.sections.3.questions.choices]]
+answer = "Murmańsk"
+correct = false
+
+[[6.sections.3.questions]]
+question = "Główny cieć do pokonania w CRASH TEAM RACING to:"
+
+[[6.sections.3.questions.choices]]
+answer = "Neo Cortex"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Nitrus Oxide"
+correct = true
+
+[[6.sections.3.questions.choices]]
+answer = "Dingodile"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "Tino Tiger"
+correct = false
+
+[[6.sections.3.questions]]
+question = "Która z gier nie oferuje trybu dla 4 Graczy?"
+
+[[6.sections.3.questions.choices]]
+answer = "SPEED FREAKS"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "MICRO MANIACS"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "QUAKE 2"
+correct = false
+
+[[6.sections.3.questions.choices]]
+answer = "RE-VOLT"
+correct = true
+
+[6.sections.4]
+introduction = """
+Ble, ble, ble bleble, bleble, ble. Bleblebleble ble, ble ble, bleble ble. A więc zaczynam...
+"""
+
+[[6.sections.4.questions]]
+question = "Rincewindowi w drugiej części DISCWORLD towarzyszy chodząca:"
+
+[[6.sections.4.questions.choices]]
+answer = "skrzynia"
+correct = true
+
+[[6.sections.4.questions.choices]]
+answer = "szafa"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "encyklopedia"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "różdżka"
+correct = false
+
+[[6.sections.4.questions]]
+question = "Głównym bohaterem gry BLAZING DRAGONS jest:"
+
+[[6.sections.4.questions.choices]]
+answer = "rycerz króla Artura"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "smok"
+correct = true
+
+[[6.sections.4.questions.choices]]
+answer = "hiszpański awanturnik"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "sir Lancelot"
+correct = false
+
+[[6.sections.4.questions]]
+question = "Głównym bohaterem gry BROKEN SWORD jest:"
+
+[[6.sections.4.questions.choices]]
+answer = "prof. Oubiere"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "Nico Collard"
+correct = false
+
+[[6.sections.4.questions.choices]]
+answer = "George Stobbart"
+correct = true
+
+[[6.sections.4.questions.choices]]
+answer = "Raul Grasiento"
+correct = false
+
+[6.sections.5]
+introduction = """
+No dobra, tym razem bez skojarzeń ale za to pomęczę Was... reklamami? A potem jeszcze odgadniecie kilka screenów i dam Wam spokój.
+"""
+
+[[6.sections.5.questions]]
+question = "Na początek prościzna. Jakiej gry dotyczy fragment tej reklamy? [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "KLAYMAN! KLAYMAN! NEVERHOOD"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "MONKEY MAGIC"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "MONKEY HERO"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "SKULLMONKEYS"
+correct = true
+
+[[6.sections.5.questions]]
+question = "No I co? Poszło gładko? Pytamy dalej o to samo. Czy ta reklama dot. jednej z gier z serii: [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "NEED FOR SPEED"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "RIDGE RACER"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "GRAN TURISMO"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "TEST DRVE"
+correct = false
+
+[[6.sections.5.questions]]
+question = "Teraz spróbuj tego. Co jest reklamowane poniżej? [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "GRAN TURISMO"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "NFS: PORSCHE UNLASHED"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "DRIVER"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "TOCA TOURING CARS"
+correct = false
+
+[[6.sections.5.questions]]
+question = """A teraz takie "buty". [img]"""
+
+[[6.sections.5.questions.choices]]
+answer = "TULIPANUS EXTREME"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "POINT BLANK 2"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "RESIDENT EVIL 2"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "FIGHTING FORCE"
+correct = true
+
+[[6.sections.5.questions]]
+question = "Jeśli do tej pory wydawało Ci się, że jesteś pewien to teraz chyba zmienisz zdanie... [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "MDK"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "MASS DESTRUCTION"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "GLOBAL DOMINATION"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "CRASH BANDICOOT"
+correct = false
+
+[[6.sections.5.questions]]
+question = "No a co Ty na to? Fajna ręka... reklamująca... [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "DEATHTRAP DUNGEON"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "WAR GODS"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "MORTAL KOMBAT 4"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "SPAWN: THE ETERNAL"
+correct = true
+
+[[6.sections.5.questions]]
+question = """A teraz masz tzw. "Big problem" [img]"""
+
+[[6.sections.5.questions.choices]]
+answer = "TIMESPLITTERS"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "INTERNATIONAL TRACK & FIELD"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "QUAKE 2"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "DEAD IN THE WATER"
+correct = false
+
+[[6.sections.5.questions]]
+question = "Wiesz co. Żal mi Cię. Nie męcz się - już Cię dobijam. Spójrz poniżej i dopasuj... [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "LOONEY TUNES RACING"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "CHICKEN RUN"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "SPYRO: YEAR OF THE DRAGON"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "MORT THE CHICKEN"
+correct = false
+
+[[6.sections.5.questions]]
+question = "Ha. Jeszcze tu jestem. Toż to ostatni Giga Test, więc skorzystam z okazji i poznęcam się nad Twoimi zwłokami. Pytanie brzmi: z Jakiej gry pochodzi ten shot? [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "FLOATING RUNNER"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "DESCENT 2"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "JUMPING FLASH 1"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "z żadnej z powyższych"
+correct = true
+
+[[6.sections.5.questions]]
+question = "Na pożegnanie: z której części JET RAIDER (JET MOTO) pochodzi ten screen? [img]"
+
+[[6.sections.5.questions.choices]]
+answer = "JET RAIDER 1"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "JET RAIDER 2"
+correct = false
+
+[[6.sections.5.questions.choices]]
+answer = "JET RAIDER 3"
+correct = true
+
+[[6.sections.5.questions.choices]]
+answer = "z żadnej, bo to jest screen ze STREAK"
+correct = false
+
+[6.sections.6]
+introduction = """
+UUuu, UUuu! UUuu, UUuu! Blow my whistle bicz! Tu tu turu turu tum! Here comes the new challenger! Jedziemy z tym koksem - po raz pierwszy złapałem się za pytania odnoszące się do zdjęć. Ciekaw jestem, czy wyszły trudne:)...
+"""
+
+[[6.sections.6.questions]]
+question = "W jakiej grze można wymiatać tą bronią? [img]"
+
+[[6.sections.6.questions.choices]]
+answer = "GRADIUS IV"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "EINHAENDER"
+correct = true
+
+[[6.sections.6.questions.choices]]
+answer = "RAY CRIZIS"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "MEGA MAN X4"
+correct = false
+
+[[6.sections.6.questions]]
+question = "Heh, heh - ostatni boss! Tylko z jakiej gry? [img]"
+
+[[6.sections.6.questions.choices]]
+answer = "STAR OCEAN 2"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "SAGA FRONTIER 2"
+correct = true
+
+[[6.sections.6.questions.choices]]
+answer = "LUNAR"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "LEGEND OF MANA"
+correct = false
+
+[[6.sections.6.questions]]
+question = "Na podstawie której gry NIE zrobiono dotychczas jeszcze żadnego filmu (klasycznego, bądź anime)?"
+
+[[6.sections.6.questions.choices]]
+answer = "DOUBLE DRAGON"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "TEKKEN"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "STREET FIGHTER"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "SHADOW FIGHTER"
+correct = true
+
+[[6.sections.6.questions]]
+question = """Ile dodatkowych samochodów było w RIDGE RACER REVOLUTION? Chodzi o "bossów", z którymi trzeba było wygrać wyścig."""
+
+[[6.sections.6.questions.choices]]
+answer = "2"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "3"
+correct = true
+
+[[6.sections.6.questions.choices]]
+answer = "4"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "5"
+correct = false
+
+[[6.sections.6.questions]]
+question = "Uwielbiamy WIPEOUTa? To jak się zwie poniższa trasa? [img]"
+
+[[6.sections.6.questions.choices]]
+answer = "Korodera"
+correct = true
+
+[[6.sections.6.questions.choices]]
+answer = "Silverstream"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "Karbonis V"
+correct = false
+
+[[6.sections.6.questions.choices]]
+answer = "Arridos IV"
 correct = false
