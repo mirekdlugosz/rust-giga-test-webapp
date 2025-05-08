@@ -11,11 +11,11 @@ Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(
 
 [1.sections.1]
 introduction = """
-Cze! To ja, Alien. Przygotowałem dla Was na początek kilka pytań z różnych dziedzin. Mam nadzieję, że nie bardzo trudnych. [Mr.Ś]
+[img]mr-sciera.png[/img] Cze! To ja, Alien. Przygotowałem dla Was na początek kilka pytań z różnych dziedzin. Mam nadzieję, że nie bardzo trudnych. [Mr.Ś]
 """
 
 [[1.sections.1.questions]]
-question = "Ten power-up w BOMBERMANie służy do: [img]"
+question = "Ten power-up w BOMBERMANie służy do: [img]Q1.png[/img]"
 
 [[1.sections.1.questions.choices]]
 answer = "rzucania ognistymi kulami"
@@ -34,7 +34,7 @@ answer = "zapalenia wszystkich przeciwników"
 correct = false
 
 [[1.sections.1.questions]]
-question = "Kto jest wydawcą tej gry? [img]"
+question = "Kto jest wydawcą tej gry? [img]Q2.png[/img]"
 
 [[1.sections.1.questions.choices]]
 answer = "SONY"
@@ -72,7 +72,7 @@ answer = "KONAMI CENTRAL"
 correct = false
 
 [[1.sections.1.questions]]
-question = "Z której gry pochodzi ta postać? [img]"
+question = "Z której gry pochodzi ta postać? [img]Q4.png[/img]"
 
 [[1.sections.1.questions.choices]]
 answer = "ROAD RASH"
@@ -129,7 +129,7 @@ answer = "wanna"
 correct = true
 
 [[1.sections.1.questions]]
-question = "Jakie zadanie w TONY HAWK'S SKATEBOARDING masz do wykonania w tej planszy? [img]"
+question = "Jakie zadanie w TONY HAWK'S SKATEBOARDING masz do wykonania w tej planszy? [img]Q7.png[/img]"
 
 [[1.sections.1.questions.choices]]
 answer = """zniszczyć znaki "Zakaz skejtowania""""
@@ -208,19 +208,19 @@ correct = false
 question = "Tylko jedno z 4 zdjęć z gry RESIDENT EVIL nie zostało spreparowane. Zaznacz właściwe."
 
 [[1.sections.1.questions.choices]]
-answer = "[img]"
+answer = "[img]Q11_A1.png[/img]"
 correct = false
 
 [[1.sections.1.questions.choices]]
-answer = "[img]"
+answer = "[img]Q11_A2.png[/img]"
 correct = true
 
 [[1.sections.1.questions.choices]]
-answer = "[img]"
+answer = "[img]Q11_A3.png[/img]"
 correct = false
 
 [[1.sections.1.questions.choices]]
-answer = "[img]"
+answer = "[img]Q11_A4.png[/img]"
 correct = false
 
 [[1.sections.1.questions]]
@@ -263,7 +263,7 @@ correct = false
 
 [1.sections.2]
 introduction = """
-Haha. Nadszedł czas na mnie:) - i już po Was! Jako że interesuję się wyścigami i strzelaninami, pytania są tylko z tych dwóch dziedzin. Spróbujcie szczęścia, bo są trudne. [Gamera]
+[img]gamera.png[/img] Haha. Nadszedł czas na mnie:) - i już po Was! Jako że interesuję się wyścigami i strzelaninami, pytania są tylko z tych dwóch dziedzin. Spróbujcie szczęścia, bo są trudne. [Gamera]
 """
 
 [[1.sections.2.questions]]
@@ -438,7 +438,7 @@ answer = "Francja"
 correct = false
 
 [[1.sections.2.questions]]
-question = "Nazwa tej trasy (GRAN TURISMO 2) brzmi: [img]"
+question = "Nazwa tej trasy (GRAN TURISMO 2) brzmi: [img]Q23.png[/img]"
 
 [[1.sections.2.questions.choices]]
 answer = "Autumn Ring"
@@ -457,7 +457,7 @@ answer = "Grindelwald"
 correct = false
 
 [[1.sections.2.questions]]
-question = "To jest samochód marki (GRAN TURISMO 2): [img]"
+question = "To jest samochód marki (GRAN TURISMO 2): [img]Q24.png[/img]"
 
 [[1.sections.2.questions.choices]]
 answer = "Vector"
@@ -477,7 +477,7 @@ correct = false
 
 [1.sections.3]
 introduction = """
-Witam! A teraz kilka pytań od Wiejskiego Głupka. Niektóre mogą okazać się nieco dziwne, ale taki już jestem - Wiejski Głupek. [HIV]
+[img]hiv.png[/img] Witam! A teraz kilka pytań od Wiejskiego Głupka. Niektóre mogą okazać się nieco dziwne, ale taki już jestem - Wiejski Głupek. [HIV]
 """
 
 [[1.sections.3.questions]]
@@ -596,7 +596,7 @@ correct = true
 
 [1.sections.4]
 introduction = """
-Teraz kolej na mnie i na bardziej ambitne pytania, niż podane wcześniej:). [Kali]
+[img]kali.png[/img] Teraz kolej na mnie i na bardziej ambitne pytania, niż podane wcześniej:). [Kali]
 """
 
 [[1.sections.4.questions]]
@@ -715,7 +715,7 @@ correct = false
 
 [1.sections.5]
 introduction = """
-Hej! Teraz kolej na moje pytania z różnych "parafii". Nie są łatwe, z góry uprzedzam. [Shiva]
+[img]shiva.png[/img] Hej! Teraz kolej na moje pytania z różnych "parafii". Nie są łatwe, z góry uprzedzam. [Shiva]
 """
 
 [[1.sections.5.questions]]
@@ -835,7 +835,7 @@ correct = false
 
 [1.sections.6]
 introduction = """
-Teraz moje pytania. Kilka łatwych, kilka trudnych. Może uda Wam się trafić:)... [Kujot]
+[img]kujot.png[/img] Teraz moje pytania. Kilka łatwych, kilka trudnych. Może uda Wam się trafić:)... [Kujot]
 """
 
 [[1.sections.6.questions]]
@@ -935,7 +935,7 @@ correct = true
 
 [1.sections.7]
 introduction = """
-Tu Loki. Takie tam 2 pytanka przygotowałem. No to sru! [Loki]
+[img]loki.png[/img] Tu Loki. Takie tam 2 pytanka przygotowałem. No to sru! [Loki]
 """
 
 [[1.sections.7.questions]]
@@ -978,7 +978,7 @@ correct = false
 
 [1.sections.8]
 introduction = """
-Teraz dziedzina sportowa. Macie za swoje :) [Koso]
+[img]koso.png[/img] Teraz dziedzina sportowa. Macie za swoje :) [Koso]
 """
 
 [[1.sections.8.questions]]
@@ -1036,7 +1036,7 @@ correct = true
 
 [1.sections.9]
 introduction = """
-Sasza podaje swoje pytania. Ruszcie trochę głową, a zadanie okaże się proste. [Sasza]
+[img]sasza.png[/img] Sasza podaje swoje pytania. Ruszcie trochę głową, a zadanie okaże się proste. [Sasza]
 """
 
 [[1.sections.9.questions]]
@@ -1147,7 +1147,7 @@ Przed Wami druga część GIGA TESTU, na wyniki czekamy do 15 listopada (podkrę
 
 [2.sections.1]
 introduction = """
-W poprzedniej edycji zabrakło moich pytań o RPG (oczywiście), bo się nie zmieściły. Teraz pora na nadrobienie zaległości. [Star]
+[img]star.png[/img] W poprzedniej edycji zabrakło moich pytań o RPG (oczywiście), bo się nie zmieściły. Teraz pora na nadrobienie zaległości. [Star]
 """
 
 [[2.sections.1.questions]]
@@ -1265,7 +1265,7 @@ answer = "Black Shadow"
 correct = false
 
 [[2.sections.1.questions]]
-question = "Do kogo należy ten mech z XENOGEARS? [img]"
+question = "Do kogo należy ten mech z XENOGEARS? [img]Q63.png[/img]"
 
 [[2.sections.1.questions.choices]]
 answer = "Feia"
@@ -1304,7 +1304,7 @@ correct = true
 
 [2.sections.2]
 introduction = """
-Teraz kolej na mnie, bo moje pytania się ostatnio zawieruszyły (jak ja sam zresztą :) [Mysza]
+[img]myszaq.png[/img] Teraz kolej na mnie, bo moje pytania się ostatnio zawieruszyły (jak ja sam zresztą :) [Mysza]
 """
 
 [[2.sections.2.questions]]
@@ -1442,7 +1442,7 @@ correct = false
 
 [2.sections.1]
 introduction = """
-Moje pytania nie są trudne, bo wymyślanie takich jest dość żmudne. Każdy Czytelnik poradzi sobie, wystarczy tylko pogrzebać w głowie. Trochę o sprzęcie, trochę o grach - bułeczka z masłem, żaden to strach. [Norby]
+[img]norby.png[/img] Moje pytania nie są trudne, bo wymyślanie takich jest dość żmudne. Każdy Czytelnik poradzi sobie, wystarczy tylko pogrzebać w głowie. Trochę o sprzęcie, trochę o grach - bułeczka z masłem, żaden to strach. [Norby]
 """
 
 [[2.sections.2.questions]]
@@ -1599,7 +1599,7 @@ correct = false
 
 [2.sections.3]
 introduction = """
-Najtrudniejsze pytania odłożyłem sobie na ostatnią część GIGA TEST'u. Na razie same prościzny. [Mr.Ściera]
+[img]mr-sciera.png[/img] Najtrudniejsze pytania odłożyłem sobie na ostatnią część GIGA TEST'u. Na razie same prościzny. [Mr.Ściera]
 """
 
 [[2.sections.3.questions]]
@@ -1660,7 +1660,7 @@ answer = "bieganie po wieżowcu"
 correct = false
 
 [[2.sections.3.questions]]
-question = "Z jakiej gry pochodzi to zdjęcie? [img]"
+question = "Z jakiej gry pochodzi to zdjęcie? [img]Q83.png[/img]"
 
 [[2.sections.3.questions.choices]]
 answer = "MECHWARRIOR 2"
@@ -1755,7 +1755,7 @@ answer = "tylko ze STREET FIGHTER"
 correct = false
 
 [[2.sections.3.questions]]
-question = "Jaki jest tytuł tej gry? [img]"
+question = "Jaki jest tytuł tej gry? [img]Q88.png[/img]"
 
 [[2.sections.3.questions.choices]]
 answer = "METAL SLUG"
@@ -1832,11 +1832,11 @@ correct = true
 
 [2.sections.4]
 introduction = """
-Pytania banalne, bułka z masłem, łatwizna, "kajne problime"...:). [Kujot]
+[img]kujot.png[/img] Pytania banalne, bułka z masłem, łatwizna, "kajne problime"...:). [Kujot]
 """
 
 [[2.sections.4.questions]]
-question = "Jak dopełnił żywota wilkołak ze SKULLMONKEYS (fotka poniżej): [img]"
+question = "Jak dopełnił żywota wilkołak ze SKULLMONKEYS (fotka poniżej): [img]Q92.png[/img]"
 
 [[2.sections.4.questions.choices]]
 answer = "został zeżarty przez zieloną łasicę"
@@ -1932,7 +1932,7 @@ correct = false
 
 [2.sections.5]
 introduction = """
-Gamera zadaje pytania. Nie będzie łatwo, oj nie. Zaczynamy.
+[img]gamera.png[/img] Gamera zadaje pytania. Nie będzie łatwo, oj nie. Zaczynamy.
 """
 
 [[2.sections.5.questions]]
@@ -2089,7 +2089,7 @@ correct = false
 
 [2.sections.6]
 introduction = """
-Pierdzący Oszołom się nie wysilił, bo mu się nie chciało. [HIV]
+[img]hiv.png[/img] Pierdzący Oszołom się nie wysilił, bo mu się nie chciało. [HIV]
 """
 
 [[2.sections.6.questions]]
@@ -2150,7 +2150,7 @@ answer = "SKULLMONKEYS"
 correct = false
 
 [[2.sections.6.questions]]
-question = "Wydawcą tej gry jest firma (screen, poniżej): [img]"
+question = "Wydawcą tej gry jest firma (screen, poniżej): [img]Q108.png[/img]"
 
 [[2.sections.6.questions.choices]]
 answer = "GT INTERACTIVE"
@@ -2169,7 +2169,7 @@ answer = "GREMLIN"
 correct = false
 
 [[2.sections.6.questions]]
-question = "Ta gra (poniżej) znalazła się na składance: [img]"
+question = "Ta gra (poniżej) znalazła się na składance: [img]Q109.png[/img]"
 
 [[2.sections.6.questions.choices]]
 answer = "CAPCOM 1"
@@ -2188,7 +2188,7 @@ answer = "CAPCOM 4"
 correct = true
 
 [[2.sections.6.questions]]
-question = "Podaj tytuł tej gry: [img]"
+question = "Podaj tytuł tej gry: [img]Q110.png[/img]"
 
 [[2.sections.6.questions.choices]]
 answer = "TRASH IT"
@@ -2266,7 +2266,7 @@ correct = true
 
 [2.sections.7]
 introduction = """
-Macie tu kolejne pytania z serii "Dziwny jest ten świat" :) [Loki]
+[img]loki.png[/img] Macie tu kolejne pytania z serii "Dziwny jest ten świat" :) [Loki]
 """
 
 [[2.sections.7.questions]]
@@ -2328,7 +2328,7 @@ correct = false
 
 [2.sections.8]
 introduction = """
-Dlaczego ja jestem na samym końcu? Ściera, nie mścij się na mnie... Tym razem pytania dotyczące głównie RPG'ów, choć trzeba też będzie wykazać się nieco szerszą wiedzą związaną z tematyką gier - w końcu bycie graczem to nie tylko siedzenie przed telewizorem/monitorem. No to jedziemy! [Kali]
+[img]kali.png[/img] Dlaczego ja jestem na samym końcu? Ściera, nie mścij się na mnie... Tym razem pytania dotyczące głównie RPG'ów, choć trzeba też będzie wykazać się nieco szerszą wiedzą związaną z tematyką gier - w końcu bycie graczem to nie tylko siedzenie przed telewizorem/monitorem. No to jedziemy! [Kali]
 """
 
 [[2.sections.8.questions]]
@@ -2485,7 +2485,7 @@ Rozpoznaj grę na ilustracji
 """
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q124.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "APOCALYPSE"
@@ -2504,7 +2504,7 @@ answer = "WILD 9"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q125.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "AUTO DESTRUCT"
@@ -2523,7 +2523,7 @@ answer = "DRIVE & SHOOTING"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q126.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "BLACK DOWN"
@@ -2542,7 +2542,7 @@ answer = "HARRIER ATTACK"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q127.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "LEGEND OF LEGAIA"
@@ -2561,7 +2561,7 @@ answer = "WAR GODS"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q128.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "WACKY RACES"
@@ -2580,7 +2580,7 @@ answer = "MOTOR TOON GP"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q129.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "AMERZONE"
@@ -2599,7 +2599,7 @@ answer = "PERFECT WEAPON"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q130.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "RALLY MASTERS"
@@ -2618,7 +2618,7 @@ answer = "RALLY THE EUROPE"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q131.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "QUAKE 2"
@@ -2637,7 +2637,7 @@ answer = "SHADOW MASTER"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q132.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "LE MANS 24 HOURS"
@@ -2656,7 +2656,7 @@ answer = "NFS: PORSHE UNLEASHED"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q133.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "STREET SK8TER 2"
@@ -2675,7 +2675,7 @@ answer = "MTV SKATEBOARDING"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q134.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "NINJA"
@@ -2694,7 +2694,7 @@ answer = "GUILY GEAR"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q135.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "TINY TANK"
@@ -2713,7 +2713,7 @@ answer = "TANK BEER"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q136.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "WARGAMES"
@@ -2732,7 +2732,7 @@ answer = "SOVIET STRIKE"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q137.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "SAND BANDITS"
@@ -2751,7 +2751,7 @@ answer = "WILD 9"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q138.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "XENOGEARS"
@@ -2770,7 +2770,7 @@ answer = "POWERBOAT RACING"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q139.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "FADE TO BLACK"
@@ -2789,7 +2789,7 @@ answer = "TO NIE JEST GRA NA PSX"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q140.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "V-RALLY 2"
@@ -2808,7 +2808,7 @@ answer = "DESTRUCTION DERBY RAW"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q141.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "ECHO NIGHT"
@@ -2827,7 +2827,7 @@ answer = "NIGHTMARE CREATURES"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q142.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "GEKIDO"
@@ -2846,7 +2846,7 @@ answer = "WWF WARZONE"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q143.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "OMEGA BOOST"
@@ -2865,7 +2865,7 @@ answer = "JUPITER STRIKE"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q144.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "RC DE GO!"
@@ -2884,7 +2884,7 @@ answer = "RADIO CONTROL RACING"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q145.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "GUARDIAN'S CRUSADE"
@@ -2903,7 +2903,7 @@ answer = "AZURE DREAMS"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q146.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "SYDNEY 2000"
@@ -2922,7 +2922,7 @@ answer = "RUSH DOWN"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q147.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "PONG"
@@ -2941,7 +2941,7 @@ answer = "SPACE INVADERS"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q148.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "MOHO"
@@ -2960,7 +2960,7 @@ answer = "WARZONE 2100"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q149.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "MAD DOGS ON THE TRACK"
@@ -2979,7 +2979,7 @@ answer = "SPEED FREAKS"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q150.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "WIPEOUT 2097"
@@ -2998,7 +2998,7 @@ answer = "WIPEOUT"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q151.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "PARAPPA THE RAPPER"
@@ -3017,7 +3017,7 @@ answer = "TV DJ (PS2)"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q152.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "THIS IS FOOTBALL"
@@ -3036,7 +3036,7 @@ answer = "ISS PRO EVOLUTION"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q153.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "HEART OF DARKNESS"
@@ -3055,7 +3055,7 @@ answer = "KLONOA"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q154.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "COUNTDOWN VAMPIRES"
@@ -3074,7 +3074,7 @@ answer = "DINO CRISIS"
 correct = true
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q155.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "AIR COMBAT"
@@ -3093,7 +3093,7 @@ answer = "AGILE WARRIOR"
 correct = false
 
 [[3.sections.1.questions]]
-question = "[img]"
+question = "[img]Q156.png[/img]"
 
 [[3.sections.1.questions.choices]]
 answer = "BLAZE & BLADE"
@@ -3124,7 +3124,7 @@ PS. Unieważniamy następujące pytania: nr 42 z GT1, ponieważ okazało się, �
 
 [4.sections.1]
 introduction = """
-To znowu ja! Tym razem nieco łatwiejsze pytanka, a nawet nie wszystkie z eRPeGów.
+[img]star.png[/img] To znowu ja! Tym razem nieco łatwiejsze pytanka, a nawet nie wszystkie z eRPeGów.
 """
 
 [[4.sections.1.questions]]
@@ -3243,7 +3243,7 @@ correct = false
 
 [4.sections.2]
 introduction = """
-No to jazda - lecą pytanka ode mnie. Myślisz, że znajdziesz tu poprawne odpowiedzi? Ghe, ghe! A kto Ci powiedział, że takowe zamieściłem:)...
+[img]myszaq.png[/img] No to jazda - lecą pytanka ode mnie. Myślisz, że znajdziesz tu poprawne odpowiedzi? Ghe, ghe! A kto Ci powiedział, że takowe zamieściłem:)...
 """
 
 [[4.sections.2.questions]]
@@ -3457,7 +3457,7 @@ correct = true
 
 [4.sections.3]
 introduction = """
-Przyszła kolej na moje pytanka:). Nie są trudne, a nawet gdyby sprawiły Wam jakieś kłopoty, to uważam, że i tak warto się pomęczyć. W końcu na zwycięzcę czeka nowiutka PS2!
+[img]ace.png[/img] Przyszła kolej na moje pytanka:). Nie są trudne, a nawet gdyby sprawiły Wam jakieś kłopoty, to uważam, że i tak warto się pomęczyć. W końcu na zwycięzcę czeka nowiutka PS2!
 """
 
 [[4.sections.3.questions]]
@@ -3480,7 +3480,7 @@ answer = "FA PREMIER LEAGUE ALL STAR MAN."
 correct = false
 
 [[4.sections.3.questions]]
-question = "W którym z podanych tytułów występuje postać przedstawiona na zdjęciu? [img]"
+question = "W którym z podanych tytułów występuje postać przedstawiona na zdjęciu? [img]Q175.png[/img]"
 
 [[4.sections.3.questions.choices]]
 answer = "ZERO DIVIDE"
@@ -3595,7 +3595,7 @@ correct = false
 
 [4.sections.4]
 introduction = """
-Oto pierwsza porcja wyalienowanych pytań. Możecie mówić o sporym szczęściu, ponieważ postanowiłem spuścić z tonu...
+[img]mr-sciera.png[/img] Oto pierwsza porcja wyalienowanych pytań. Możecie mówić o sporym szczęściu, ponieważ postanowiłem spuścić z tonu...
 """
 
 [[4.sections.4.questions]]
@@ -3695,11 +3695,11 @@ correct = false
 
 [4.sections.5]
 introduction = """
-Kilka pytań "screenowych", za to dosyć trudnych. Może komuś uda się zgadnąć.
+[img]kujot.png[/img] Kilka pytań "screenowych", za to dosyć trudnych. Może komuś uda się zgadnąć.
 """
 
 [[4.sections.5.questions]]
-question = "Jak nazywa się jegomość ze zdjęcia (seria FINAL FANTASY) [img]"
+question = "Jak nazywa się jegomość ze zdjęcia (seria FINAL FANTASY) [img]Q186.png[/img]"
 
 [[4.sections.5.questions.choices]]
 answer = "Sephiroth"
@@ -3718,7 +3718,7 @@ answer = "Setzer"
 correct = true
 
 [[4.sections.5.questions]]
-question = "Z introdukcji jakiej gry pochodzi ten kadr? [img]"
+question = "Z introdukcji jakiej gry pochodzi ten kadr? [img]Q187.png[/img]"
 
 [[4.sections.5.questions.choices]]
 answer = "ELEMENTAL GEARBOLT"
@@ -3737,7 +3737,7 @@ answer = "SUIKODEN 2"
 correct = false
 
 [[4.sections.5.questions]]
-question = "Jaki tytuł ma ten kawałek? [img]"
+question = "Jaki tytuł ma ten kawałek? [img]Q188.png[/img]"
 
 [[4.sections.5.questions.choices]]
 answer = "Happy Man"
@@ -3757,7 +3757,7 @@ correct = false
 
 [4.sections.6]
 introduction = """
-Pytania od Wiejskiego Gupka jak zwykle trudności Wam nie przysporzą wielkich... a może jednak?
+[img]hiv.png[/img] Pytania od Wiejskiego Gupka jak zwykle trudności Wam nie przysporzą wielkich... a może jednak?
 """
 
 [[4.sections.6.questions]]
@@ -3990,7 +3990,7 @@ correct = false
 
 [4.sections.7]
 introduction = """
-Nie lubicie mnie? Ja też Was nie lubię. Macie za swoje...
+[img]shiva.png[/img] Nie lubicie mnie? Ja też Was nie lubię. Macie za swoje...
 """
 
 [[4.sections.7.questions]]
@@ -4128,7 +4128,7 @@ correct = true
 
 [4.sections.8]
 introduction = """
-Jak zwykle moje pytania są rewelacynie proste. Nic tylko odpowiadać...
+[img]loki.png[/img] Jak zwykle moje pytania są rewelacynie proste. Nic tylko odpowiadać...
 """
 
 [[4.sections.8.questions]]
@@ -4171,7 +4171,7 @@ correct = false
 
 [4.sections.9]
 introduction = """
-Na koniec jak zwykle kolej na moje pytania.
+[img]kali.png[/img] Na koniec jak zwykle kolej na moje pytania.
 """
 
 [[4.sections.9.questions]]
@@ -4309,11 +4309,11 @@ correct = false
 
 [4.sections.10]
 introduction = """
-A teraz porcja pytań od Mr.X'a, który nie chce pokazać swojej twarzy [Loki, Ściera, nie wydurniajcie się - Star] [Ty kapo - Mr.Ś]
+[img]mr-x.png[/img] A teraz porcja pytań od Mr.X'a, który nie chce pokazać swojej twarzy [Loki, Ściera, nie wydurniajcie się - Star] [Ty kapo - Mr.Ś]
 """
 
 [[4.sections.10.questions]]
-question = """Z jakiej gry pochodzi ten "loading"? [img]"""
+question = """Z jakiej gry pochodzi ten "loading"? [img]Q217.png[/img]"""
 
 [[4.sections.10.questions.choices]]
 answer = "ROLLCAGE"
@@ -4392,15 +4392,15 @@ correct = false
 question = "Który ze screenów NIE pokazuje gry na PSX?"
 
 [[4.sections.10.questions.choices]]
-answer = "[img]"
+answer = "[img]Q231_A1.png[/img]"
 correct = false
 
 [[4.sections.10.questions.choices]]
-answer = "[img]"
+answer = "[img]Q231_A2.png[/img]"
 correct = true
 
 [[4.sections.10.questions.choices]]
-answer = "[img]"
+answer = "[img]Q231_A3.png[/img]"
 correct = false
 
 [5]
@@ -4412,7 +4412,7 @@ Star jest stanowczy - wyrzuca do kosza za późno nadesłane GIGA TESTY (liczy s
 
 [5.sections.1]
 introduction = """
-W tym miesiącu wszystkie moje pytania będą "na jedno kopyto". Która z wymienionych gier nie pasuje do reszty tytułów? Problem twój polega na tym, że sam musisz się domyśleć, Jakie kryterium przyjąłem przy doborze tytułów. Skojarzenie to przekleństwo... [Mr. Ś]
+[img]mr-sciera.png[/img] W tym miesiącu wszystkie moje pytania będą "na jedno kopyto". Która z wymienionych gier nie pasuje do reszty tytułów? Problem twój polega na tym, że sam musisz się domyśleć, Jakie kryterium przyjąłem przy doborze tytułów. Skojarzenie to przekleństwo... [Mr. Ś]
 """
 
 [[5.sections.1.questions]]
@@ -4589,7 +4589,7 @@ correct = false
 
 [5.sections.2]
 introduction = """
-Tym razem nie będę nikogo dręczył i zadam kilka łatwiejszych pytań, aby w statystykach liczba trafień nieco wzrosła:). Kujot
+[img]kujot.png[/img] Tym razem nie będę nikogo dręczył i zadam kilka łatwiejszych pytań, aby w statystykach liczba trafień nieco wzrosła:). Kujot
 """
 
 [[5.sections.2.questions]]
@@ -4708,7 +4708,7 @@ correct = false
 
 [5.sections.3]
 introduction = """
-Oczywiście zapodaję łatwiznę, bo na kacu myślenie kiepsko mi idzie... [HIV]
+[img]hiv.png[/img] Oczywiście zapodaję łatwiznę, bo na kacu myślenie kiepsko mi idzie... [HIV]
 """
 
 [[5.sections.3.questions]]
@@ -4770,7 +4770,7 @@ correct = false
 
 [5.sections.4]
 introduction = """
-To znowu ja! Tym razem większość pytań dotyczy RPG, w sumie jednak nie powinny Wam sprawić problemów... a może jednak? [Star]
+[img]star.png[/img] To znowu ja! Tym razem większość pytań dotyczy RPG, w sumie jednak nie powinny Wam sprawić problemów... a może jednak? [Star]
 """
 
 [[5.sections.4.questions]]
@@ -4889,7 +4889,7 @@ correct = false
 
 [5.sections.5]
 introduction = """
-Lecimy z kolejnymi pytankami. Będzie szybko i krótko, bo musze pisać recki... Jutro końcówka, ghe, ghe! [myq].
+[img]myszaq.png[/img] Lecimy z kolejnymi pytankami. Będzie szybko i krótko, bo musze pisać recki... Jutro końcówka, ghe, ghe! [myq].
 """
 
 [[5.sections.5.questions]]
@@ -4989,7 +4989,7 @@ correct = false
 
 [5.sections.6]
 introduction = """
-Dwa szybkie pytanka. [Ace]
+[img]ace.png[/img] Dwa szybkie pytanka. [Ace]
 """
 
 [[5.sections.6.questions]]
@@ -5012,7 +5012,7 @@ answer = "Koala Kong"
 correct = false
 
 [[5.sections.6.questions]]
-question = "Wipeout 2097, która nazwa pasuje do umieszczonego obok logo? [img]"
+question = "Wipeout 2097, która nazwa pasuje do umieszczonego obok logo? [img]Q262.png[/img]"
 
 [[5.sections.6.questions.choices]]
 answer = "Felsar"
@@ -5045,11 +5045,11 @@ PS: w ostatniej edycji zapomniało nam się wrzucić tabelki z miejscem na wpisa
 
 [6.sections.1]
 introduction = """
-Co za alien dopisał mi miesiąc temu to debilne pytanie o skrócie Playa 2 (chociaż to raczej oczywiste:)? Ale do rzeczy - oto kilka obrazków do rozpoznania. Nie ma łatwo... [kujot]
+[img]kujot.png[/img] Co za alien dopisał mi miesiąc temu to debilne pytanie o skrócie Playa 2 (chociaż to raczej oczywiste:)? Ale do rzeczy - oto kilka obrazków do rozpoznania. Nie ma łatwo... [kujot]
 """
 
 [[6.sections.1.questions]]
-question = "Ten rasowy umarlak rozkładał się w: [img] [Kujot, co jest na tym screenie? - Mr.Ś]"
+question = "Ten rasowy umarlak rozkładał się w: [img]Q263.png[/img] [Kujot, co jest na tym screenie? - Mr.Ś]"
 
 [[6.sections.1.questions.choices]]
 answer = "DEATHTRAP DUNGEON"
@@ -5068,7 +5068,7 @@ answer = "WARHAMMER: DARK OMEN"
 correct = true
 
 [[6.sections.1.questions]]
-question = "Z której gry pochodzi ten koleś? [img]"
+question = "Z której gry pochodzi ten koleś? [img]Q264.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "FADE TO BLACK"
@@ -5087,7 +5087,7 @@ answer = "SILENT HILL"
 correct = false
 
 [[6.sections.1.questions]]
-question = "Jak dokładnie nazywa się ta niewiasta? [img]"
+question = "Jak dokładnie nazywa się ta niewiasta? [img]Q265.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "!SOPHITIA"
@@ -5106,7 +5106,7 @@ answer = "SOPHITIA!!"
 correct = true
 
 [[6.sections.1.questions]]
-question = "To Ci się spodoba:). Save którego CRASHa ma taką ikonkę? [img]"
+question = "To Ci się spodoba:). Save którego CRASHa ma taką ikonkę? [img]Q266.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "CRASH BANDICOOT"
@@ -5125,7 +5125,7 @@ answer = "CRASH TEAM RACING"
 correct = false
 
 [[6.sections.1.questions]]
-question = "Nie śliń się, tylko odpowiedz: co to za gra? [img]"
+question = "Nie śliń się, tylko odpowiedz: co to za gra? [img]Q267.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "FEAR EFFECT"
@@ -5144,7 +5144,7 @@ answer = "to nie jest gra na PSX!"
 correct = false
 
 [[6.sections.1.questions]]
-question = "Jaki tytuł nosi ten shooter? [img]"
+question = "Jaki tytuł nosi ten shooter? [img]Q268.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "GAMERA 2000"
@@ -5163,7 +5163,7 @@ answer = "SPACE DEBRIS"
 correct = false
 
 [[6.sections.1.questions]]
-question = "W jakiej grze można się natknąć na tego debila? [img]"
+question = "W jakiej grze można się natknąć na tego debila? [img]Q269.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "ROGUE TRIP"
@@ -5182,7 +5182,7 @@ answer = "VIGILANTE 8"
 correct = false
 
 [[6.sections.1.questions]]
-question = "Oto i ostatni obrazek, a pochodzi on z: [img]"
+question = "Oto i ostatni obrazek, a pochodzi on z: [img]Q270.png[/img]"
 
 [[6.sections.1.questions.choices]]
 answer = "CHOCOBO MYSTERIOUS DUNGEON 2"
@@ -5202,7 +5202,7 @@ correct = false
 
 [6.sections.2]
 introduction = """
-Cóż, nowy wiek - czas i na nową porcję pytań. Czy ich debilizm wzniósł się też na nowy poziom? Czy mu podołasz? Sam oceń... [myq]
+[img]myszaq.png[/img] Cóż, nowy wiek - czas i na nową porcję pytań. Czy ich debilizm wzniósł się też na nowy poziom? Czy mu podołasz? Sam oceń... [myq]
 """
 
 [[6.sections.2.questions]]
@@ -5435,7 +5435,7 @@ correct = true
 
 [6.sections.3]
 introduction = """
-Tada!!!  
+[img]shiva.png[/img] Tada!!!  
 A oto i ostatnia porcja pytań.
 """
 
@@ -5536,7 +5536,7 @@ correct = true
 
 [6.sections.4]
 introduction = """
-Ble, ble, ble bleble, bleble, ble. Bleblebleble ble, ble ble, bleble ble. A więc zaczynam...
+[img]loki.png[/img] Ble, ble, ble bleble, bleble, ble. Bleblebleble ble, ble ble, bleble ble. A więc zaczynam...
 """
 
 [[6.sections.4.questions]]
@@ -5598,11 +5598,11 @@ correct = false
 
 [6.sections.5]
 introduction = """
-No dobra, tym razem bez skojarzeń ale za to pomęczę Was... reklamami? A potem jeszcze odgadniecie kilka screenów i dam Wam spokój.
+[img]mr-sciera.png[/img] No dobra, tym razem bez skojarzeń ale za to pomęczę Was... reklamami? A potem jeszcze odgadniecie kilka screenów i dam Wam spokój.
 """
 
 [[6.sections.5.questions]]
-question = "Na początek prościzna. Jakiej gry dotyczy fragment tej reklamy? [img]"
+question = "Na początek prościzna. Jakiej gry dotyczy fragment tej reklamy? [img]Q291.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "KLAYMAN! KLAYMAN! NEVERHOOD"
@@ -5621,7 +5621,7 @@ answer = "SKULLMONKEYS"
 correct = true
 
 [[6.sections.5.questions]]
-question = "No I co? Poszło gładko? Pytamy dalej o to samo. Czy ta reklama dot. jednej z gier z serii: [img]"
+question = "No I co? Poszło gładko? Pytamy dalej o to samo. Czy ta reklama dot. jednej z gier z serii: [img]Q292.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "NEED FOR SPEED"
@@ -5640,7 +5640,7 @@ answer = "TEST DRVE"
 correct = false
 
 [[6.sections.5.questions]]
-question = "Teraz spróbuj tego. Co jest reklamowane poniżej? [img]"
+question = "Teraz spróbuj tego. Co jest reklamowane poniżej? [img]Q293.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "GRAN TURISMO"
@@ -5659,7 +5659,7 @@ answer = "TOCA TOURING CARS"
 correct = false
 
 [[6.sections.5.questions]]
-question = """A teraz takie "buty". [img]"""
+question = """A teraz takie "buty". [img]Q294.png[/img]"""
 
 [[6.sections.5.questions.choices]]
 answer = "TULIPANUS EXTREME"
@@ -5678,7 +5678,7 @@ answer = "FIGHTING FORCE"
 correct = true
 
 [[6.sections.5.questions]]
-question = "Jeśli do tej pory wydawało Ci się, że jesteś pewien to teraz chyba zmienisz zdanie... [img]"
+question = "Jeśli do tej pory wydawało Ci się, że jesteś pewien to teraz chyba zmienisz zdanie... [img]Q295.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "MDK"
@@ -5697,7 +5697,7 @@ answer = "CRASH BANDICOOT"
 correct = false
 
 [[6.sections.5.questions]]
-question = "No a co Ty na to? Fajna ręka... reklamująca... [img]"
+question = "No a co Ty na to? Fajna ręka... reklamująca... [img]Q296.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "DEATHTRAP DUNGEON"
@@ -5716,7 +5716,7 @@ answer = "SPAWN: THE ETERNAL"
 correct = true
 
 [[6.sections.5.questions]]
-question = """A teraz masz tzw. "Big problem" [img]"""
+question = """A teraz masz tzw. "Big problem" [img]Q297.png[/img]"""
 
 [[6.sections.5.questions.choices]]
 answer = "TIMESPLITTERS"
@@ -5735,7 +5735,7 @@ answer = "DEAD IN THE WATER"
 correct = false
 
 [[6.sections.5.questions]]
-question = "Wiesz co. Żal mi Cię. Nie męcz się - już Cię dobijam. Spójrz poniżej i dopasuj... [img]"
+question = "Wiesz co. Żal mi Cię. Nie męcz się - już Cię dobijam. Spójrz poniżej i dopasuj... [img]Q298.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "LOONEY TUNES RACING"
@@ -5754,7 +5754,7 @@ answer = "MORT THE CHICKEN"
 correct = false
 
 [[6.sections.5.questions]]
-question = "Ha. Jeszcze tu jestem. Toż to ostatni Giga Test, więc skorzystam z okazji i poznęcam się nad Twoimi zwłokami. Pytanie brzmi: z Jakiej gry pochodzi ten shot? [img]"
+question = "Ha. Jeszcze tu jestem. Toż to ostatni Giga Test, więc skorzystam z okazji i poznęcam się nad Twoimi zwłokami. Pytanie brzmi: z Jakiej gry pochodzi ten shot? [img]Q299.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "FLOATING RUNNER"
@@ -5773,7 +5773,7 @@ answer = "z żadnej z powyższych"
 correct = true
 
 [[6.sections.5.questions]]
-question = "Na pożegnanie: z której części JET RAIDER (JET MOTO) pochodzi ten screen? [img]"
+question = "Na pożegnanie: z której części JET RAIDER (JET MOTO) pochodzi ten screen? [img]Q300.png[/img]"
 
 [[6.sections.5.questions.choices]]
 answer = "JET RAIDER 1"
@@ -5793,11 +5793,11 @@ correct = false
 
 [6.sections.6]
 introduction = """
-UUuu, UUuu! UUuu, UUuu! Blow my whistle bicz! Tu tu turu turu tum! Here comes the new challenger! Jedziemy z tym koksem - po raz pierwszy złapałem się za pytania odnoszące się do zdjęć. Ciekaw jestem, czy wyszły trudne:)...
+[img]kali.png[/img] UUuu, UUuu! UUuu, UUuu! Blow my whistle bicz! Tu tu turu turu tum! Here comes the new challenger! Jedziemy z tym koksem - po raz pierwszy złapałem się za pytania odnoszące się do zdjęć. Ciekaw jestem, czy wyszły trudne:)...
 """
 
 [[6.sections.6.questions]]
-question = "W jakiej grze można wymiatać tą bronią? [img]"
+question = "W jakiej grze można wymiatać tą bronią? [img]Q301.png[/img]"
 
 [[6.sections.6.questions.choices]]
 answer = "GRADIUS IV"
@@ -5816,7 +5816,7 @@ answer = "MEGA MAN X4"
 correct = false
 
 [[6.sections.6.questions]]
-question = "Heh, heh - ostatni boss! Tylko z jakiej gry? [img]"
+question = "Heh, heh - ostatni boss! Tylko z jakiej gry? [img]Q302.png[/img]"
 
 [[6.sections.6.questions.choices]]
 answer = "STAR OCEAN 2"
@@ -5873,7 +5873,7 @@ answer = "5"
 correct = false
 
 [[6.sections.6.questions]]
-question = "Uwielbiamy WIPEOUTa? To jak się zwie poniższa trasa? [img]"
+question = "Uwielbiamy WIPEOUTa? To jak się zwie poniższa trasa? [img]Q305.png[/img]"
 
 [[6.sections.6.questions.choices]]
 answer = "Korodera"
