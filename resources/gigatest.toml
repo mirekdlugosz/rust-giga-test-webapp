@@ -2292,19 +2292,19 @@ correct = false
 question = """Które z poniżych "krzaczków" są logiem Tekkena (zagadka wzrokowa):"""
 
 [[2.sections.7.questions.choices]]
-answer = "[img]"
+answer = "鉄筋"
 correct = false
 
 [[2.sections.7.questions.choices]]
-answer = "[img]"
+answer = "鉄拳"
 correct = true
 
 [[2.sections.7.questions.choices]]
-answer = "[img]"
+answer = "鉄建"
 correct = false
 
 [[2.sections.7.questions.choices]]
-answer = "[img]"
+answer = "鉄幹"
 correct = false
 
 [[2.sections.7.questions]]
