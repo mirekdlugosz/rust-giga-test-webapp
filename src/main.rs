@@ -1,5 +1,5 @@
 use crate::errors::Error;
-use axum::extract::DefaultBodyLimit;
+use crate::giga_test::get_giga_test;
 use axum::Router;
 use std::process::ExitCode;
 use std::time::Duration;
@@ -8,29 +8,35 @@ use tower::ServiceBuilder;
 use tower_http::compression::CompressionLayer;
 use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
-use tower_sessions::{MemoryStore, Session, SessionManagerLayer};
+use tower_sessions::{MemoryStore, SessionManagerLayer};
+use tower_serve_static::ServeDir;
+use include_dir::{Dir, include_dir};
+use regex::Regex;
 
-//mod assets;
 mod env;
 mod errors;
+mod giga_test;
 mod models;
 mod pages;
 mod routes;
-#[cfg(test)]
-mod test_helpers;
+
+static STATIC_ASSETS_DIR: Dir<'static> = include_dir!("$CARGO_MANIFEST_DIR/resources");
 
 #[derive(Clone)]
 pub struct AppState {
     giga_test: models::Test,
+    questions_db: models::QuestionsDB,
 }
 
-pub(crate) fn make_app(max_body_size: usize, timeout: Duration) -> Router<AppState> {
+pub(crate) fn make_app(timeout: Duration) -> Router<AppState> {
+    // FIXME: we might want persistent file-based session storage with memory storage in front, as part of
+    //        cached storage
+    // FIXME: check how it works when multiple people try to access a page
     Router::new()
-        .nest("/", routes::routes())
+        .nest_service("/static", ServeDir::new(&STATIC_ASSETS_DIR))
+        .merge(routes::routes())
         .layer(
             ServiceBuilder::new()
-                .layer(DefaultBodyLimit::disable())
-                .layer(DefaultBodyLimit::max(max_body_size))
                 .layer(CompressionLayer::new())
                 .layer(TraceLayer::new_for_http())
                 .layer(TimeoutLayer::new(timeout))
@@ -65,22 +71,32 @@ async fn shutdown_signal() {
     tracing::info!("received signal, exiting ...");
 }
 
+fn html_preprocessor(input: &str) -> String {
+    let re = Regex::new(r"\[img\](\S+\.png)\[/img\]").unwrap();
+    let new = re.replace_all(input, "<img src='/static/img/$1'>");
+    new.to_string()
+}
+
 async fn start() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt::init();
 
+    // FIXME: port env to dotenv or similar
+    // FIXME: protocol, domain, port, path - everything
     let addr = env::addr()?;
-    let max_body_size = env::max_body_size()?;
     let timeout = env::http_timeout()?;
-    let giga_test = env::giga_test().to_owned();
+    // FIXME: should preprocessor know about path?
+    let giga_test = get_giga_test(&html_preprocessor);
+    let questions_db = &giga_test.get_questions().to_owned();
+
     let state = AppState {
-        giga_test,
+        giga_test: giga_test.to_owned(),
+        questions_db: questions_db.clone(),
     };
 
     tracing::info!("serving on {addr}");
-    tracing::info!("restricting maximum body size to {max_body_size} bytes");
     tracing::info!("timeout set to {:?}", timeout);
 
-    let service = make_app(max_body_size, timeout).with_state(state);
+    let service = make_app(timeout).with_state(state);
     let listener = TcpListener::bind(&addr).await?;
 
     axum::serve(listener, service)

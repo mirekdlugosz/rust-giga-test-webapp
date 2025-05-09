@@ -7,7 +7,7 @@ pub enum Error {
     Axum(#[from] axum::http::Error),
     #[error("compression error: {0}")]
     Compression(String),
-    #[error("entry not found")]
+    #[error("not found")]
     NotFound,
     #[error("wrong size")]
     WrongSize,

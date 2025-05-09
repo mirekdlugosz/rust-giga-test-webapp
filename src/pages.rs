@@ -1,5 +1,4 @@
-use crate::env;
-use crate::models::{Test, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage};
+use crate::models::{TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage};
 //use crate::routes::paste::{Format, QueryData};
 use askama::Template;
 use axum::http::StatusCode;
@@ -7,20 +6,16 @@ use axum::http::StatusCode;
 /// Error page showing a message.
 #[derive(Template)]
 #[template(path = "error.html")]
-pub struct Error<'a> {
-    meta: &'a env::Metadata<'a>,
-    base_path: &'static env::BasePath,
+pub struct Error {
     description: String,
 }
 
 /// Error response carrying a status code and the page itself.
-pub type ErrorResponse<'a> = (StatusCode, Error<'a>);
+pub type ErrorResponse<'a> = (StatusCode, Error);
 
 impl From<crate::Error> for ErrorResponse<'_> {
     fn from(err: crate::Error) -> Self {
         let html = Error {
-            meta: env::metadata(),
-            base_path: env::base_path(),
             description: err.to_string(),
         };
 
@@ -32,8 +27,6 @@ impl From<crate::Error> for ErrorResponse<'_> {
 #[derive(Template)]
 #[template(path = "index.html")]
 pub struct Index<'a> {
-    meta: &'a env::Metadata<'a>,
-    base_path: &'static env::BasePath,
     tests_state: &'a [TestStateMainPageElem],
     totals: &'a TestStateMainPageTotals,
     giga_test_finished: bool,
@@ -46,8 +39,6 @@ impl<'a> Index<'a> {
         giga_test_finished: bool,
     ) -> Self {
         Self {
-            meta: env::metadata(),
-            base_path: env::base_path(),
             tests_state,
             totals,
             giga_test_finished,
@@ -59,8 +50,6 @@ impl<'a> Index<'a> {
 #[derive(Template)]
 #[template(path = "part.html")]
 pub struct Part<'a> {
-    meta: &'a env::Metadata<'a>,
-    base_path: &'static env::BasePath,
     part_state: &'a TestStatePartPage,
     giga_test_finished: bool,
 }
@@ -68,14 +57,9 @@ pub struct Part<'a> {
 impl<'a> Part<'a> {
     /// Construct new paste view from cache `key` and paste `html`.
     pub fn new(part_state: &'a TestStatePartPage, giga_test_finished: bool) -> Self {
-
         Self {
-            meta: env::metadata(),
-            base_path: env::base_path(),
             part_state,
             giga_test_finished,
         }
     }
 }
-
-mod filters {}

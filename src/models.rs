@@ -7,7 +7,7 @@ fn ret_false() -> bool {
 
 
 pub(crate) type UserResponseData = HashMap<String, UserResponse>;
-pub(crate) type QuestionsDB = HashMap<String, &'static Question>;
+pub(crate) type QuestionsDB = HashMap<String, Question>;
 
 #[derive(Clone, Debug, Deserialize, Default)]
 pub(crate) struct Test(BTreeMap<String, TestPart>);
@@ -21,14 +21,14 @@ impl Test {
         self.0.get(key)
     }
 
-    pub(crate) fn get_questions(&self) -> HashMap<String, &Question> {
+    // FIXME: we shouldn't need to clone question, reference should suffice
+    pub(crate) fn get_questions(&self) -> QuestionsDB {
         self.0.values()
             .flat_map(|part| part.sections.values())
             .flat_map(|section| section.questions.iter())
-            .map(|question| (question.id.clone(), question))
+            .map(|question| (question.id.clone(), question.clone()))
             .collect()
     }
-
 }
 
 #[derive(Clone, Debug, Default, Deserialize)]
@@ -57,6 +57,7 @@ pub(crate) struct Question {
     pub(crate) question: String,
     pub(crate) choices: BTreeMap<char, AnswerChoice>,
     // FIXME: brak logiki tego pola
+    #[allow(dead_code)]
     canceled: bool,
 }
 
@@ -176,6 +177,7 @@ pub(crate) struct UserResponse {
 }
 
 pub(crate) struct TestStateMainPageElem {
+    // FIXME: dodaj numer PE i datę wydania
     pub(crate) test_id: String,
     pub(crate) answered_q: usize,
     pub(crate) total_q: usize,
@@ -220,12 +222,14 @@ pub(crate) struct TestStatePartPageQuestion {
     pub(crate) id: String,
     pub(crate) question: String,
     pub(crate) choices: BTreeMap<char, TestStatePartPageAnswerChoice>,
+    #[allow(dead_code)]
     pub(crate) user_answer: Option<char>,
 }
 
 #[derive(Clone, Debug, Default, Deserialize)]
 pub(crate) struct TestStatePartPageAnswerChoice {
     pub(crate) answer: String,
+    #[allow(dead_code)]
     pub(crate) correct: bool,
     pub(crate) user_selected: bool,
     pub(crate) choice_class: String,

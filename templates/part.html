@@ -6,10 +6,10 @@
 <p>{{ part_state.introduction }}</p>
 
 {% for section in part_state.sections %}
-<p>{{ section.introduction }}</p>
+<p>{{ section.introduction|safe }}</p>
 {% for question in section.questions %}
 <div id="{{ question.id }}">
-    <p>{{ question.question }}</p>
+    <p>{{ question.question|safe }}</p>
     {% for choice in question.choices %}
     <input 
         type="radio"
@@ -19,7 +19,7 @@
         {% if giga_test_finished %}disabled{% endif %}
         {% if choice.1.user_selected %}checked{% endif %}
     />
-    <label class="{% if giga_test_finished %}{{ choice.1.choice_class }}{% endif %}" for="{{ choice.1.id }}">{{ choice.1.answer }}</label>
+    <label class="{% if giga_test_finished %}{{ choice.1.choice_class }}{% endif %}" for="{{ choice.1.id }}">{{ choice.1.answer|safe }}</label>
     {% endfor %}
 </div>
 {% endfor %}

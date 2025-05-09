@@ -1,180 +1,34 @@
-use crate::pages::{Index, Part};
-use crate::{AppState, Error};
-use crate::env;
-use crate::models::{TestStateMainPageElem, UserResponse, Test, TestPart, Question, UserResponseData, QuestionsDB, 
-    TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
-    TestStateMainPageTotals, Section, AnswerChoice, TestPartTally,
-};
+use crate::pages::{Index, Part, ErrorResponse};
+use crate::AppState;
+use crate::models::UserResponseData;
+use crate::giga_test::{get_index_tests_state, get_part_state, get_index_totals, responses_from_form_data};
 use std::collections::HashMap;
 use axum::routing::{get, post, Router};
-use axum::body::Body;
-use axum::extract::{Form, Json, Path, Query, State};
-use axum::http::header::{self, HeaderMap};
-use axum::http::{Request, StatusCode};
-use axum::response::{AppendHeaders, IntoResponse, Redirect, Response};
-use axum::RequestExt;
-use tower_http::trace::TraceLayer;
+use axum::extract::{Form, Path, State};
+use axum::response::{IntoResponse, Redirect};
 use tower_sessions::Session;
-use tower::util::ServiceExt;
 
 const GT_RESP_KEY: &str = "giga_test_responses";
 const GT_FINISHED_KEY: &str = "giga_test_finished";
 
-pub struct MetadataRoutes {
-    pub css: String,
-    pub favicon: String,
-    pub index: String,
-    pub part: String,
-}
-
-impl Default for MetadataRoutes {
-    fn default() -> Self {
-        MetadataRoutes {
-            css: "/style.css".to_string(),
-            favicon: "/favicon.png".to_string(),
-            index: "/".to_string(),
-            part: "/czesc-".to_string(),
-        }
-    }
-}
-
-fn tally_test_part(
-    test_part: &TestPart,
-    test_responses: &UserResponseData
-) -> TestPartTally {
-    let part_questions = test_part.get_questions();
-    let total_q = part_questions.len();
-
-    let (answered_good_q, answered_bad_q) = part_questions.iter()
-        .filter_map(|question| test_responses.get(&question.id))
-        .map(|user_response| user_response.user_answer == user_response.correct_answer)
-        .fold((0, 0), |(t, f), is_correct| {
-            match is_correct {
-                true => (t + 1, f),
-                false => (t, f + 1),
-            }
-        });
-
-    let answered_q = answered_good_q + answered_bad_q;
-
-    TestPartTally::new(
-        answered_q,
-        total_q,
-        answered_good_q,
-        answered_bad_q,
-    )
-}
-
-fn get_index_tests_state(
-    test: &Test,
-    test_responses: &UserResponseData,
-    test_finished: bool
-) -> Vec<TestStateMainPageElem> {
-    test.iter()
-        .map(|(test_id, part)| {
-            let part_tally = tally_test_part(part, test_responses);
-            TestStateMainPageElem::from(test_id, part_tally)
-        })
-        .collect()
-}
-
-fn get_index_totals(index_tests_state: &[TestStateMainPageElem]) -> TestStateMainPageTotals {
-    let (answered_good_q, answered_bad_q, total_q) = index_tests_state.iter()
-        .fold((0, 0, 0), |(g, b, t), x| (g + x.answered_good_q, b + x.answered_bad_q, t + x.total_q));
-    let no_answer = total_q - answered_good_q - answered_bad_q;
-    TestStateMainPageTotals{
-        answered_good_q,
-        answered_bad_q,
-        no_answer,
-        total_q,
-    }
-}
-
-fn get_part_state(
-    test_part: &TestPart,
-    test_responses: &UserResponseData,
-) -> TestStatePartPage {
-    fn generate_answers(
-        question_id: &str,
-        answer_id: &char,
-        answer: &AnswerChoice,
-        user_answer: Option<char>,
-    ) -> (char, TestStatePartPageAnswerChoice) {
-        let user_selected = match user_answer {
-            None => false,
-            Some(r) => &r == answer_id,
-        };
-        let choice_class = match (user_selected, answer.correct) {
-            (true, true) => "poprawnie".to_string(),
-            (true, false) => "niepoprawnie".to_string(),
-            (false, true) => "poprawnie".to_string(),
-            (false, false) => "".to_string(),
-        };
-        let id = format!("{}_{}", question_id, answer_id).to_string();
-        let obj = TestStatePartPageAnswerChoice {
-            answer: answer.answer.clone(),
-            correct: answer.correct,
-            user_selected,
-            choice_class,
-            id,
-        };
-        (answer_id.clone(), obj)
-    }
-
-    let generate_questions = |question: &Question| {
-        let user_answer = match test_responses.get(&question.id) {
-            None => None,
-            Some(r) => Some(r.user_answer),
-        };
-        let new_answers = question.choices.iter()
-            .map(|(answer_id, answer)| generate_answers(&question.id, answer_id, answer, user_answer))
-            .collect();
-        TestStatePartPageQuestion {
-            id: question.id.clone(),
-            question: question.question.clone(),
-            choices: new_answers,
-            user_answer,
-        }
-    };
-
-    let generate_sections = |section: &Section| {
-        let new_questions = section.questions.iter()
-            .map(generate_questions)
-            .collect();
-        TestStatePartPageSection {
-            introduction: section.introduction.clone(),
-            questions: new_questions,
-        }
-    };
-
-    let new_sections = test_part.sections.values()
-        .map(generate_sections)
-        .collect();
-
-    TestStatePartPage {
-        introduction: test_part.introduction.clone(),
-        sections: new_sections,
-    }
-}
-
 async fn get_index(
+    State(state): State<AppState>,
     session: Session,
-    request: Request<Body>,
-) -> Result<impl IntoResponse, Index<'static>> {
+) -> Result<impl IntoResponse, ErrorResponse<'static>> {
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-    let index_tests_state = get_index_tests_state(env::giga_test(), &test_responses, test_finished);
+    let index_tests_state = get_index_tests_state(&state.giga_test, &test_responses);
     let totals = get_index_totals(&index_tests_state);
     Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
 }
 
 async fn get_part(
+    State(state): State<AppState>,
     session: Session,
     Path(id): Path<usize>,
-    request: Request<Body>,
-) -> Result<impl IntoResponse, Part<'static>> {
+) -> Result<impl IntoResponse, ErrorResponse<'static>> {
     let test_id = id.to_string();
-    let test_part = env::giga_test().get(&test_id).unwrap(); // FIXME: poprawna strona błędu
+    let test_part = state.giga_test.get(&test_id).ok_or(crate::Error::NotFound)?;
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
     let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
 
@@ -184,49 +38,27 @@ async fn get_part(
 }
 
 async fn post_answers(
+    State(state): State<AppState>,
     session: Session,
     form: Option<Form<HashMap<String, String>>>,
-) -> Result<impl IntoResponse, Index<'static>> {
-    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
+) -> Result<impl IntoResponse, ErrorResponse<'static>> {
+    let new_responses: UserResponseData = form.map_or_else(
+        || UserResponseData::new(),
+        |form| responses_from_form_data(&form.0, &state.questions_db)
+    );
 
-    if let Some(form) = form {
-        let new_responses: UserResponseData = form.iter()
-            .map(|answer| {
-                let question_id = answer.0;
-                let user_answer = answer.1.chars().next().unwrap();
-
-                let correct_answer = env::giga_test_questions().get(question_id)
-                    .unwrap()
-                    .choices.iter()
-                    .find(|choice| choice.1.correct)
-                    .map(|choice| choice.0)
-                    .unwrap()
-                    .clone();
-
-                let ur = UserResponse {
-                    user_answer,
-                    correct_answer,
-                };
-                (question_id.clone(), ur)
-            })
-            .collect();
+    if ! new_responses.is_empty() {
+        let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
         let all_responses: UserResponseData = test_responses.into_iter().chain(new_responses).collect();
         session.insert(GT_RESP_KEY, all_responses).await.unwrap();
     }
 
-    // FIXME: odczytuje choć przed chwilą zapisałem
-    let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
-
-    // FIXME: duplikat
-    let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-    let index_tests_state = get_index_tests_state(env::giga_test(), &test_responses, test_finished);
-    let totals = get_index_totals(&index_tests_state);
-    Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
+    get_index(axum::extract::State(state), session).await
 }
 
 async fn submit_test(
     session: Session,
-    form: Option<Form<HashMap<String, String>>>,
+    _form: Option<Form<HashMap<String, String>>>,
 ) -> Redirect {
     session.insert(GT_FINISHED_KEY, true).await.unwrap();
     Redirect::to("/")
@@ -237,273 +69,4 @@ pub fn routes() -> Router<AppState> {
         .route("/", get(get_index).post(post_answers))
         .route("/czesc-:id", get(get_part))
         .route("/zakoncz", post(submit_test))
-        // FIXME: assety statyczne
-        //.merge(assets::routes())
-}
-
-#[cfg(test)]
-mod tests {
-    use crate::db::write::Entry;
-    use crate::env::base_path;
-    use crate::routes;
-    use crate::test_helpers::{make_app, Client};
-    use reqwest::{header, StatusCode};
-    use serde::Serialize;
-
-    #[tokio::test]
-    async fn unknown_paste() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let res = client.get(&base_path().join("000000")).send().await?;
-        assert_eq!(res.status(), StatusCode::NOT_FOUND);
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn insert_via_form() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let data = routes::form::Entry {
-            text: "FooBarBaz".to_string(),
-            extension: Some("rs".to_string()),
-            expires: "0".to_string(),
-            password: "".to_string(),
-        };
-
-        let res = client.post(base_path().path()).form(&data).send().await?;
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let location = res.headers().get("location").unwrap().to_str()?;
-
-        let res = client
-            .get(location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let header = res.headers().get(header::CONTENT_TYPE).unwrap();
-        assert!(header.to_str().unwrap().contains("text/html"));
-
-        let content = res.text().await?;
-        assert!(content.contains("FooBarBaz"));
-
-        let res = client
-            .get(location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .query(&[("fmt", "raw")])
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let header = res.headers().get(header::CONTENT_TYPE).unwrap();
-        assert!(header.to_str().unwrap().contains("text/plain"));
-
-        let content = res.text().await?;
-        assert_eq!(content, "FooBarBaz");
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn burn_after_reading() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let data = routes::form::Entry {
-            text: "FooBarBaz".to_string(),
-            extension: None,
-            expires: "burn".to_string(),
-            password: "".to_string(),
-        };
-
-        let res = client.post(base_path().path()).form(&data).send().await?;
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let location = res.headers().get("location").unwrap().to_str()?;
-
-        // Location is the `/burn/foo` page not the paste itself, so remove the prefix.
-        let location = location.replace("burn/", "");
-
-        let res = client
-            .get(&location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let res = client
-            .get(&location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::NOT_FOUND);
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn burn_after_reading_with_encryption() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-        let password = "asd";
-
-        let data = routes::form::Entry {
-            text: "FooBarBaz".to_string(),
-            extension: None,
-            expires: "burn".to_string(),
-            password: password.to_string(),
-        };
-
-        let res = client.post(base_path().path()).form(&data).send().await?;
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let location = res.headers().get("location").unwrap().to_str()?;
-
-        // Location is the `/burn/foo` page not the paste itself, so remove the prefix.
-        let location = location.replace("burn/", "");
-
-        let res = client
-            .get(&location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-
-        #[derive(Debug, Serialize)]
-        struct Form {
-            password: String,
-        }
-
-        let data = Form {
-            password: password.to_string(),
-        };
-
-        let res = client
-            .post(&location)
-            .form(&data)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let res = client
-            .get(&location)
-            .header(header::ACCEPT, "text/html; charset=utf-8")
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::NOT_FOUND);
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn insert_via_json() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let entry = Entry {
-            text: "FooBarBaz".to_string(),
-            ..Default::default()
-        };
-
-        let res = client.post(base_path().path()).json(&entry).send().await?;
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let payload = res.json::<routes::json::RedirectResponse>().await?;
-
-        let res = client.get(&payload.path).send().await?;
-        assert_eq!(res.status(), StatusCode::OK);
-        assert_eq!(res.text().await?, "FooBarBaz");
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn insert_via_json_encrypted() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-        let password = "SuperSecretPassword";
-
-        let entry = Entry {
-            text: "FooBarBaz".to_string(),
-            password: Some(password.to_string()),
-            ..Default::default()
-        };
-
-        let res = client.post(base_path().path()).json(&entry).send().await?;
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let payload = res.json::<routes::json::RedirectResponse>().await?;
-
-        let res = client
-            .get(&payload.path)
-            .header("Wastebin-Password", password)
-            .send()
-            .await?;
-
-        assert_eq!(res.status(), StatusCode::OK);
-        assert_eq!(res.text().await?, "FooBarBaz");
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn delete_via_link() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let data = routes::form::Entry {
-            text: "FooBarBaz".to_string(),
-            extension: None,
-            expires: "0".to_string(),
-            password: "".to_string(),
-        };
-
-        let res = client.post(base_path().path()).form(&data).send().await?;
-        let uid_cookie = res.cookies().find(|cookie| cookie.name() == "uid");
-        assert!(uid_cookie.is_some());
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let location = res.headers().get("location").unwrap().to_str()?;
-        let id = location.replace(base_path().path(), "");
-
-        let res = client
-            .get(&base_path().join(&format!("delete/{id}")))
-            .send()
-            .await?;
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let res = client.get(&base_path().join(&id)).send().await?;
-        assert_eq!(res.status(), StatusCode::NOT_FOUND);
-
-        Ok(())
-    }
-
-    #[tokio::test]
-    async fn download() -> Result<(), Box<dyn std::error::Error>> {
-        let client = Client::new(make_app()?).await;
-
-        let data = routes::form::Entry {
-            text: "FooBarBaz".to_string(),
-            extension: None,
-            expires: "0".to_string(),
-            password: "".to_string(),
-        };
-
-        let res = client.post(base_path().path()).form(&data).send().await?;
-        assert_eq!(res.status(), StatusCode::SEE_OTHER);
-
-        let location = res.headers().get("location").unwrap().to_str()?;
-        let res = client.get(&format!("{location}?dl=cpp")).send().await?;
-        assert_eq!(res.status(), StatusCode::OK);
-
-        let content = res.text().await?;
-        assert_eq!(content, "FooBarBaz");
-
-        Ok(())
-    }
 }
