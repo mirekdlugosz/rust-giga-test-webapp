@@ -6,20 +6,41 @@ use std::collections::HashMap;
 use axum::routing::{get, post, Router};
 use axum::extract::{Form, Path, State};
 use axum::response::{IntoResponse, Redirect};
+use serde::{Deserialize, Serialize};
 use tower_sessions::Session;
 
 const GT_RESP_KEY: &str = "giga_test_responses";
 const GT_FINISHED_KEY: &str = "giga_test_finished";
+const GT_COUNT_CANCELED_KEY: &str = "giga_test_count_canceled";
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
+struct CountCanceled(bool);
+
+#[derive(Clone, Debug, Deserialize, Serialize)]
+struct TestFinished(bool);
+
+impl Default for CountCanceled {
+    fn default() -> Self {
+        Self(false)
+    }
+}
+
+impl Default for TestFinished {
+    fn default() -> Self {
+        Self(false)
+    }
+}
 
 async fn get_index(
     State(state): State<AppState>,
     session: Session,
 ) -> Result<impl IntoResponse, ErrorResponse<'static>> {
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
-    let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
-    let index_tests_state = get_index_tests_state(&state.giga_test, &test_responses);
+    let count_canceled: CountCanceled = session.get(GT_COUNT_CANCELED_KEY).await.unwrap().unwrap_or_default();
+    let test_finished: TestFinished = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or_default();
+    let index_tests_state = get_index_tests_state(&state.giga_test, &test_responses, count_canceled.0);
     let totals = get_index_totals(&index_tests_state);
-    Ok(Index::new(&index_tests_state, &totals, test_finished).into_response())
+    Ok(Index::new(&index_tests_state, &totals, count_canceled.0, test_finished.0).into_response())
 }
 
 async fn get_part(
@@ -30,11 +51,12 @@ async fn get_part(
     let test_id = id.to_string();
     let test_part = state.giga_test.get(&test_id).ok_or(crate::Error::NotFound)?;
     let test_responses: UserResponseData = session.get(GT_RESP_KEY).await.unwrap().unwrap_or_default();
-    let test_finished: bool = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or(false);
+    let count_canceled: CountCanceled = session.get(GT_COUNT_CANCELED_KEY).await.unwrap().unwrap_or_default();
+    let test_finished: TestFinished = session.get(GT_FINISHED_KEY).await.unwrap().unwrap_or_default();
 
-    let part_state = get_part_state(test_part, &test_responses);
+    let part_state = get_part_state(test_part, &test_responses, count_canceled.0);
 
-    Ok(Part::new(&part_state, test_finished).into_response())
+    Ok(Part::new(&part_state, test_finished.0).into_response())
 }
 
 async fn post_answers(
@@ -56,6 +78,15 @@ async fn post_answers(
     get_index(axum::extract::State(state), session).await
 }
 
+async fn submit_toggle_canceled(
+    session: Session,
+    _form: Option<Form<HashMap<String, String>>>,
+) -> Redirect {
+    let count_canceled: CountCanceled = session.get(GT_COUNT_CANCELED_KEY).await.unwrap().unwrap_or_default();
+    session.insert(GT_COUNT_CANCELED_KEY, !count_canceled.0).await.unwrap();
+    Redirect::to("/")
+}
+
 async fn submit_test(
     session: Session,
     _form: Option<Form<HashMap<String, String>>>,
@@ -68,5 +99,6 @@ pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(get_index).post(post_answers))
         .route("/czesc-:id", get(get_part))
+        .route("/licz-anulowane", post(submit_toggle_canceled))
         .route("/zakoncz", post(submit_test))
 }

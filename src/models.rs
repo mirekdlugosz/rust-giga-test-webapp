@@ -56,9 +56,7 @@ pub(crate) struct Question {
     pub(crate) id: String,
     pub(crate) question: String,
     pub(crate) choices: BTreeMap<char, AnswerChoice>,
-    // FIXME: brak logiki tego pola
-    #[allow(dead_code)]
-    canceled: bool,
+    pub(crate) canceled: bool,
 }
 
 #[derive(Clone, Debug, Deserialize, Default)]
@@ -173,12 +171,13 @@ impl TestPartTally {
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub(crate) struct UserResponse {
     pub(crate) user_answer: char,
-    pub(crate) correct_answer: char,
+    pub(crate) correct_answer: Option<char>,
 }
 
 pub(crate) struct TestStateMainPageElem {
-    // FIXME: dodaj numer PE i datę wydania
     pub(crate) test_id: String,
+    pub(crate) pe_id: String,
+    pub(crate) pe_date: String,
     pub(crate) answered_q: usize,
     pub(crate) total_q: usize,
     pub(crate) answered_good_q: usize,
@@ -188,8 +187,19 @@ pub(crate) struct TestStateMainPageElem {
 impl TestStateMainPageElem {
     pub(crate) fn from(test_id: &str, test_part_tally: TestPartTally) -> Self {
         let TestPartTally { answered_q, total_q, answered_good_q, answered_bad_q } = test_part_tally;
+        let (pe_id, pe_date) = match test_id {
+            "1" => ("37", "wrzesień 2000"),
+            "2" => ("38", "październik 2000"),
+            "3" => ("39", "listopad 2000"),
+            "4" => ("40", "grudzień 2000"),
+            "5" => ("41", "styczeń 2001"),
+            "6" => ("42", "luty 2001"),
+            _ => ("brak", "brak")
+        };
         Self {
             test_id: test_id.to_string(),
+            pe_id: pe_id.to_string(),
+            pe_date: pe_date.to_string(),
             answered_q,
             total_q,
             answered_good_q,
@@ -224,6 +234,7 @@ pub(crate) struct TestStatePartPageQuestion {
     pub(crate) choices: BTreeMap<char, TestStatePartPageAnswerChoice>,
     #[allow(dead_code)]
     pub(crate) user_answer: Option<char>,
+    pub(crate) canceled: bool,
 }
 
 #[derive(Clone, Debug, Default, Deserialize)]

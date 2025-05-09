@@ -8,7 +8,7 @@
 {% for section in part_state.sections %}
 <p>{{ section.introduction|safe }}</p>
 {% for question in section.questions %}
-<div id="{{ question.id }}">
+<div id="{{ question.id }}" {% if question.canceled && giga_test_finished %}class="canceled"{% endif %}>
     <p>{{ question.question|safe }}</p>
     {% for choice in question.choices %}
     <input 

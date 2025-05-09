@@ -29,6 +29,7 @@ pub struct AppState {
 }
 
 pub(crate) fn make_app(timeout: Duration) -> Router<AppState> {
+    // FIXME: headery dla cache zasobów statycznych, może obsługa nagłówka if-modified
     // FIXME: we might want persistent file-based session storage with memory storage in front, as part of
     //        cached storage
     // FIXME: check how it works when multiple people try to access a page
@@ -71,6 +72,7 @@ async fn shutdown_signal() {
     tracing::info!("received signal, exiting ...");
 }
 
+// FIXME: review all unwrap() calls
 fn html_preprocessor(input: &str) -> String {
     let re = Regex::new(r"\[img\](\S+\.png)\[/img\]").unwrap();
     let new = re.replace_all(input, "<img src='/static/img/$1'>");

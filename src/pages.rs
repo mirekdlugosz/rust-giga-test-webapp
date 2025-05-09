@@ -29,6 +29,7 @@ impl From<crate::Error> for ErrorResponse<'_> {
 pub struct Index<'a> {
     tests_state: &'a [TestStateMainPageElem],
     totals: &'a TestStateMainPageTotals,
+    count_canceled: bool,
     giga_test_finished: bool,
 }
 
@@ -36,11 +37,13 @@ impl<'a> Index<'a> {
     pub fn new(
         tests_state: &'a [TestStateMainPageElem],
         totals: &'a TestStateMainPageTotals,
+        count_canceled: bool,
         giga_test_finished: bool,
     ) -> Self {
         Self {
             tests_state,
             totals,
+            count_canceled,
             giga_test_finished,
         }
     }

@@ -5,6 +5,7 @@
 {% for test_elem in tests_state %}
     <li>
         <a href="/czesc-{{ test_elem.test_id }}">Giga Test cz. {{ test_elem.test_id }}</a>
+        (PSX Extreme #{{ test_elem.pe_id }}, {{ test_elem.pe_date }})
     {% if giga_test_finished %}
         <span class="correct">poprawnie: {{ test_elem.answered_good_q }}</span>
         <span class="incorrect">niepoprawnie: {{ test_elem.answered_bad_q }}</span>
@@ -26,6 +27,10 @@
     <span class="total">razem: {{ totals.total_q }}</span>
 </p>
 {% endif %}
+
+<form action="/licz-anulowane" method="POST">
+    <button>{% if count_canceled %}Nie uwzględniaj anulowanych pytań{% else %}Uwzględniaj anulowane pytania{% endif %}</button>
+</form>
 
 <form action="/zakoncz" method="POST">
     <button {% if giga_test_finished %}disabled{% endif %}>Zamknij giga test</button>
