@@ -82,11 +82,13 @@ fn html_preprocessor(input: &str) -> String {
 async fn start() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt::init();
 
-    // FIXME: port env to dotenv or similar
-    // FIXME: protocol, domain, port, path - everything
+    // FIXME: read values from dotenv file
+    // FIXME: one variable to specify host and port to bind to (usually 0.0.0.0 or 127.0.0.1)
+    //      FIXME: ideally host would be optional
+    // FIXME: variable to specify base path, passed to templates. that would allow to pretend app
+    //      is running from subdirectory
     let addr = env::addr()?;
     let timeout = env::http_timeout()?;
-    // FIXME: should preprocessor know about path?
     let giga_test = get_giga_test(&html_preprocessor);
     let questions_db = &giga_test.get_questions().to_owned();
 

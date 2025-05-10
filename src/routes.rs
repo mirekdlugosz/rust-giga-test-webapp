@@ -96,6 +96,9 @@ async fn submit_test(
 }
 
 pub fn routes() -> Router<AppState> {
+    // FIXME: should post_answers have own endpoint that raises redirect?
+    // That's called Post/Redirect/Get and is common in apps like mine
+    // FIXME: can I have route names, ideally ones I could use in templates?
     Router::new()
         .route("/", get(get_index).post(post_answers))
         .route("/czesc-:id", get(get_part))
