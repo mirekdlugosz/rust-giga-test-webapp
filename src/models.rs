@@ -5,9 +5,8 @@ fn ret_false() -> bool {
     false
 }
 
-
 pub(crate) type UserResponseData = HashMap<String, UserResponse>;
-pub(crate) type QuestionsDB = HashMap<String, Question>;
+pub(crate) type AnswersDB = HashMap<String, Option<char>>;
 
 #[derive(Clone, Debug, Deserialize, Default)]
 pub(crate) struct Test(BTreeMap<String, TestPart>);
@@ -21,12 +20,16 @@ impl Test {
         self.0.get(key)
     }
 
-    // FIXME: we shouldn't need to clone question, reference should suffice
-    pub(crate) fn get_questions(&self) -> QuestionsDB {
+    pub(crate) fn get_correct_answers(&self) -> AnswersDB {
         self.0.values()
             .flat_map(|part| part.sections.values())
             .flat_map(|section| section.questions.iter())
-            .map(|question| (question.id.clone(), question.clone()))
+            .map(|question| {
+                let correct_answer = question.choices.iter()
+                    .find(|choice| choice.1.correct)
+                    .map(|choice| *choice.0);
+                (question.id.clone(), correct_answer)
+            })
             .collect()
     }
 }
@@ -88,9 +91,9 @@ pub(crate) struct AnswerChoice {
     pub(crate) correct: bool,
 }
 
-impl Into<Test> for RawTest {
-    fn into(self) -> Test {
-        let new_test = self.0.iter()
+impl From<RawTest> for Test {
+    fn from(val: RawTest) -> Self {
+        let new_test = val.0.iter()
             .map(|part: (&String, &RawTestPart)| {
                 let part_id = part.0.clone();
                 let test_part = TestPart::from_raw(part.1, &part_id);
@@ -128,7 +131,7 @@ impl Section {
             .map(|(i, question)| {
                 let question_id = format!("q{part_id}_{section_id}_{i}");
                 let new_choices = QUESTION_IDS.into_iter()
-                    .zip(question.choices.clone().into_iter())
+                    .zip(question.choices.clone())
                     .collect();
                 Question {
                     id: question_id,

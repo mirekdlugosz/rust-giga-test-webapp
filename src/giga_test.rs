@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::models::{TestStateMainPageElem, Test, RawTest, TestPart, Question, UserResponseData, QuestionsDB,
+use crate::models::{TestStateMainPageElem, Test, RawTest, TestPart, Question, UserResponseData, AnswersDB,
     TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
     TestStateMainPageTotals, Section, AnswerChoice, TestPartTally, UserResponse
 };
@@ -30,10 +30,7 @@ fn tally_test_part(
 
     let (answered_good_q, answered_bad_q) = part_questions.iter()
         .filter_map(|question| test_responses.get(&question.id))
-        .map(|user_response| user_response.correct_answer.map_or(
-                false,
-                |ca| user_response.user_answer == ca)
-        )
+        .map(|user_response| user_response.correct_answer == Some(user_response.user_answer))
         .fold((0, 0), |(t, f), is_correct| {
             match is_correct {
                 true => (t + 1, f),
@@ -87,7 +84,7 @@ pub(crate) fn get_part_state(
         answer: &AnswerChoice,
         user_answer: Option<char>,
     ) -> (char, TestStatePartPageAnswerChoice) {
-        let user_selected = user_answer.map_or(false, |r| &r == answer_id);
+        let user_selected = user_answer.is_some_and(|r| &r == answer_id);
         let choice_class = match (user_selected, answer.correct) {
             (true, true) => "poprawnie".to_string(),
             (true, false) => "niepoprawnie".to_string(),
@@ -102,7 +99,7 @@ pub(crate) fn get_part_state(
             choice_class,
             id,
         };
-        (answer_id.clone(), obj)
+        (*answer_id, obj)
     }
 
     let generate_questions = |question: &Question| {
@@ -140,23 +137,21 @@ pub(crate) fn get_part_state(
     }
 }
 
-pub(crate) fn responses_from_form_data(form_data: &HashMap<String, String>, questions_db: &QuestionsDB) -> UserResponseData {
+pub(crate) fn responses_from_form_data(form_data: &HashMap<String, String>, questions_db: &AnswersDB) -> UserResponseData {
     form_data.iter()
-        .map(|answer| {
+        .filter_map(|answer| {
             let question_id = answer.0;
-            let user_answer = answer.1.chars().next().unwrap();
+            let user_answer = answer.1.chars().next()?;
 
             let correct_answer = questions_db.get(question_id)
-                .unwrap()
-                .choices.iter()
-                .find(|choice| choice.1.correct)
-                .map(|choice| *choice.0);
+                .copied()
+                .flatten();
 
             let ur = UserResponse {
                 user_answer,
                 correct_answer,
             };
-            (question_id.clone(), ur)
+            Some((question_id.clone(), ur))
         })
     .collect()
 }
