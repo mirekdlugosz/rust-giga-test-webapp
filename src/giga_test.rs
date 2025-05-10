@@ -1,8 +1,10 @@
 use std::collections::HashMap;
 
-use crate::models::{TestStateMainPageElem, Test, RawTest, TestPart, Question, UserResponseData, AnswersDB,
-    TestStatePartPage, TestStatePartPageSection, TestStatePartPageQuestion, TestStatePartPageAnswerChoice,
-    TestStateMainPageTotals, Section, AnswerChoice, TestPartTally, UserResponse
+use crate::models::{
+    AnswerChoice, AnswersDB, Question, RawTest, Section, Test, TestPart, TestPartTally,
+    TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
+    TestStatePartPageAnswerChoice, TestStatePartPageQuestion, TestStatePartPageSection,
+    UserResponse, UserResponseData,
 };
 
 pub(crate) fn get_giga_test(preprocessor: &dyn Fn(&str) -> String) -> Test {
@@ -14,7 +16,7 @@ pub(crate) fn get_giga_test(preprocessor: &dyn Fn(&str) -> String) -> Test {
 }
 
 fn display_canceled_question(count_canceled: bool, question: &Question) -> bool {
-    count_canceled || ! question.canceled
+    count_canceled || !question.canceled
 }
 
 fn tally_test_part(
@@ -22,30 +24,26 @@ fn tally_test_part(
     test_responses: &UserResponseData,
     count_canceled: bool,
 ) -> TestPartTally {
-    let part_questions: Vec<&Question> = test_part.get_questions()
+    let part_questions: Vec<&Question> = test_part
+        .get_questions()
         .iter()
         .copied()
-        .filter(|q| display_canceled_question(count_canceled, q)).collect();
+        .filter(|q| display_canceled_question(count_canceled, q))
+        .collect();
     let total_q = part_questions.len();
 
-    let (answered_good_q, answered_bad_q) = part_questions.iter()
+    let (answered_good_q, answered_bad_q) = part_questions
+        .iter()
         .filter_map(|question| test_responses.get(&question.id))
         .map(|user_response| user_response.correct_answer == Some(user_response.user_answer))
-        .fold((0, 0), |(t, f), is_correct| {
-            match is_correct {
-                true => (t + 1, f),
-                false => (t, f + 1),
-            }
+        .fold((0, 0), |(t, f), is_correct| match is_correct {
+            true => (t + 1, f),
+            false => (t, f + 1),
         });
 
     let answered_q = answered_good_q + answered_bad_q;
 
-    TestPartTally::new(
-        answered_q,
-        total_q,
-        answered_good_q,
-        answered_bad_q,
-    )
+    TestPartTally::new(answered_q, total_q, answered_good_q, answered_bad_q)
 }
 
 pub(crate) fn get_index_tests_state(
@@ -61,11 +59,15 @@ pub(crate) fn get_index_tests_state(
         .collect()
 }
 
-pub(crate) fn get_index_totals(index_tests_state: &[TestStateMainPageElem]) -> TestStateMainPageTotals {
-    let (answered_good_q, answered_bad_q, total_q) = index_tests_state.iter()
-        .fold((0, 0, 0), |(g, b, t), x| (g + x.answered_good_q, b + x.answered_bad_q, t + x.total_q));
+pub(crate) fn get_index_totals(
+    index_tests_state: &[TestStateMainPageElem],
+) -> TestStateMainPageTotals {
+    let (answered_good_q, answered_bad_q, total_q) =
+        index_tests_state.iter().fold((0, 0, 0), |(g, b, t), x| {
+            (g + x.answered_good_q, b + x.answered_bad_q, t + x.total_q)
+        });
     let no_answer = total_q - answered_good_q - answered_bad_q;
-    TestStateMainPageTotals{
+    TestStateMainPageTotals {
         answered_good_q,
         answered_bad_q,
         no_answer,
@@ -104,8 +106,12 @@ pub(crate) fn get_part_state(
 
     let generate_questions = |question: &Question| {
         let user_answer = test_responses.get(&question.id).map(|r| r.user_answer);
-        let new_answers = question.choices.iter()
-            .map(|(answer_id, answer)| generate_answers(&question.id, answer_id, answer, user_answer))
+        let new_answers = question
+            .choices
+            .iter()
+            .map(|(answer_id, answer)| {
+                generate_answers(&question.id, answer_id, answer, user_answer)
+            })
             .collect();
         TestStatePartPageQuestion {
             id: question.id.clone(),
@@ -117,7 +123,9 @@ pub(crate) fn get_part_state(
     };
 
     let generate_sections = |section: &Section| {
-        let new_questions = section.questions.iter()
+        let new_questions = section
+            .questions
+            .iter()
             .filter(|q| display_canceled_question(count_canceled, q))
             .map(generate_questions)
             .collect();
@@ -127,9 +135,7 @@ pub(crate) fn get_part_state(
         }
     };
 
-    let new_sections = test_part.sections.values()
-        .map(generate_sections)
-        .collect();
+    let new_sections = test_part.sections.values().map(generate_sections).collect();
 
     TestStatePartPage {
         introduction: test_part.introduction.clone(),
@@ -137,15 +143,17 @@ pub(crate) fn get_part_state(
     }
 }
 
-pub(crate) fn responses_from_form_data(form_data: &HashMap<String, String>, questions_db: &AnswersDB) -> UserResponseData {
-    form_data.iter()
+pub(crate) fn responses_from_form_data(
+    form_data: &HashMap<String, String>,
+    questions_db: &AnswersDB,
+) -> UserResponseData {
+    form_data
+        .iter()
         .filter_map(|answer| {
             let question_id = answer.0;
             let user_answer = answer.1.chars().next()?;
 
-            let correct_answer = questions_db.get(question_id)
-                .copied()
-                .flatten();
+            let correct_answer = questions_db.get(question_id).copied().flatten();
 
             let ur = UserResponse {
                 user_answer,
@@ -153,5 +161,5 @@ pub(crate) fn responses_from_form_data(form_data: &HashMap<String, String>, ques
             };
             Some((question_id.clone(), ur))
         })
-    .collect()
+        .collect()
 }

@@ -29,9 +29,9 @@ impl From<Error> for StatusCode {
             | Error::IntConversion(_)
             | Error::WrongSize
             | Error::CookieParsing(_) => StatusCode::BAD_REQUEST,
-            Error::Join(_)
-            | Error::Compression(_)
-            | Error::Axum(_) => StatusCode::INTERNAL_SERVER_ERROR,
+            Error::Join(_) | Error::Compression(_) | Error::Axum(_) => {
+                StatusCode::INTERNAL_SERVER_ERROR
+            }
         }
     }
 }

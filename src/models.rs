@@ -1,5 +1,5 @@
-use std::collections::{BTreeMap, HashMap};
 use serde::{Deserialize, Serialize};
+use std::collections::{BTreeMap, HashMap};
 
 fn ret_false() -> bool {
     false
@@ -21,11 +21,14 @@ impl Test {
     }
 
     pub(crate) fn get_correct_answers(&self) -> AnswersDB {
-        self.0.values()
+        self.0
+            .values()
             .flat_map(|part| part.sections.values())
             .flat_map(|section| section.questions.iter())
             .map(|question| {
-                let correct_answer = question.choices.iter()
+                let correct_answer = question
+                    .choices
+                    .iter()
                     .find(|choice| choice.1.correct)
                     .map(|choice| *choice.0);
                 (question.id.clone(), correct_answer)
@@ -42,7 +45,8 @@ pub(crate) struct TestPart {
 
 impl TestPart {
     pub(crate) fn get_questions(&self) -> Vec<&Question> {
-        self.sections.iter()
+        self.sections
+            .iter()
             .flat_map(|(_, section)| section.questions.iter())
             .collect()
     }
@@ -93,7 +97,9 @@ pub(crate) struct AnswerChoice {
 
 impl From<RawTest> for Test {
     fn from(val: RawTest) -> Self {
-        let new_test = val.0.iter()
+        let new_test = val
+            .0
+            .iter()
             .map(|part: (&String, &RawTestPart)| {
                 let part_id = part.0.clone();
                 let test_part = TestPart::from_raw(part.1, &part_id);
@@ -106,7 +112,9 @@ impl From<RawTest> for Test {
 
 impl TestPart {
     fn from_raw(value: &RawTestPart, part_id: &str) -> Self {
-        let new_sections = value.sections.iter()
+        let new_sections = value
+            .sections
+            .iter()
             .map(|section: (&String, &RawSection)| {
                 let section_id = section.0.clone();
                 let new_section = Section::from_raw(section.1, part_id, &section_id);
@@ -120,17 +128,18 @@ impl TestPart {
     }
 }
 
-static QUESTION_IDS: [char; 8] = [
-    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-];
+static QUESTION_IDS: [char; 8] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 impl Section {
     fn from_raw(value: &RawSection, part_id: &str, section_id: &str) -> Self {
-        let new_questions = value.questions.iter()
+        let new_questions = value
+            .questions
+            .iter()
             .enumerate()
             .map(|(i, question)| {
                 let question_id = format!("q{part_id}_{section_id}_{i}");
-                let new_choices = QUESTION_IDS.into_iter()
+                let new_choices = QUESTION_IDS
+                    .into_iter()
                     .zip(question.choices.clone())
                     .collect();
                 Question {
@@ -189,7 +198,12 @@ pub(crate) struct TestStateMainPageElem {
 
 impl TestStateMainPageElem {
     pub(crate) fn from(test_id: &str, test_part_tally: TestPartTally) -> Self {
-        let TestPartTally { answered_q, total_q, answered_good_q, answered_bad_q } = test_part_tally;
+        let TestPartTally {
+            answered_q,
+            total_q,
+            answered_good_q,
+            answered_bad_q,
+        } = test_part_tally;
         let (pe_id, pe_date) = match test_id {
             "1" => ("37", "wrzesień 2000"),
             "2" => ("38", "październik 2000"),
@@ -197,7 +211,7 @@ impl TestStateMainPageElem {
             "4" => ("40", "grudzień 2000"),
             "5" => ("41", "styczeń 2001"),
             "6" => ("42", "luty 2001"),
-            _ => ("brak", "brak")
+            _ => ("brak", "brak"),
         };
         Self {
             test_id: test_id.to_string(),

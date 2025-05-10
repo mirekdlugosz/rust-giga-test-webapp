@@ -1,4 +1,4 @@
-use std::net::{SocketAddr, AddrParseError};
+use std::net::{AddrParseError, SocketAddr};
 use std::num::ParseIntError;
 use std::time::Duration;
 
@@ -23,15 +23,13 @@ pub enum Error {
 }
 
 pub(crate) fn bind_addr() -> Result<SocketAddr, Error> {
-    let address = std::env::var(GIGA_TEST_ADDRESS)
-        .or(Ok(DEFAULT_ADDRESS.to_string()))?;
+    let address = std::env::var(GIGA_TEST_ADDRESS).or(Ok(DEFAULT_ADDRESS.to_string()))?;
     let port = std::env::var(GIGA_TEST_PORT)
-        .map_or_else(
-            |_| Ok(DEFAULT_PORT),
-            |p| p.parse::<usize>()
-        )
+        .map_or_else(|_| Ok(DEFAULT_PORT), |p| p.parse::<usize>())
         .map_err(Error::InvalidPort)?;
-    format!("{address}:{port}").parse().map_err(Error::InvalidAddress)
+    format!("{address}:{port}")
+        .parse()
+        .map_err(Error::InvalidAddress)
 }
 
 pub(crate) fn http_timeout() -> Result<Duration, Error> {

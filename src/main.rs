@@ -1,19 +1,19 @@
 use crate::errors::Error;
 use crate::giga_test::get_giga_test;
 use axum::Router;
+use include_dir::{include_dir, Dir};
+use regex::Regex;
+use std::fs::File;
+use std::io::ErrorKind;
 use std::process::ExitCode;
 use tokio::net::TcpListener;
 use tower::ServiceBuilder;
 use tower_http::compression::CompressionLayer;
 use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
-use tower_sessions::{SessionManagerLayer, Expiry, cookie::time::Duration};
-use tower_sessions_sqlx_store::{sqlx::SqlitePool, SqliteStore};
 use tower_serve_static::ServeDir;
-use include_dir::{Dir, include_dir};
-use regex::Regex;
-use std::io::ErrorKind;
-use std::fs::File;
+use tower_sessions::{cookie::time::Duration, Expiry, SessionManagerLayer};
+use tower_sessions_sqlx_store::{sqlx::SqlitePool, SqliteStore};
 
 mod env;
 mod errors;
@@ -114,9 +114,11 @@ async fn start() -> Result<(), Box<dyn std::error::Error>> {
                 .layer(CompressionLayer::new())
                 .layer(TraceLayer::new_for_http())
                 .layer(TimeoutLayer::new(timeout))
-                .layer(SessionManagerLayer::new(session_store)
-                       .with_name("giga_test_session")
-                       .with_expiry(cookie_expiry)),
+                .layer(
+                    SessionManagerLayer::new(session_store)
+                        .with_name("giga_test_session")
+                        .with_expiry(cookie_expiry),
+                ),
         )
         .with_state(state);
 
