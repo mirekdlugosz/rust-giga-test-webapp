@@ -63,7 +63,7 @@ async fn post_answers(
     State(state): State<AppState>,
     session: Session,
     form: Option<Form<HashMap<String, String>>>,
-) -> Result<impl IntoResponse, ErrorResponse<'static>> {
+) -> Redirect {
     let new_responses: UserResponseData = form.map_or_else(
         || UserResponseData::new(),
         |form| responses_from_form_data(&form.0, &state.questions_db)
@@ -75,7 +75,7 @@ async fn post_answers(
         session.insert(GT_RESP_KEY, all_responses).await.unwrap();
     }
 
-    get_index(axum::extract::State(state), session).await
+    Redirect::to("/")
 }
 
 async fn submit_toggle_canceled(
@@ -95,13 +95,21 @@ async fn submit_test(
     Redirect::to("/")
 }
 
+async fn start_new_test(
+    session: Session,
+    _form: Option<Form<HashMap<String, String>>>,
+) -> Redirect {
+    session.insert(GT_RESP_KEY, UserResponseData::new()).await.unwrap();
+    session.insert(GT_FINISHED_KEY, false).await.unwrap();
+    Redirect::to("/")
+}
+
 pub fn routes() -> Router<AppState> {
-    // FIXME: should post_answers have own endpoint that raises redirect?
-    // That's called Post/Redirect/Get and is common in apps like mine
-    // FIXME: can I have route names, ideally ones I could use in templates?
     Router::new()
-        .route("/", get(get_index).post(post_answers))
+        .route("/", get(get_index))
         .route("/czesc-:id", get(get_part))
+        .route("/odpowiedzi", post(post_answers))
         .route("/licz-anulowane", post(submit_toggle_canceled))
         .route("/zakoncz", post(submit_test))
+        .route("/od-nowa", post(start_new_test))
 }

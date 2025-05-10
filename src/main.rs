@@ -2,16 +2,19 @@ use crate::errors::Error;
 use crate::giga_test::get_giga_test;
 use axum::Router;
 use std::process::ExitCode;
-use std::time::Duration;
 use tokio::net::TcpListener;
 use tower::ServiceBuilder;
 use tower_http::compression::CompressionLayer;
 use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
-use tower_sessions::{MemoryStore, SessionManagerLayer};
+use tower_sessions::SessionManagerLayer;
+use tower_sessions_sqlx_store::{sqlx::SqlitePool, SqliteStore};
 use tower_serve_static::ServeDir;
 use include_dir::{Dir, include_dir};
 use regex::Regex;
+use dotenvy;
+use std::io::ErrorKind;
+use std::fs::File;
 
 mod env;
 mod errors;
@@ -28,22 +31,14 @@ pub struct AppState {
     questions_db: models::QuestionsDB,
 }
 
-pub(crate) fn make_app(timeout: Duration) -> Router<AppState> {
-    // FIXME: headery dla cache zasobów statycznych, może obsługa nagłówka if-modified
-    // FIXME: we might want persistent file-based session storage with memory storage in front, as part of
-    //        cached storage
-    // FIXME: check how it works when multiple people try to access a page
-    Router::new()
-        .nest_service("/static", ServeDir::new(&STATIC_ASSETS_DIR))
-        .merge(routes::routes())
-        .layer(
-            ServiceBuilder::new()
-                .layer(CompressionLayer::new())
-                .layer(TraceLayer::new_for_http())
-                .layer(TimeoutLayer::new(timeout))
-                .layer(SessionManagerLayer::new(MemoryStore::default())
-                       .with_name("giga_test_session")),
-        )
+fn ensure_sqlite_file_exists(pool: &str) -> Result<(), Box<dyn std::error::Error>> {
+    let filepath = pool.trim_start_matches("sqlite:");
+    tracing::info!("Ensuring SQLite file exists: {filepath}");
+    match File::create_new(filepath) {
+        Ok(_) => Ok(()),
+        Err(e) if e.kind() == ErrorKind::AlreadyExists => Ok(()),
+        Err(e) => Err(Box::new(e)),
+    }
 }
 
 async fn shutdown_signal() {
@@ -81,14 +76,16 @@ fn html_preprocessor(input: &str) -> String {
 
 async fn start() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt::init();
+    let _ = dotenvy::dotenv();
 
-    // FIXME: read values from dotenv file
-    // FIXME: one variable to specify host and port to bind to (usually 0.0.0.0 or 127.0.0.1)
-    //      FIXME: ideally host would be optional
     // FIXME: variable to specify base path, passed to templates. that would allow to pretend app
     //      is running from subdirectory
-    let addr = env::addr()?;
+    let bind_addr = env::bind_addr()?;
     let timeout = env::http_timeout()?;
+    let sqlite_pool = env::sqlite_pool()?;
+    if ! (sqlite_pool.to_lowercase() == "sqlite::memory:") {
+        ensure_sqlite_file_exists(&sqlite_pool)?;
+    }
     let giga_test = get_giga_test(&html_preprocessor);
     let questions_db = &giga_test.get_questions().to_owned();
 
@@ -97,11 +94,28 @@ async fn start() -> Result<(), Box<dyn std::error::Error>> {
         questions_db: questions_db.clone(),
     };
 
-    tracing::info!("serving on {addr}");
-    tracing::info!("timeout set to {:?}", timeout);
+    let pool = SqlitePool::connect(&sqlite_pool).await?;
+    let session_store = SqliteStore::new(pool).with_table_name("sessions")?;
+    session_store.migrate().await?;
 
-    let service = make_app(timeout).with_state(state);
-    let listener = TcpListener::bind(&addr).await?;
+    tracing::info!("serving on {bind_addr}");
+    tracing::info!("timeout set to {timeout:?}");
+    tracing::info!("using SQLite db at {sqlite_pool}");
+
+    let service = Router::new()
+        .nest_service("/static", ServeDir::new(&STATIC_ASSETS_DIR))
+        .merge(routes::routes())
+        .layer(
+            ServiceBuilder::new()
+                .layer(CompressionLayer::new())
+                .layer(TraceLayer::new_for_http())
+                .layer(TimeoutLayer::new(timeout))
+                .layer(SessionManagerLayer::new(session_store)
+                       .with_name("giga_test_session")),
+        )
+        .with_state(state);
+
+    let listener = TcpListener::bind(&bind_addr).await?;
 
     axum::serve(listener, service)
         .with_graceful_shutdown(shutdown_signal())
