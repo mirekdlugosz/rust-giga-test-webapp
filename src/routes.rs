@@ -15,12 +15,19 @@ const GT_RESP_KEY: &str = "giga_test_responses";
 const GT_FINISHED_KEY: &str = "giga_test_finished";
 const GT_COUNT_CANCELED_KEY: &str = "giga_test_count_canceled";
 
-#[derive(Clone, Debug, Default, Deserialize, Serialize)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 struct CountCanceled(bool);
+
+impl Default for CountCanceled {
+    fn default() -> Self {
+        Self(true)
+    }
+}
 
 #[derive(Clone, Debug, Default, Deserialize, Serialize)]
 struct TestFinished(bool);
 
+// FIXME: tell user which place she would have
 async fn get_index(
     State(state): State<AppState>,
     session: Session,

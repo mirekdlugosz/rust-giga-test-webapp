@@ -22,7 +22,6 @@ mod models;
 mod pages;
 mod routes;
 
-// FIXME: run clippy
 static STATIC_ASSETS_DIR: Dir<'static> = include_dir!("$CARGO_MANIFEST_DIR/resources");
 
 #[derive(Clone)]
