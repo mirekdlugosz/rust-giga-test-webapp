@@ -33,11 +33,9 @@ section.test-management {
     form {
         margin-block-end: var(--pico-block-spacing-vertical);
     }
-
     @media (min-width: 576px) {
         display: flex;
         gap: var(--pico-block-spacing-horizontal);
-
         form {
             flex: 1 1 0;
         }
@@ -47,7 +45,6 @@ section.test-management {
 #start-new-test button {
     --pico-border-color: var(--pico-color-red-450);
     --pico-color: var(--pico-border-color);
-
     &:hover, &:active, &:focus {
         --pico-border-color: var(--pico-color-red-500);
     }
@@ -69,7 +66,6 @@ section.test-management {
         padding-inline-start: var(--pico-block-spacing-horizontal);
         padding-inline-end: var(--pico-block-spacing-horizontal);
     }
-
     button {
         width: 100%;
     }
@@ -90,11 +86,9 @@ p.question img {
 
 div.question {
     margin-block-end: calc(var(--pico-typography-spacing-vertical) * 2);
-
     p {
         margin-block-end: calc(var(--pico-typography-spacing-vertical) / 2);
     }
-
     p.answer {
         display: flex;
         align-items: center;
@@ -103,4 +97,63 @@ div.question {
             flex-shrink: 0;
         }
     }
+}
+
+footer {
+    color: var(--pico-muted-color);
+    text-align: center;
+    section {
+        flex: 1 1 0;
+    }
+    .copy p {
+        margin-block-end: 0;
+        font-size: 80%;
+    }
+    .social {
+        p {
+            margin-block-end: calc(var(--pico-typography-spacing-vertical) / 2);
+        }
+        ul {
+            padding-inline-start: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        li {
+            display: inline;
+            flex: 1 1 0;
+            font-size: 3.5em;
+            margin-inline-start: calc(var(--pico-block-spacing-horizontal) / 2);
+        }
+        a {
+            text-decoration: none;
+            --pico-color: var(--pico-muted-color);
+            :hover {
+                text-decoration: none;
+                --pico-color: var(--pico-muted-color);
+            }
+        }
+        svg {
+            height: 1em;
+            width: 1em;
+        }
+    }
+}
+@media (min-width: 576px) {
+    footer {
+        text-align: left;
+        display: flex;
+        .social {
+            text-align: right;
+            ul {
+                display: block;
+            }
+            li {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.part footer {
+    margin-block-end: calc(var(--pico-block-spacing-vertical) * 2);
 }

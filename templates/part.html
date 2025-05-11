@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block body_class %}part{% endblock %}
+
 {%- block content -%}
 <form action="/odpowiedzi" method="POST">
     {% if ! giga_test_finished %}
