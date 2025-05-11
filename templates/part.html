@@ -2,27 +2,39 @@
 
 {%- block content -%}
 <form action="/odpowiedzi" method="POST">
-    <button>Submit!</button>
-<p>{{ part_state.introduction }}</p>
+    {% if ! giga_test_finished %}
+    <section class="container submit-answers">
+        <button>Zapisz odpowiedzi</button>
+    </section>
+    {% endif %}
+    <article class="introduction">
+        <p>{{ part_state.introduction|linebreaks|safe }}</p>
+    </article>
 
-{% for section in part_state.sections %}
-<p>{{ section.introduction|safe }}</p>
-{% for question in section.questions %}
-<div id="{{ question.id }}" {% if question.canceled && giga_test_finished %}class="canceled"{% endif %}>
-    <p>{{ question.question|safe }}</p>
-    {% for choice in question.choices %}
-    <input 
-        type="radio"
-        id="{{ choice.1.id }}"
-        name="{{ question.id }}"
-        value="{{ choice.0 }}" 
-        {% if giga_test_finished %}disabled{% endif %}
-        {% if choice.1.user_selected %}checked{% endif %}
-    />
-    <label class="{% if giga_test_finished %}{{ choice.1.choice_class }}{% endif %}" for="{{ choice.1.id }}">{{ choice.1.answer|safe }}</label>
-    {% endfor %}
-</div>
-{% endfor %}
-{% endfor %}
+    {% for section in part_state.sections %}
+    <article class="section">
+        <p class="introduction">{{ section.introduction|safe }}</p>
+        {%- for question in section.questions %}
+        <div id="{{ question.id }}" class="question 
+                 {%- if question.canceled && giga_test_finished %}canceled{%- endif -%}
+            ">
+            <p class="question">{{ question.question|safe }}</p>
+            {% for choice in question.choices -%}
+            <p class="answer">
+                <input 
+                    type="radio"
+                    id="{{ choice.1.id }}"
+                    name="{{ question.id }}"
+                    value="{{ choice.0 }}" 
+                    {% if giga_test_finished %}disabled{% endif %}
+                    {% if choice.1.user_selected %}checked{% endif %}
+                />
+                <label class="{% if giga_test_finished %}{{ choice.1.choice_class }}{% endif %}" for="{{ choice.1.id }}">{{ choice.1.answer|safe }}</label>
+            </p>
+            {%- endfor %}
+        </div>
+        {%- endfor %}
+    </article>
+    {%- endfor %}
 </form>
 {% endblock %}

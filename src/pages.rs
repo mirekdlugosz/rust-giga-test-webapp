@@ -1,5 +1,6 @@
-use crate::models::{TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage};
-//use crate::routes::paste::{Format, QueryData};
+use crate::models::{
+    PlaceBucket, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
+};
 use askama::Template;
 use axum::http::StatusCode;
 
@@ -49,7 +50,6 @@ impl<'a> Index<'a> {
     }
 }
 
-/// Paste view showing the formatted paste as well as a bunch of links.
 #[derive(Template)]
 #[template(path = "part.html")]
 pub struct Part<'a> {
@@ -58,11 +58,20 @@ pub struct Part<'a> {
 }
 
 impl<'a> Part<'a> {
-    /// Construct new paste view from cache `key` and paste `html`.
     pub fn new(part_state: &'a TestStatePartPage, giga_test_finished: bool) -> Self {
         Self {
             part_state,
             giga_test_finished,
         }
+    }
+}
+
+#[derive(Template)]
+#[template(path = "about.html")]
+pub struct About {}
+
+impl About {
+    pub fn new() -> Self {
+        Self {}
     }
 }

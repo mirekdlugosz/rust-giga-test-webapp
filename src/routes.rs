@@ -2,7 +2,7 @@ use crate::giga_test::{
     get_index_tests_state, get_index_totals, get_part_state, responses_from_form_data,
 };
 use crate::models::UserResponseData;
-use crate::pages::{ErrorResponse, Index, Part};
+use crate::pages::{About, ErrorResponse, Index, Part};
 use crate::AppState;
 use axum::extract::{Form, Path, State};
 use axum::response::{IntoResponse, Redirect};
@@ -27,7 +27,6 @@ impl Default for CountCanceled {
 #[derive(Clone, Debug, Default, Deserialize, Serialize)]
 struct TestFinished(bool);
 
-// FIXME: tell user which place she would have
 async fn get_index(
     State(state): State<AppState>,
     session: Session,
@@ -88,6 +87,10 @@ async fn get_part(
     let part_state = get_part_state(test_part, &test_responses, count_canceled.0);
 
     Ok(Part::new(&part_state, test_finished.0).into_response())
+}
+
+async fn get_about() -> Result<impl IntoResponse, ErrorResponse<'static>> {
+    Ok(About::new().into_response())
 }
 
 async fn post_answers(
@@ -159,6 +162,7 @@ pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(get_index))
         .route("/czesc-:id", get(get_part))
+        .route("/o-co-chodzi-jakby", get(get_about))
         .route("/odpowiedzi", post(post_answers))
         .route("/licz-anulowane", post(submit_toggle_canceled))
         .route("/zakoncz", post(submit_test))

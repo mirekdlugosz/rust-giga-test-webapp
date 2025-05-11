@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, HashMap};
+use std::fmt;
 
 fn ret_false() -> bool {
     false
@@ -7,6 +8,27 @@ fn ret_false() -> bool {
 
 pub(crate) type UserResponseData = HashMap<String, UserResponse>;
 pub(crate) type AnswersDB = HashMap<String, Option<char>>;
+
+pub(crate) enum PlaceBucket {
+    Winner,
+    ConsolationPrize,
+    NamePrinted,
+    NameWebsite,
+    Loser,
+}
+
+impl fmt::Display for PlaceBucket {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        let display_text = match self {
+            PlaceBucket::Winner => "winner",
+            PlaceBucket::ConsolationPrize => "consolation-prize",
+            PlaceBucket::NamePrinted => "name-printed",
+            PlaceBucket::NameWebsite => "name-website",
+            PlaceBucket::Loser => "loser",
+        };
+        write!(f, "{}", display_text)
+    }
+}
 
 #[derive(Clone, Debug, Deserialize, Default)]
 pub(crate) struct Test(BTreeMap<String, TestPart>);
@@ -228,8 +250,10 @@ impl TestStateMainPageElem {
 pub(crate) struct TestStateMainPageTotals {
     pub(crate) answered_good_q: usize,
     pub(crate) answered_bad_q: usize,
-    pub(crate) no_answer: usize,
+    pub(crate) answered_total_q: usize,
     pub(crate) total_q: usize,
+    pub(crate) place: usize,
+    pub(crate) place_bucket: PlaceBucket,
 }
 
 #[derive(Clone, Debug, Default, Deserialize)]

@@ -1,8 +1,26 @@
 use std::collections::HashMap;
 
+// Table with a number of points received by each participant of original competition,
+// copied from http://www.psxextreme.bmp.net.pl/gigatest.htm (Web Archive)
+// get_user_place() uses that to tell which place user would have, had she participated
+static GT_RESULTS: &[usize] = &[
+    276, 274, 271, 270, 267, 264, 262, 260, 259, 256, 255, 254, 252, 250, 248, 247, 246, 245, 244,
+    243, 242, 241, 240, 239, 238, 236, 235, 234, 233, 232, 231, 230, 228, 227, 226, 225, 224, 223,
+    222, 221, 220, 219, 218, 217, 216, 215, 214, 213, 212, 211, 210, 209, 208, 207, 206, 205, 204,
+    203, 202, 201, 200, 199, 198, 197, 196, 195, 194, 193, 192, 191, 190, 189, 188, 187, 186, 185,
+    184, 183, 182, 181, 180, 179, 178, 177, 176, 175, 174, 173, 172, 171, 170, 169, 168, 167, 166,
+    165, 164, 163, 162, 161, 160, 159, 157, 156, 155, 154, 153, 152, 151, 150, 149, 148, 147, 146,
+    145, 144, 143, 142, 141, 140, 139, 138, 137, 136, 135, 134, 133, 132, 131, 130, 129, 128, 127,
+    126, 125, 124, 123, 122, 121, 120, 119, 118, 117, 115, 114, 113, 112, 111, 110, 109, 108, 107,
+    106, 105, 104, 103, 102, 100, 99, 98, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 82,
+    81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 64, 63, 62, 61, 60, 59, 58, 57,
+    56, 55, 53, 52, 51, 50, 49, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 30,
+    29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 0,
+];
+
 use crate::models::{
-    AnswerChoice, AnswersDB, Question, RawTest, Section, Test, TestPart, TestPartTally,
-    TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
+    AnswerChoice, AnswersDB, PlaceBucket, Question, RawTest, Section, Test, TestPart,
+    TestPartTally, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
     TestStatePartPageAnswerChoice, TestStatePartPageQuestion, TestStatePartPageSection,
     UserResponse, UserResponseData,
 };
@@ -17,6 +35,14 @@ pub(crate) fn get_giga_test(preprocessor: &dyn Fn(&str) -> String) -> Test {
 
 fn display_canceled_question(count_canceled: bool, question: &Question) -> bool {
     count_canceled || !question.canceled
+}
+
+fn get_user_place(correct_answers: usize) -> usize {
+    GT_RESULTS
+        .iter()
+        .position(|&t| correct_answers >= t)
+        .unwrap_or(0)
+        + 1
 }
 
 fn tally_test_part(
@@ -66,12 +92,22 @@ pub(crate) fn get_index_totals(
         index_tests_state.iter().fold((0, 0, 0), |(g, b, t), x| {
             (g + x.answered_good_q, b + x.answered_bad_q, t + x.total_q)
         });
-    let no_answer = total_q - answered_good_q - answered_bad_q;
+    let answered_total_q = answered_good_q + answered_bad_q;
+    let place = get_user_place(answered_good_q);
+    let place_bucket = match place {
+        1 => PlaceBucket::Winner,
+        2..=7 => PlaceBucket::ConsolationPrize,
+        8..=61 => PlaceBucket::NamePrinted,
+        62..=232 => PlaceBucket::NameWebsite,
+        _ => PlaceBucket::Loser,
+    };
     TestStateMainPageTotals {
         answered_good_q,
         answered_bad_q,
-        no_answer,
+        answered_total_q,
         total_q,
+        place,
+        place_bucket,
     }
 }
 
@@ -87,12 +123,14 @@ pub(crate) fn get_part_state(
         user_answer: Option<char>,
     ) -> (char, TestStatePartPageAnswerChoice) {
         let user_selected = user_answer.is_some_and(|r| &r == answer_id);
-        let choice_class = match (user_selected, answer.correct) {
-            (true, true) => "poprawnie".to_string(),
-            (true, false) => "niepoprawnie".to_string(),
-            (false, true) => "poprawnie".to_string(),
-            (false, false) => "".to_string(),
-        };
+        let choice_class = if answer.correct {
+            "correct"
+        } else if user_selected {
+            "incorrect "
+        } else {
+            ""
+        }
+        .to_string();
         let id = format!("{}_{}", question_id, answer_id).to_string();
         let obj = TestStatePartPageAnswerChoice {
             answer: answer.answer.clone(),
@@ -162,4 +200,39 @@ pub(crate) fn responses_from_form_data(
             Some((question_id.clone(), ur))
         })
         .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_user_place_best() {
+        let user_place = get_user_place(300);
+        assert_eq!(user_place, 1);
+    }
+
+    #[test]
+    fn test_user_place_same() {
+        let user_place = get_user_place(270);
+        assert_eq!(user_place, 4);
+    }
+
+    #[test]
+    fn test_user_place_different() {
+        let user_place = get_user_place(272);
+        assert_eq!(user_place, 3);
+    }
+
+    #[test]
+    fn test_user_place_worst() {
+        let user_place = get_user_place(3);
+        assert_eq!(user_place, 233);
+    }
+
+    #[test]
+    fn test_user_place_zero() {
+        let user_place = get_user_place(0);
+        assert_eq!(user_place, 233);
+    }
 }

@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <title>PSX Extreme Giga Test</title>
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <!-- FIXME: usuń link do kolorów, gdy już nie będą potrzebne -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
         <link rel="stylesheet" href="/static/style.css">
-        <!--<link rel="icon" href=" meta.routes.favicon " type="image/png">-->
-        <style>
-        .niepoprawnie { color: red; }
-        .poprawnie { color: green; }
-        </style>
+        <title>PSX Extreme Giga Test</title>
+        <!--FIXME<link rel="icon" href=" meta.routes.favicon " type="image/png">-->
         {% block head %}{% endblock %}
     </head>
     <body>
-        <header>
-            <span id="nav-title"><a href="/"><button>home</button></a></span>
+        <header class="container">
             <nav>
                 <ul>
-                    {% block nav %}{% endblock %}
+                    <li><strong><a href="/">PSX Extreme Giga Test</a></strong></li>
+                </ul>
+                <ul>
+                    <li><a href="/o-co-chodzi-jakby">O ćo chodzi jakby?</a></li>
                 </ul>
             </nav>
         </header>
-        {% block content %}{% endblock %}
+        <main class="container">
+            {% block content %}{% endblock %}
+        </main>
+        <!--
+            FIXME: footer
+        -->
     </body>
 </html>

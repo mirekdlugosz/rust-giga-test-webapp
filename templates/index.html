@@ -1,43 +1,79 @@
 {% extends "base.html" %}
 
 {%- block content -%}
-<ul>
-{% for test_elem in tests_state %}
-    <li>
-        <a href="/czesc-{{ test_elem.test_id }}">Giga Test cz. {{ test_elem.test_id }}</a>
-        (PSX Extreme #{{ test_elem.pe_id }}, {{ test_elem.pe_date }})
-    {% if giga_test_finished %}
-        <span class="correct">poprawnie: {{ test_elem.answered_good_q }}</span>
-        <span class="incorrect">niepoprawnie: {{ test_elem.answered_bad_q }}</span>
-    {% else %}
-        <span class="answered">odpowiedzi: {{ test_elem.answered_q }}</span>
-    {% endif %}
-    <span class="total">razem: {{ test_elem.total_q }}</span>
-    </li>
-{% endfor %}
-</ul>
-
-
 {% if giga_test_finished %}
-<p>
-    Razem
-    <span class="correct">poprawnie: {{ totals.answered_good_q }}</span>
-    <span class="incorrect">niepoprawnie: {{ totals.answered_bad_q }}</span>
-    <span class="incorrect">brak odpowiedzi: {{ totals.no_answer }}</span>
-    <span class="total">razem: {{ totals.total_q }}</span>
-</p>
+<article class="test-results">
+    <p>Zakończyłeś swoje podejście do Giga Testu.</p>
+    <p class="counts">
+        Na <span class="total">{{ totals.total_q }}</span> pytań udzieliłeś <span class="answered">{{ totals.answered_total_q }}</span>
+        odpowiedzi, z czego <span class="correct">{{ totals.answered_good_q }} poprawnie</span> i 
+        <span class="incorrect">{{ totals.answered_bad_q }} błędnie</span>.
+    </p>
+    <p>
+        Z takim wynikiem zająłbyś <span class="place {{ totals.place_bucket }}">{{ totals.place }}</span> miejsce.
+        {% match totals.place_bucket %}
+            {% when PlaceBucket::Winner %}Gratulacje! PlayStation 2 byłaby Twoja!
+            {% when PlaceBucket::ConsolationPrize %}Gratulacje! Załapałbyś się na nagrodę pocieszenia - pada.
+            {% when PlaceBucket::NamePrinted %}Super! Twoje nazwisko znalazłoby się na liście uczestników umieszczonej w czasopiśmie.
+            {% when PlaceBucket::NameWebsite %}Nieźle - Twoje nazwisko znalazłoby się na stronie internetowej.
+            {% when _ %}Nawet nie umieściliby Twojego nazwiska na stronie internetowej.
+        {% endmatch %}
+    </p>
+    <p>Na stronach konkretnych części Giga Testu zaznaczone są poprawne odpowiedzi. Możesz zacząć kolejne podejście korzystając z przycisku poniżej - ale bez oszukiwania!</p>
+    <form action="/od-nowa" method="POST">
+        <button class="container">Próbuję ponownie</button>
+    </form>
+</article>
 {% endif %}
 
-<form action="/licz-anulowane" method="POST">
-    <button>{% if count_canceled %}Pomijaj anulowane pytania{% else %}Uwzględniaj anulowane pytania{% endif %}</button>
-</form>
+<section class="test-index">
+    <ul>
+        {%- for test_elem in tests_state -%}
+        <li class="test-part">
+            <span class="heading">
+                <a href="/czesc-{{ test_elem.test_id }}">Giga Test cz. {{ test_elem.test_id }}</a>
+                (PSX Extreme #{{ test_elem.pe_id }}, {{ test_elem.pe_date }})
+            </span>
+            <span class="counts">
+                <span class="total">Pytań: {{ test_elem.total_q }}</span>
+                <span class="answered">Odpowiedzi: {{ test_elem.answered_q }}</span>
+                {% if giga_test_finished %}
+                (w tym:
+                <span class="correct">poprawnie: {{ test_elem.answered_good_q }}</span>
+                <span class="incorrect">błędnie: {{ test_elem.answered_bad_q }}</span>)
+                {% endif %}
+            </span>
+        </li>
+        {%- endfor -%}
+    </ul>
+</section>
+        <!--FIXME: usuń, zmień guzik żeby mniej się rzucał w oczy-->
+                        <!--
+                            <fieldset>
+                        <label>
+                            <input name="opt-in" type="checkbox" role="switch" checked />
+                            Anulowane pytania
+                        </label>
+                    </fieldset>
+                        -->
+<section class="test-management">
+    <form action="/licz-anulowane" method="POST">
+        <button class="container secondary">{% if count_canceled %}Pomijaj anulowane pytania{% else %}Uwzględniaj anulowane pytania{% endif %}</button>
+    </form>
+</section>
 
-<form action="/zakoncz" method="POST">
-    <button {% if giga_test_finished %}disabled{% endif %}>Zamknij giga test</button>
-</form>
+{% if ! giga_test_finished %}
+<section>
+    <form action="/zakoncz" method="POST">
+        <button class="container">Zakończ podejście - wyniki!</button>
+    </form>
+</section>
 
-<form action="/od-nowa" method="POST">
-    <button>Zacznij od nowa</button>
-</form>
+<section>
+    <form action="/od-nowa" method="POST">
+        <button class="container">Poddaję się, zaczynam od nowa</button>
+    </form>
+</section>
+{% endif %}
 
 {%- endblock -%}
