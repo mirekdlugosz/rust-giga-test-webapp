@@ -1,3 +1,13 @@
+/*!
+ * Colors copied from Pico CSS ✨ v2.1.1 (https://picocss.com)
+ * Copyright 2019-2025 - Licensed under MIT
+ */
+:host,:root {
+    --pico-color-red-500:#d93526;
+    --pico-color-red-450:#ee402e;
+    --pico-color-jade-450:#029764;
+}
+
 .incorrect {
     color: var(--pico-color-red-450);
 }
@@ -16,6 +26,30 @@ section.test-index ul {
     li {
         list-style-type: none;
         margin-block-end: var(--pico-block-spacing-vertical);
+    }
+}
+
+section.test-management {
+    form {
+        margin-block-end: var(--pico-block-spacing-vertical);
+    }
+
+    @media (min-width: 576px) {
+        display: flex;
+        gap: var(--pico-block-spacing-horizontal);
+
+        form {
+            flex: 1 1 0;
+        }
+    }
+}
+
+#start-new-test button {
+    --pico-border-color: var(--pico-color-red-450);
+    --pico-color: var(--pico-border-color);
+
+    &:hover, &:active, &:focus {
+        --pico-border-color: var(--pico-color-red-500);
     }
 }
 
