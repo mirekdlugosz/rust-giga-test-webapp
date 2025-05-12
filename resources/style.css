@@ -6,13 +6,23 @@
     --pico-color-red-500:#d93526;
     --pico-color-red-450:#ee402e;
     --pico-color-jade-450:#029764;
+
+    --color-incorrect: var(--pico-color-red-450);
+    --color-correct: var(--pico-color-jade-450);
+    --answer-img-border-width: calc(var(--pico-border-width) * 3);
 }
 
 .incorrect {
-    color: var(--pico-color-red-450);
+    color: var(--color-incorrect);
+    img {
+        border: var(--color-incorrect) var(--answer-img-border-width) solid;
+    }
 }
 .correct {
-    color: var(--pico-color-jade-450);
+    color: var(--color-correct);
+    img {
+        border: var(--color-correct) var(--answer-img-border-width) solid;
+    }
 }
 
 .test-part {
