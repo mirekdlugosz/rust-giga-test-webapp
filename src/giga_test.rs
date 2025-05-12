@@ -25,7 +25,6 @@ use crate::models::{
     UserResponse, UserResponseData,
 };
 
-// FIXME: spellcheck pl na TOML z gigatestem, potwierdź wszystkie literówki
 pub(crate) fn get_giga_test(preprocessor: &dyn Fn(&str) -> String) -> Test {
     let giga_test_toml = include_str!("../resources/gigatest.toml");
     let processed_giga_test_toml = preprocessor(giga_test_toml);

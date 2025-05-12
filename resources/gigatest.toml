@@ -4,7 +4,7 @@ Witamy w pierwszej z sześciu części Giga Testu, w którym główną nagrodą 
 
 Aby do samego końca nie było wiadomo, kto ma największą szansę na nagrodę, w międzyczasie nie będziemy przedstawiać żadnych rankingów. Takowy powstanie dopiero na końcu, po przebrnięciu przez wszystkie sześć tur. Wtedy dopiero każdy z Was przekona się jak wypadł na tle innych uczestników. Żeby wszystko było jasne - powtarzamy: ZDOBYWCA PIERWSZEGO MIEJSCA ZOSTANIE ZAPROSZONY DO REDAKCJI I OSOBIŚCIE ODBIERZE KONSOLĘ PLAYSTATION 2.
 
-Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(Red.)zioli. Podpowiadamy, że na każde z pytań jest tylko jedna prawidłowa odpowiedż, którą najlepiej zaznaczyć krzyżykiem, bądź zamalować odpowiedni kwadracik. Wiemy, iż z bólem serca przychodzi Wam wycinanie czegokolwiek z PE i mając to na uwadze umożliwiliśmy Wam "bezbolesne" pozbycie się tych czterech stron (w związku z tym nie przyjmujemy kserokopii). Niczego nie żałujcie: WYRYWAJCIE, WYPEŁNIAJCIE, WYSYŁAJCIE I WYGRYWAJCIE! Na odpowiedzi z pierwszej edycji (bieżącej) czekamy do 1 listopada (potem podkręcimy tempo), więc nie spieszcie się i jeśli czegoś nie wiecie albo nie jesteście pewni, połączcie siły, spytajcie znajomych (HIV: Nie pomagaj kumplowi, nie pozwól mu spisać swoich odpowiedzi, trzaśnij mu z flaczka - pomyśl, co się stanie, jeśli to ON wygra, a nie TY! Chyba sobie nie podarujesz, co?), poszukajcie w prasie, ponieważ jest o co walczyć a każdy błąd może być na wagę złota. Na kopercie prosimy o dopisek "GIGA TEST". Zaczynamy!
+Na pierwszy ogień idzie 56 pytań, które przygotowało dla Was dziewięciu zg(Red.)zioli. Podpowiadamy, że na każde z pytań jest tylko jedna prawidłowa odpowiedź, którą najlepiej zaznaczyć krzyżykiem, bądź zamalować odpowiedni kwadracik. Wiemy, iż z bólem serca przychodzi Wam wycinanie czegokolwiek z PE i mając to na uwadze umożliwiliśmy Wam "bezbolesne" pozbycie się tych czterech stron (w związku z tym nie przyjmujemy kserokopii). Niczego nie żałujcie: WYRYWAJCIE, WYPEŁNIAJCIE, WYSYŁAJCIE I WYGRYWAJCIE! Na odpowiedzi z pierwszej edycji (bieżącej) czekamy do 1 listopada (potem podkręcimy tempo), więc nie spieszcie się i jeśli czegoś nie wiecie albo nie jesteście pewni, połączcie siły, spytajcie znajomych (HIV: Nie pomagaj kumplowi, nie pozwól mu spisać swoich odpowiedzi, trzaśnij mu z flaczka - pomyśl, co się stanie, jeśli to ON wygra, a nie TY! Chyba sobie nie podarujesz, co?), poszukajcie w prasie, ponieważ jest o co walczyć a każdy błąd może być na wagę złota. Na kopercie prosimy o dopisek "GIGA TEST". Zaczynamy!
 """
 
 [1.sections]
@@ -301,7 +301,7 @@ answer = "w komorze gazowej"
 correct = false
 
 [[1.sections.2.questions.choices]]
-answer = "na szubienlcy"
+answer = "na szubienicy"
 correct = false
 
 [[1.sections.2.questions]]
@@ -430,7 +430,7 @@ answer = "Szwecja"
 correct = false
 
 [[1.sections.2.questions.choices]]
-answer = "Australla"
+answer = "Australia"
 correct = false
 
 [[1.sections.2.questions.choices]]
@@ -1429,7 +1429,7 @@ answer = "czapeczce ze śmigłem"
 correct = false
 
 [[2.sections.2.questions.choices]]
-answer = """wielkim uszom ("klaskał uszami”) """
+answer = """wielkim uszom ("klaskał uszami") """
 correct = true
 
 [[2.sections.2.questions.choices]]
@@ -3247,7 +3247,7 @@ introduction = """
 """
 
 [[4.sections.2.questions]]
-question = "Gra IRON SOLDIER, której trzecia część ukazała się niedawno na PSX'a, ma swoje korzenie na innej płattormie. A mianowicie:"
+question = "Gra IRON SOLDIER, której trzecia część ukazała się niedawno na PSX'a, ma swoje korzenie na innej platformie. A mianowicie:"
 
 [[4.sections.2.questions.choices]]
 answer = "Saturn"
@@ -3932,7 +3932,7 @@ answer = "N.GEN RACING"
 correct = false
 
 [[4.sections.6.questions]]
-question = "Snowhoard w konwencji platformówki:"
+question = "Snowboard w konwencji platformówki:"
 
 [[4.sections.6.questions.choices]]
 answer = "COOLBOARDERS"
@@ -5015,7 +5015,7 @@ correct = false
 question = "Wipeout 2097, która nazwa pasuje do umieszczonego obok logo? [img]Q262.png[/img]"
 
 [[5.sections.6.questions.choices]]
-answer = "Felsar"
+answer = "Feisar"
 correct = false
 
 [[5.sections.6.questions.choices]]
@@ -5034,7 +5034,7 @@ correct = false
 introduction = """
 Przed Wami szósta i zarazem ostatnia edycja GIGA TESTU. Z zapowiadanych 350 pytań zmieściło się 305, ale to chyba nie jest problem, co? Teraz już tylko pozostaje wypełnić GT6 i czekać wytrwale na ogłoszenie wyników... w okolicach maja.
 
-Sprawdzanie takiej ilości nadesłanych płacht zajmuje Starowi sporo czasu, a chyba nikt nie chce, żeby facet się pomylił, nieprawdzać (co prawda to matematyk, ale...)? W następnym numerze postaramy się wrzucić listę prawidłowych odpowiedzi. Swoją drogą - również umieramy z ciekawości, kto wyjdzie stąd z konsolą (no jak, przecież umawialiśmy się, że mój kuzyn - Star) (H: przecież to ja zapłaciłem 5 stówek! Ściera, co on gada?). Pomyślimy również o jakichś nagrodach pocieszenia dla pierwszych 10 "przegranych" oraz oficjalnych zaproszeniach do Redakcji. Po takiej batalii chyba warto się spotkać...
+Sprawdzanie takiej ilości nadesłanych płacht zajmuje Starowi sporo czasu, a chyba nikt nie chce, żeby facet się pomylił, nieprawdaż (co prawda to matematyk, ale...)? W następnym numerze postaramy się wrzucić listę prawidłowych odpowiedzi. Swoją drogą - również umieramy z ciekawości, kto wyjdzie stąd z konsolą (no jak, przecież umawialiśmy się, że mój kuzyn - Star) (H: przecież to ja zapłaciłem 5 stówek! Ściera, co on gada?). Pomyślimy również o jakichś nagrodach pocieszenia dla pierwszych 10 "przegranych" oraz oficjalnych zaproszeniach do Redakcji. Po takiej batalii chyba warto się spotkać...
 
 Ściera zabił Wam klina w ubiegłym miesiącu. Został zwyzywany za to od najgorszych, czym się naprawdę przejął. Nawet postanowił unieważnić jedno pytanie (GT5, nr 234), które uznał za niejednoznaczne, czy coś w tym stylu.
 
@@ -5793,7 +5793,7 @@ correct = false
 
 [6.sections.6]
 introduction = """
-[img]kali.png[/img] UUuu, UUuu! UUuu, UUuu! Blow my whistle bicz! Tu tu turu turu tum! Here comes the new challenger! Jedziemy z tym koksem - po raz pierwszy złapałem się za pytania odnoszące się do zdjęć. Ciekaw jestem, czy wyszły trudne:)...
+[img]kali.png[/img] UUuu, UUuu! UUuu, UUuu! Blow my whistle bicz! Tu tu turu tum tum! Here comes the new challenger! Jedziemy z tym koksem - po raz pierwszy złapałem się za pytania odnoszące się do zdjęć. Ciekaw jestem, czy wyszły trudne:)...
 """
 
 [[6.sections.6.questions]]
