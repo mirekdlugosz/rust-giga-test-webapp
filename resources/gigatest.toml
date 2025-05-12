@@ -965,7 +965,7 @@ answer = "serii ligowego ISS-a"
 correct = false
 
 [[1.sections.7.questions.choices]]
-answer = "bijatyka DYNASTY WARRIORS"
+answer = "bijatyki DYNASTY WARRIORS"
 correct = true
 
 [[1.sections.7.questions.choices]]
@@ -3465,11 +3465,11 @@ question = "Który z tych tytułów zrobiło CODEMASTERS?"
 
 [[4.sections.3.questions.choices]]
 answer = "LMA MANAGER"
-correct = false
+correct = true
 
 [[4.sections.3.questions.choices]]
 answer = "PREMIER MANAGER 2000"
-correct = true
+correct = false
 
 [[4.sections.3.questions.choices]]
 answer = "PLAYER MANAGER 2000"
@@ -4935,11 +4935,11 @@ question = "Twoja rola polega na rozwożeniu pizzy. Gra ta jest kieprawa, a jej 
 
 [[5.sections.5.questions.choices]]
 answer = "FELLONY 11-79"
-correct = true
+correct = false
 
 [[5.sections.5.questions.choices]]
 answer = "RADIKAL BIKERS"
-correct = false
+correct = true
 
 [[5.sections.5.questions.choices]]
 answer = "RUNABOUT 2"
