@@ -13,7 +13,7 @@ use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
 use tower_serve_static::ServeDir;
 use tower_sessions::{cookie::time::Duration, Expiry, SessionManagerLayer};
-use tower_sessions_sqlx_store::{sqlx::SqlitePool, SqliteStore};
+use tower_sessions_sqlx_store::{sqlx::sqlite::SqlitePoolOptions, SqliteStore};
 
 mod env;
 mod errors;
@@ -97,7 +97,9 @@ async fn start() -> Result<(), Box<dyn std::error::Error>> {
         questions_db: questions_db.clone(),
     };
 
-    let pool = SqlitePool::connect(&sqlite_pool).await?;
+    let pool = SqlitePoolOptions::new()
+        .max_connections(1)
+        .connect(&sqlite_pool).await?;
     let session_store = SqliteStore::new(pool).with_table_name("sessions")?;
     session_store.migrate().await?;
     // FIXME: call continuously_delete_expired - ale ja nie mam? :(
