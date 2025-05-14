@@ -1227,7 +1227,7 @@ answer = "Ripper Blast"
 correct = false
 
 [[2.sections.1.questions]]
-question = "Podczas zakończenia którego z państw w BRIGANDINE może zostać zabity Bulnoil"
+question = "Podczas zakończenia którego z państw w BRIGANDINE może zostać zabity Bulnoil?"
 
 [[2.sections.1.questions.choices]]
 answer = "Iscalio"
@@ -1747,7 +1747,7 @@ answer = "STREET FIGHTER i X-MEN"
 correct = false
 
 [[2.sections.4.questions.choices]]
-answer = "STREET FIGHTER, DARKSTALKERS i X-MEN"
+answer = "STREET FIGHTER, DARKASTALKERS i X-MEN"
 correct = false
 
 [[2.sections.4.questions.choices]]
@@ -3699,7 +3699,7 @@ introduction = """
 """
 
 [[4.sections.5.questions]]
-question = "Jak nazywa się jegomość ze zdjęcia (seria FINAL FANTASY) [img]Q186.png[/img]"
+question = "Jak nazywa się jegomość ze zdjęcia (seria FINAL FANTASY)? [img]Q186.png[/img]"
 
 [[4.sections.5.questions.choices]]
 answer = "Sephiroth"
