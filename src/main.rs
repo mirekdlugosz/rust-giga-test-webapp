@@ -99,7 +99,8 @@ async fn start() -> Result<(), Box<dyn std::error::Error>> {
 
     let pool = SqlitePoolOptions::new()
         .max_connections(1)
-        .connect(&sqlite_pool).await?;
+        .connect(&sqlite_pool)
+        .await?;
     let session_store = SqliteStore::new(pool).with_table_name("sessions")?;
     session_store.migrate().await?;
     // FIXME: call continuously_delete_expired - ale ja nie mam? :(

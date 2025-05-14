@@ -1,3 +1,9 @@
+use crate::models::{
+    AnswerChoice, AnswersDB, PlaceBucket, Question, RawTest, Section, Test, TestPart,
+    TestPartTally, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
+    TestStatePartPageAnswerChoice, TestStatePartPageQuestion, TestStatePartPageSection,
+    UserResponse, UserResponseData,
+};
 use std::collections::HashMap;
 
 // Table with a number of points received by each participant of original competition,
@@ -17,13 +23,6 @@ static GT_RESULTS: &[usize] = &[
     56, 55, 53, 52, 51, 50, 49, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 30,
     29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 0,
 ];
-
-use crate::models::{
-    AnswerChoice, AnswersDB, PlaceBucket, Question, RawTest, Section, Test, TestPart,
-    TestPartTally, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
-    TestStatePartPageAnswerChoice, TestStatePartPageQuestion, TestStatePartPageSection,
-    UserResponse, UserResponseData,
-};
 
 pub(crate) fn get_giga_test(preprocessor: &dyn Fn(&str) -> String) -> Test {
     let giga_test_toml = include_str!("../resources/gigatest.toml");
@@ -173,7 +172,12 @@ pub(crate) fn get_part_state(
         }
     };
 
-    let new_sections = test_part.sections.values().map(generate_sections).collect();
+    let mut sorted: Vec<_> = test_part.sections.iter().collect();
+    sorted.sort_by_key(|(key, _)| key.parse().unwrap_or(i32::MAX));
+    let new_sections = sorted
+        .iter()
+        .map(|(_, section)| generate_sections(section))
+        .collect();
 
     TestStatePartPage {
         introduction: test_part.introduction.clone(),
