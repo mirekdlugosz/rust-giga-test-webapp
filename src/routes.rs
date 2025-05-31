@@ -39,24 +39,23 @@ impl IntoResponse for Error {
         }
 
         let status = match &self {
-            Error::Render(_) => StatusCode::INTERNAL_SERVER_ERROR,
-            Error::NotFound => StatusCode::NOT_FOUND,
-            Error::IllegalCharacters
-            | Error::IntConversion(_)
-            | Error::WrongSize
-            | Error::CookieParsing(_) => StatusCode::BAD_REQUEST,
-            Error::Join(_) | Error::Compression(_) | Error::Axum(_) => {
+            Self::Render(_) => StatusCode::INTERNAL_SERVER_ERROR,
+            Self::NotFound => StatusCode::NOT_FOUND,
+            Self::IllegalCharacters
+            | Self::IntConversion(_)
+            | Self::WrongSize
+            | Self::CookieParsing(_) => StatusCode::BAD_REQUEST,
+            Self::Join(_) | Self::Compression(_) | Self::Axum(_) => {
                 StatusCode::INTERNAL_SERVER_ERROR
             }
         };
         let tmpl = Tmpl {
-            description: "nie wiem".to_string(),
+            description: self.to_string(),
         };
-        if let Ok(body) = tmpl.render() {
-            (status, Html(body)).into_response()
-        } else {
-            (status, "Something went wrong").into_response()
-        }
+        tmpl.render().map_or_else(
+            |_| (status, "Something went wrong").into_response(),
+            |body| (status, Html(body)).into_response(),
+        )
     }
 }
 

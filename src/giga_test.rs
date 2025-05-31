@@ -117,11 +117,11 @@ pub(crate) fn get_part_state(
 ) -> TestStatePartPage {
     fn generate_answers(
         question_id: &str,
-        answer_id: &char,
+        answer_id: char,
         answer: &AnswerChoice,
         user_answer: Option<char>,
     ) -> (char, TestStatePartPageAnswerChoice) {
-        let user_selected = user_answer.is_some_and(|r| &r == answer_id);
+        let user_selected = user_answer.is_some_and(|r| r == answer_id);
         let choice_class = if answer.correct {
             "correct"
         } else if user_selected {
@@ -130,7 +130,7 @@ pub(crate) fn get_part_state(
             ""
         }
         .to_string();
-        let id = format!("{}_{}", question_id, answer_id).to_string();
+        let id = format!("{question_id}_{answer_id}").to_string();
         let obj = TestStatePartPageAnswerChoice {
             answer: answer.answer.clone(),
             correct: answer.correct,
@@ -138,7 +138,7 @@ pub(crate) fn get_part_state(
             choice_class,
             id,
         };
-        (*answer_id, obj)
+        (answer_id, obj)
     }
 
     let generate_questions = |question: &Question| {
@@ -147,7 +147,7 @@ pub(crate) fn get_part_state(
             .choices
             .iter()
             .map(|(answer_id, answer)| {
-                generate_answers(&question.id, answer_id, answer, user_answer)
+                generate_answers(&question.id, *answer_id, answer, user_answer)
             })
             .collect();
         TestStatePartPageQuestion {

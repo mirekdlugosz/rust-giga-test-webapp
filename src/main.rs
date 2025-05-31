@@ -78,6 +78,7 @@ fn html_preprocessor(input: &str) -> String {
     new.to_string()
 }
 
+#[allow(clippy::cognitive_complexity)]
 async fn start() -> Result<(), Box<dyn std::error::Error>> {
     tracing_subscriber::fmt::init();
     let _ = dotenvy::dotenv();
@@ -89,10 +90,10 @@ async fn start() -> Result<(), Box<dyn std::error::Error>> {
         ensure_sqlite_file_exists(&sqlite_pool)?;
     }
     let giga_test = get_giga_test(&html_preprocessor);
-    let questions_db = &giga_test.get_correct_answers().to_owned();
+    let questions_db = &giga_test.get_correct_answers().clone();
 
     let state = AppState {
-        giga_test: giga_test.to_owned(),
+        giga_test: giga_test.clone(),
         questions_db: questions_db.clone(),
     };
 

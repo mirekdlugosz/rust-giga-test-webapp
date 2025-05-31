@@ -26,7 +26,7 @@ impl fmt::Display for PlaceBucket {
             PlaceBucket::NameWebsite => "name-website",
             PlaceBucket::Loser => "loser",
         };
-        write!(f, "{}", display_text)
+        write!(f, "{display_text}")
     }
 }
 
