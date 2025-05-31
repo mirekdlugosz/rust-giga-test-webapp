@@ -1,0 +1,21 @@
+# RapiDAST configuration file
+# Run it something like that:
+#     podman run --network=host --userns=keep-id -v /tmp/results/:/opt/rapidast/results:Z -v ./config.yaml:/opt/rapidast/config/config.yaml:Z quay.io/redhatproductsecurity/rapidast:latest
+
+config:
+  configVersion: 6
+
+application:
+  shortName: "Giga Test"
+  url: "http://localhost:8088/"
+
+scanners:
+  zap:
+    spider:
+      maxDuration: 10
+    passiveScan:
+      disabledRules: "2"
+    activeScan:
+      policy:  "API-scan-minimal"
+    report:
+      format: ["json", "html"]
