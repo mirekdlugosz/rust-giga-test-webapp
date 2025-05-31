@@ -131,11 +131,9 @@ async fn get_about() -> Result<impl IntoResponse, Error> {
 async fn post_answers(
     State(state): State<AppState>,
     session: Session,
-    form: Option<Form<HashMap<String, String>>>,
+    form: Form<HashMap<String, String>>,
 ) -> Redirect {
-    let new_responses: UserResponseData = form.map_or_else(UserResponseData::new, |form| {
-        responses_from_form_data(&form.0, &state.questions_db)
-    });
+    let new_responses: UserResponseData = responses_from_form_data(&form.0, &state.questions_db);
 
     if !new_responses.is_empty() {
         let test_responses: UserResponseData = session
@@ -154,10 +152,7 @@ async fn post_answers(
     Redirect::to("/")
 }
 
-async fn submit_toggle_canceled(
-    session: Session,
-    _form: Option<Form<HashMap<String, String>>>,
-) -> Redirect {
+async fn submit_toggle_canceled(session: Session) -> Redirect {
     let count_canceled: CountCanceled = session
         .get(GT_COUNT_CANCELED_KEY)
         .await
@@ -170,7 +165,7 @@ async fn submit_toggle_canceled(
     Redirect::to("/")
 }
 
-async fn submit_test(session: Session, _form: Option<Form<HashMap<String, String>>>) -> Redirect {
+async fn submit_test(session: Session) -> Redirect {
     session
         .insert(GT_FINISHED_KEY, true)
         .await
@@ -178,10 +173,7 @@ async fn submit_test(session: Session, _form: Option<Form<HashMap<String, String
     Redirect::to("/")
 }
 
-async fn start_new_test(
-    session: Session,
-    _form: Option<Form<HashMap<String, String>>>,
-) -> Redirect {
+async fn start_new_test(session: Session) -> Redirect {
     session
         .insert(GT_RESP_KEY, UserResponseData::new())
         .await
@@ -196,7 +188,7 @@ async fn start_new_test(
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(get_index))
-        .route("/czesc-:id", get(get_part))
+        .route("/czesc-{id}", get(get_part))
         .route("/o-co-chodzi-jakby", get(get_about))
         .route("/odpowiedzi", post(post_answers))
         .route("/licz-anulowane", post(submit_toggle_canceled))
