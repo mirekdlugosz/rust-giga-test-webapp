@@ -2,27 +2,6 @@ use crate::models::{
     PlaceBucket, TestStateMainPageElem, TestStateMainPageTotals, TestStatePartPage,
 };
 use askama::Template;
-use axum::http::StatusCode;
-
-/// Error page showing a message.
-#[derive(Template)]
-#[template(path = "error.html")]
-pub struct Error {
-    description: String,
-}
-
-/// Error response carrying a status code and the page itself.
-pub type ErrorResponse<'a> = (StatusCode, Error);
-
-impl From<crate::Error> for ErrorResponse<'_> {
-    fn from(err: crate::Error) -> Self {
-        let html = Error {
-            description: err.to_string(),
-        };
-
-        (err.into(), html)
-    }
-}
 
 /// Index page displaying a form for paste insertion and a selection box for languages.
 #[derive(Template)]

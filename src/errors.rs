@@ -1,7 +1,7 @@
-use axum::http::StatusCode;
 use std::num::TryFromIntError;
 
-#[derive(thiserror::Error, Debug)]
+#[allow(dead_code)]
+#[derive(Debug, thiserror::Error)]
 pub enum Error {
     #[error("axum http error: {0}")]
     Axum(#[from] axum::http::Error),
@@ -19,19 +19,6 @@ pub enum Error {
     Join(#[from] tokio::task::JoinError),
     #[error("could not parse cookie: {0}")]
     CookieParsing(String),
-}
-
-impl From<Error> for StatusCode {
-    fn from(err: Error) -> Self {
-        match err {
-            Error::NotFound => StatusCode::NOT_FOUND,
-            Error::IllegalCharacters
-            | Error::IntConversion(_)
-            | Error::WrongSize
-            | Error::CookieParsing(_) => StatusCode::BAD_REQUEST,
-            Error::Join(_) | Error::Compression(_) | Error::Axum(_) => {
-                StatusCode::INTERNAL_SERVER_ERROR
-            }
-        }
-    }
+    #[error("could not render template")]
+    Render(#[from] askama::Error),
 }

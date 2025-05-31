@@ -2,10 +2,13 @@ use crate::giga_test::{
     get_index_tests_state, get_index_totals, get_part_state, responses_from_form_data,
 };
 use crate::models::UserResponseData;
-use crate::pages::{About, ErrorResponse, Index, Part};
+use crate::pages::{About, Index, Part};
 use crate::AppState;
+use crate::Error;
+use askama::Template;
 use axum::extract::{Form, Path, State};
-use axum::response::{IntoResponse, Redirect};
+use axum::http::StatusCode;
+use axum::response::{Html, IntoResponse, Redirect, Response};
 use axum::routing::{get, post, Router};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -27,10 +30,40 @@ impl Default for CountCanceled {
 #[derive(Clone, Debug, Default, Deserialize, Serialize)]
 struct TestFinished(bool);
 
+impl IntoResponse for Error {
+    fn into_response(self) -> Response {
+        #[derive(Debug, Template)]
+        #[template(path = "error.html")]
+        struct Tmpl {
+            description: String,
+        }
+
+        let status = match &self {
+            Error::Render(_) => StatusCode::INTERNAL_SERVER_ERROR,
+            Error::NotFound => StatusCode::NOT_FOUND,
+            Error::IllegalCharacters
+            | Error::IntConversion(_)
+            | Error::WrongSize
+            | Error::CookieParsing(_) => StatusCode::BAD_REQUEST,
+            Error::Join(_) | Error::Compression(_) | Error::Axum(_) => {
+                StatusCode::INTERNAL_SERVER_ERROR
+            }
+        };
+        let tmpl = Tmpl {
+            description: "nie wiem".to_string(),
+        };
+        if let Ok(body) = tmpl.render() {
+            (status, Html(body)).into_response()
+        } else {
+            (status, "Something went wrong").into_response()
+        }
+    }
+}
+
 async fn get_index(
     State(state): State<AppState>,
     session: Session,
-) -> Result<impl IntoResponse, ErrorResponse<'static>> {
+) -> Result<impl IntoResponse, Error> {
     let test_responses: UserResponseData = session
         .get(GT_RESP_KEY)
         .await
@@ -49,20 +82,22 @@ async fn get_index(
     let index_tests_state =
         get_index_tests_state(&state.giga_test, &test_responses, count_canceled.0);
     let totals = get_index_totals(&index_tests_state);
-    Ok(Index::new(
-        &index_tests_state,
-        &totals,
-        count_canceled.0,
-        test_finished.0,
-    )
-    .into_response())
+    Ok(Html(
+        Index::new(
+            &index_tests_state,
+            &totals,
+            count_canceled.0,
+            test_finished.0,
+        )
+        .render()?,
+    ))
 }
 
 async fn get_part(
     State(state): State<AppState>,
     session: Session,
     Path(id): Path<usize>,
-) -> Result<impl IntoResponse, ErrorResponse<'static>> {
+) -> Result<impl IntoResponse, Error> {
     let test_id = id.to_string();
     let test_part = state
         .giga_test
@@ -86,11 +121,11 @@ async fn get_part(
 
     let part_state = get_part_state(test_part, &test_responses, count_canceled.0);
 
-    Ok(Part::new(&part_state, test_finished.0).into_response())
+    Ok(Html(Part::new(&part_state, test_finished.0).render()?))
 }
 
-async fn get_about() -> Result<impl IntoResponse, ErrorResponse<'static>> {
-    Ok(About::new().into_response())
+async fn get_about() -> Result<impl IntoResponse, Error> {
+    Ok(Html(About::new().render()?))
 }
 
 async fn post_answers(
