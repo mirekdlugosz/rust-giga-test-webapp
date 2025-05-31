@@ -2,7 +2,7 @@ use crate::giga_test::{
     get_index_tests_state, get_index_totals, get_part_state, responses_from_form_data,
 };
 use crate::models::UserResponseData;
-use crate::pages::{About, Index, Part};
+use crate::pages::{About, ErrorPage, Index, Part};
 use crate::AppState;
 use crate::Error;
 use askama::Template;
@@ -32,12 +32,6 @@ struct TestFinished(bool);
 
 impl IntoResponse for Error {
     fn into_response(self) -> Response {
-        #[derive(Debug, Template)]
-        #[template(path = "error.html")]
-        struct Tmpl {
-            description: String,
-        }
-
         let status = match &self {
             Self::Render(_) => StatusCode::INTERNAL_SERVER_ERROR,
             Self::NotFound => StatusCode::NOT_FOUND,
@@ -49,10 +43,7 @@ impl IntoResponse for Error {
                 StatusCode::INTERNAL_SERVER_ERROR
             }
         };
-        let tmpl = Tmpl {
-            description: self.to_string(),
-        };
-        tmpl.render().map_or_else(
+        ErrorPage::new(self.to_string()).render().map_or_else(
             |_| (status, "Something went wrong").into_response(),
             |body| (status, Html(body)).into_response(),
         )

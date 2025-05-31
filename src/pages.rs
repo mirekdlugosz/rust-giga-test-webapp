@@ -3,7 +3,19 @@ use crate::models::{
 };
 use askama::Template;
 
-/// Index page displaying a form for paste insertion and a selection box for languages.
+#[derive(Debug, Template)]
+#[template(path = "error.html")]
+pub struct ErrorPage {
+    description: String,
+}
+
+impl ErrorPage {
+    pub fn new(description: String) -> Self {
+        Self { description }
+    }
+}
+
+/// Index page - list of parts
 #[derive(Template)]
 #[template(path = "index.html")]
 pub struct Index<'a> {
@@ -29,6 +41,7 @@ impl<'a> Index<'a> {
     }
 }
 
+/// Part page - introduction and questions
 #[derive(Template)]
 #[template(path = "part.html")]
 pub struct Part<'a> {
@@ -45,6 +58,7 @@ impl<'a> Part<'a> {
     }
 }
 
+/// About page - static text
 #[derive(Template)]
 #[template(path = "about.html")]
 pub struct About {}
