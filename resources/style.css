@@ -107,6 +107,18 @@ div.question {
             flex-shrink: 0;
         }
     }
+    &.canceled:before {
+        position: absolute;
+        display: block;
+        content: "ANULOWANE";
+        color: var(--color-incorrect);
+        font-size: 3em;
+        filter: opacity(60%);
+        transform: rotate(-25deg) translate(-20%, 75%);
+        @media (min-width: 576px) {
+            transform: rotate(-25deg) translate(50%, 150%);
+        }
+    }
 }
 
 footer {

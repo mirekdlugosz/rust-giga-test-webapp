@@ -18,7 +18,7 @@
         <p class="introduction">{{ section.introduction|safe }}</p>
         {%- for question in section.questions %}
         <div id="{{ question.id }}" class="question 
-                 {%- if question.canceled && giga_test_finished %}canceled{%- endif -%}
+                 {%- if question.canceled && giga_test_finished %} canceled{%- endif -%}
             ">
             <p class="question">{{ question.question|safe }}</p>
             {% for choice in question.choices -%}
